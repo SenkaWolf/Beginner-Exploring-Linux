@@ -45,6 +45,9 @@ If you have any suggestions and corrections then please get involved through Git
 
 **Pull Requests:** If you have improvements or additions to this document, feel free to submit a pull request.
 
+### Post Format
+Anything to do with the terminal (konsole) will be within fenced code blocks throughout this document.
+
 ![---](https://github.com/senkawolf/Beginner-Exploring-Arch-Linux/blob/main/media/line.png?raw=true)
 
 <h2 align="center">Bare Metal or Virtual Machine</h2>
@@ -265,7 +268,7 @@ Here we will make the terminal more colourful, this involves downloading a prema
 - Type `cd Downloads/`
 - Type `unzip Linux_terminal_color.zip`
 - Then type:
-```
+```console
 sudo mv bash.bashrc /etc/bash.bashrc
 sudo mv DIR_COLORS /etc/
 mv .bashrc ~/.bashrc
@@ -277,28 +280,34 @@ mv .bashrc ~/.bashrc
 #### Automatic package cache cleaning <sup>[Wiki](https://wiki.archlinux.org/title/Pacman#Cleaning_the_package_cache)</sup>
 Downloading package updates can take up a large amount of space over time, this will automatically clear the cache for you. The below instructions will clear the cache weekly but leave 3 of the most recent versions of each package incase you need to downgrade anything.
 
-- Type `sudo pacman -S pacman-contrib`
-- Type `sudo systemctl enable paccache.timer`
+```
+$ sudo pacman -S pacman-contrib
+$ sudo systemctl enable paccache.timer
+```
 
 ---
 
 #### Installing AUR Helper <sup>[Wiki](https://wiki.archlinux.org/title/Arch_User_Repository)</sup>
 The Arch User Repository (AUR) is a communuty-drive repository of packages. If a package isn't in the official Arch repository it most likey found in the AUR.
 
-- Type `sudo pacman -S --needed base-devel git`
-- Type `mkdir Programs`
-- Type `cd Programs/`
-- Type `git clone https://aur.archlinux.org/yay.git`
-- Type `cd yay/`
-- Type `makepkg -si`
+```
+$ sudo pacman -S --needed base-devel git
+$ mkdir Programs
+$ cd Programs/
+$ git clone https://aur.archlinux.org/yay.git
+$ cd yay/
+$ makepkg -si
+```
 
 ---
 
 #### Create user folders <sup>[Wiki](https://wiki.archlinux.org/title/XDG_user_directories)</sup>
 By default you don't get the common folders like pictures, videos etc like you do in Windows. Here is a easy way to create them without having to do it manually.
 
-- Type `sudo pacman -S xdg-user-dirs`
-- Type `xdg-user-dirs-update`
+```
+$ sudo pacman -S xdg-user-dirs
+$ xdg-user-dirs-update
+```
 
 #### Install microcode <sup>[Wiki](https://wiki.archlinux.org/title/Microcode)</sup>
 Microcode is a essential part of our CPU's functionality so it's important that it's secure and up to date. Make sure you install the packages based on if you have a AMD or Intel CPU.
@@ -328,26 +337,44 @@ Almost all Linux distributions come with a inactive firewall. The Linux kernel h
 > [!WARNING]
 > Note that this will not work if iptables.service is also enabled.
 
-- Type `sudo pacman -S ufw`
-- Type `sudo ufw enable`
-- Type `sudo ufw status verbose` to check it's status to make sure it's active.
-- Type `sudo systemctl enable ufw.service` to make it auto start with the system.
+```
+$ sudo pacman -S ufw                    # To install ufw
+$ sudo ufw enable                       # Enabled ufw
+$ sudo ufw status verbose               # To check it's status to make sure it's active.
+$ sudo systemctl enable ufw.service`    # To make it auto start with the system.
+```
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Arch-Linux/blob/main/media/line.png?raw=true)
 
 <h2 align="center">Themes</h2>
 
-### XeroLinux
+### My Setup
+My setup uses the [Vivid Dark Global 6](https://store.kde.org/p/2133856) theme. As for Widgets AkA Plasmoids, it uses [Apdatifier](https://store.kde.org/p/2135796), [Netspeed](https://store.kde.org/p/2136505), [Quick Shutdown](https://store.kde.org/p/1288430) and [Toggle Overview](https://store.kde.org/p/2132554).
+
+### Other Themes
+- [Layan](https://github.com/vinceliuice/Layan-kde)
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Arch-Linux/blob/main/media/line.png?raw=true)
 
 <h1 align="center">Guides</h1>
+> [!CAUTION]
+> All links here unless specified are NOT affiliated with me.
 
 - [Arch Linux Official Install Guide](https://wiki.archlinux.org/title/Installation_guide)
+- [YouTube Video: How to Install Arch Linux](https://www.youtube.com/watch?v=LiG2wMkcrFE)
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Arch-Linux/blob/main/media/line.png?raw=true)
 
 <h1 align="center">Miscellaneous</h1>
+
+<details>
+ <summary>Sources</summary>
+  
+  - [Arch Linux](https://archlinux.org/)
+  - [KDE Software](https://kde.org/)
+  - [KDE Store](https://store.kde.org/browse/)
+  - [XeroLinux](https://xerolinux.xyz/)
+</details>
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Arch-Linux/blob/main/media/line.png?raw=true)
 
