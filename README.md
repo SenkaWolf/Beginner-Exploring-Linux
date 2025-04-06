@@ -268,7 +268,7 @@ Here we will make the terminal more colourful, this involves downloading a prema
 - Type `cd Downloads/`
 - Type `unzip Linux_terminal_color.zip`
 - Then type:
-```console
+```bash
 sudo mv bash.bashrc /etc/bash.bashrc
 sudo mv DIR_COLORS /etc/
 mv .bashrc ~/.bashrc
