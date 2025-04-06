@@ -48,6 +48,8 @@ If you have any suggestions and corrections then please get involved through Git
 ### Post Format
 Anything to do with the terminal (konsole) will be within fenced code blocks throughout this document. The code lines will start with a dollar sign<sup>($)</sup> which illustrates terminal input and if the line has a suffix of a hashtag<sup>(#)</sup> then this will be a comment explaining the line.
 
+Unless specified any steps which require confirmation with a 'y' or 'n' always confirm it with 'y'.
+
 ![---](https://github.com/senkawolf/Beginner-Exploring-Arch-Linux/blob/main/media/line.png?raw=true)
 
 <h2 align="center">Bare Metal or Virtual Machine</h2>
@@ -218,25 +220,25 @@ Now we will be going through the install process of Arch Linux, follow the steps
 <h2 align="center">chroot Environment</h2>
 Now we are in the chroot environment where we can install useful tools before booting into the desktop environment. These tools are optional, the tools are separated by spaces in the below command.
 
-- `pacman -Sy enchant mythes-en ttf-liberation hunspell-en_GB ttf-bitstream-vera adobe-source-sans-pro-fonts gst-plugins-good ttf-droid ttf-dejavu aspell-en icedtea-web gst-libav ttf-ubuntu-font-family ttf-anonymous-pro jre8-openjdk languagetool libmythes firefox libreoffice-fresh vlc`
-
-- Now type `exit` to exit the chroot environment.
-- Finally type `shutdown now`.
-- If you installed Arch Linus onto bare metal remove the bootsable USB and turn on the computer.
+```console
+$ pacman -Sy enchant mythes-en ttf-liberation hunspell-en_GB ttf-bitstream-vera adobe-source-sans-pro-fonts gst-plugins-good ttf-droid ttf-dejavu aspell-en icedtea-web gst-libav ttf-ubuntu-font-family ttf-anonymous-pro jre8-openjdk languagetool libmythes firefox libreoffice-fresh vlc
+$ exit          #To exit the chroot environment
+$ shutdown now  #Powers off your computer or virtual machine
+````
+> [!IMPORTANT]  
+> If you installed Arch Linus onto bare metal remove the bootsable USB and turn on the computer.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Arch-Linux/blob/main/media/line.png?raw=true)
 
 <h2 align="center">Fix Discover app backend</h2>
 The Discover application helps you find and install applications, games, and tools from multiple sources. If you try to launch the application you will get a error saying that Arch Linus is not configured for installing apps through Discover. 
 
-To fix this we need to install Flatpak and use it as a backend for Dicover:
-- Open konsole.
-- Type `sudo pacman -Sy`.
-- Input your password.
-- Type `sudo pacman -Sy flatpak`.
-- Press y for any prompts.
+To fix this we need to install Flatpak and use it as a backend for Dicover.
 
-Now the Discover app will work.
+```console
+$ sudo pacman -Sy
+$ sudo pacman -Sy flatpak
+```
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Arch-Linux/blob/main/media/line.png?raw=true)
 
@@ -245,13 +247,18 @@ Now the Discover app will work.
 #### Configure pacman <sup>[Wiki](https://wiki.archlinux.org/title/Pacman)</sup>
 Here we are going to improve the visuals of pacman.
 
-- Type `sudo nano /etc/pacman.conf`
+```console
+$ sudo nano /etc/pacman.conf      #Opens the file pacman.conf
+```
+
 - Scroll down the file until you see a line `#Color` and remove the hashtag.
 - Add a new line under `Color` and type `ILoveCandy`.
 - Press Ctrl + O to save the file.
 - Press Ctrl + X to close the nano editor.
-- Then run `sudo pacman -Syu` to make the changes take effect.
 
+```console
+$ sudo pacman -Syu      #Make the changes take effect.
+```
 
 Optional: If you have a good computer and internet connection then remove the hashtag in front of `ParalleDownloads = 5` so pacman will download several packages at the simultaneously.
 
@@ -264,14 +271,14 @@ Here we will make the terminal more colourful, this involves downloading a prema
 > This terminal colour scheme was made by [Average Linux User](https://averagelinuxuser.com/).
 
 - Download [Linux_terminal_color.zip](https://averagelinuxuser.com/assets/images/posts/2019-01-18-linux-terminal-color/Linux_terminal_color.zip).
-- Type `sudo pacman -S unzip` to install unzip.
-- Type `cd Downloads/`
-- Type `unzip Linux_terminal_color.zip`
-- Then type:
+
 ```console
-sudo mv bash.bashrc /etc/bash.bashrc
-sudo mv DIR_COLORS /etc/
-mv .bashrc ~/.bashrc
+$ sudo pacman -S unzip                      #Installs unzip
+$ cd Downloads/                             #Move into downloads folder
+$ unzip Linux_terminal_color.zip            #Unzip the file you downloaded earlier
+$ sudo mv bash.bashrc /etc/bash.bashrc
+$ sudo mv DIR_COLORS /etc/
+$ mv .bashrc ~/.bashrc
 ```
 - Close and reopen Konsole.
 
@@ -312,22 +319,32 @@ $ xdg-user-dirs-update
 #### Install microcode <sup>[Wiki](https://wiki.archlinux.org/title/Microcode)</sup>
 Microcode is a essential part of our CPU's functionality so it's important that it's secure and up to date. Make sure you install the packages based on if you have a AMD or Intel CPU.
 
-Intel: `sudo pacman -S intel-ucode`
-
-AMD: `sudo pacman -S amd-ucode`
+```console
+$ sudo pacman -S amd-ucode      #AMD CPU
+$ sudo pacman -S intel-ucode    #Intel CPU
+```
 
 ---
 
 #### Disable GRUB delay
-To speed up your boot process you can disable the GRUB screen and boot into Arch Linux right away. If you need the GRUB screen you can get to it by holding ESC key whilst booting your virtual machine or computer.
+To speed up your boot process you can disable the GRUB screen and boot into Arch Linux right away.
 
-- Type `sudo nano /etc/default/grub`
+> [!TIP]
+> If you need the GRUB screen you can get to it by holding ESC key whilst booting your virtual machine or computer.
+
+```console
+$ sudo nano /etc/default/grub   #Open the grub.cfg file
+```
+
 - Scroll down the file to the line `GRUB_TIMEOUT_STYLE=menu`.
 - Edit where it says 'menu' to 'hidden' `GRUB_TIMEOUT_STYLE=hidden`.
 - Press Ctrl + O to save.
 - Press Ctrl + X to exit.
-- Type `sudo grub-mkconfig -o /boot/grub/grub.cfg`
-- Type `sudo reboot now`
+
+```console
+$ sudo grub-mkconfig -o /boot/grub/grub.cfg     #Update the grub config
+$ sudo reboot now                               #Powers off your computer or virtual machine
+```
 
 ---
 
