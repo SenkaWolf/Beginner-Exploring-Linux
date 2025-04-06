@@ -46,7 +46,7 @@ If you have any suggestions and corrections then please get involved through Git
 **Pull Requests:** If you have improvements or additions to this document, feel free to submit a pull request.
 
 ### Post Format
-Anything to do with the terminal (konsole) will be within fenced code blocks throughout this document.
+Anything to do with the terminal (konsole) will be within fenced code blocks throughout this document. The code lines will start with a dollar sign<sup>($)</sup> which illustrates terminal input and if the line has a suffix of a hashtag<sup>(#)</sup> then this will be a comment explaining the line.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Arch-Linux/blob/main/media/line.png?raw=true)
 
@@ -268,7 +268,7 @@ Here we will make the terminal more colourful, this involves downloading a prema
 - Type `cd Downloads/`
 - Type `unzip Linux_terminal_color.zip`
 - Then type:
-```bash
+```console
 sudo mv bash.bashrc /etc/bash.bashrc
 sudo mv DIR_COLORS /etc/
 mv .bashrc ~/.bashrc
@@ -280,7 +280,7 @@ mv .bashrc ~/.bashrc
 #### Automatic package cache cleaning <sup>[Wiki](https://wiki.archlinux.org/title/Pacman#Cleaning_the_package_cache)</sup>
 Downloading package updates can take up a large amount of space over time, this will automatically clear the cache for you. The below instructions will clear the cache weekly but leave 3 of the most recent versions of each package incase you need to downgrade anything.
 
-```
+```console
 $ sudo pacman -S pacman-contrib
 $ sudo systemctl enable paccache.timer
 ```
@@ -290,7 +290,7 @@ $ sudo systemctl enable paccache.timer
 #### Installing AUR Helper <sup>[Wiki](https://wiki.archlinux.org/title/Arch_User_Repository)</sup>
 The Arch User Repository (AUR) is a communuty-drive repository of packages. If a package isn't in the official Arch repository it most likey found in the AUR.
 
-```
+```console
 $ sudo pacman -S --needed base-devel git
 $ mkdir Programs
 $ cd Programs/
@@ -304,7 +304,7 @@ $ makepkg -si
 #### Create user folders <sup>[Wiki](https://wiki.archlinux.org/title/XDG_user_directories)</sup>
 By default you don't get the common folders like pictures, videos etc like you do in Windows. Here is a easy way to create them without having to do it manually.
 
-```
+```console
 $ sudo pacman -S xdg-user-dirs
 $ xdg-user-dirs-update
 ```
@@ -337,7 +337,7 @@ Almost all Linux distributions come with a inactive firewall. The Linux kernel h
 > [!WARNING]
 > Note that this will not work if iptables.service is also enabled.
 
-```
+```console
 $ sudo pacman -S ufw                    # To install ufw
 $ sudo ufw enable                       # Enabled ufw
 $ sudo ufw status verbose               # To check it's status to make sure it's active.
