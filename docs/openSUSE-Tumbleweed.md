@@ -19,31 +19,27 @@
 <details>
  <summary>Expand Table Here</summary>
   
-  - [Arch-based Distributions](#Arch-based-Distributions)
+  - [openSUSE-based Distributions](#openSUSE-based-Distributions)
   - [Installation](#Installation)
     - [Bare Metal or Virtual Machine](#Bare-Metal-or-Virtual-Machine)
-    - [Arch Linux Install Process](#Arch-Linux-Install-Process)
+    - [openSUSE Tumbleweed Install Process](#openSUSE-Tumbleweed-Install-Process)
     - [chroot Environment](#chroot-Environment)
     - [Fix Discover app backend](#Fix-Discover-app-backend)
-  - [Tweaks and Improvements](Tweaks-and-Improvements)
-  - [Themes](#Themes)
   - [Guides](#Guides)
   - [Miscellaneous](#Miscellaneous)
 </details>
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
-<h1 align="center">Arch-based Distributions</h1>
+<h1 align="center">openSUSE-based Distributions</h1>
 
-This list is OS distributions which are derived from Arch Linux either in whole or in part. The version you use is down to preference, taste in distros and use case.
+This list is OS distributions which are derived from openSUSE Linux either in whole or in part. The version you use is down to preference, taste in distros and use case.
    
 <sub>In alphabetical order.<sub>
 
-- [Arch Linux](https://archlinux.org)
-- [EndeavourOS](https://endeavouros.com/)
-- [Garuda Linux](https://garudalinux.org/) - Targeted towards gaming however does bring alot of bloat and not recommended for low end computers.
-- [Manjaro](https://manjaro.org/)
-- [XeroLinux](https://xerolinux.xyz/) - Simplies installation process and offers pre-configured environments that serve as an elegant but functional starting point for users.
+- [GeckoLinux](https://geckolinux.github.io/)
+- [openSUSE](https://get.opensuse.org/)
+- [openSUSE MicroOS](https://microos.opensuse.org/)
 
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
@@ -76,7 +72,7 @@ Pick a virtualisation software you wish to run Linux in, below are a few options
 - [QEMU](https://www.qemu.org/download/)
 
 #### Step 2 - Download ISO
-Download the Arch Linux ISO file from the offcial website only which can be found [here](https://archlinux.org/download/). Make sure you pick a region near you.
+Download the openSUSE Tumbleweed ISO file from the offcial website only which can be found [here](https://get.opensuse.org/tumbleweed/#download). Make sure you pick a region near you.
 
 #### Step 3 - Setuping up a virtual machine
 I'm using the [VMWare Workstation Pro](https://www.broadcom.com/) software so this section will talk you through how to use it, if you're using something else then your steps will vary.
@@ -98,7 +94,7 @@ Start the virtual machine and move onto the next section [Arch Linux Install Pro
 
 This option is best for daily use and without the overhead of using a virtual machine.
 
-Here you will need to either have a dedicate storage device or partition an existing one to install Arch Linux onto.
+Here you will need to either have a dedicate storage device or partition an existing one to install openSUSE Tumbleweed onto.
 
 #### Step 1 - USB Drive
 Make sure that you have an 8GB or higher USB key/pendrive/memory stick and connect it to your computer.
@@ -107,15 +103,14 @@ Make sure that you have an 8GB or higher USB key/pendrive/memory stick and conne
 Pick a USB formatting utility you wish to use to create a bootable USB flash drive, below are a few options:
 - [balenaEtcher](https://etcher.balena.io/)
 - [Rufus](https://rufus.ie/en/)
-- [Ventoy](https://www.ventoy.net/en/index.html)
 
 #### Step 3 - Download ISO
-Download the Arch Linux ISO file from the offcial website only which can be found [here](https://archlinux.org/download/). Make sure you pick a region near you.
+Download the openSUSE Tumbleweed ISO file from the offcial website only which can be found [here](https://get.opensuse.org/tumbleweed/#download). Make sure you pick a region near you.
 
 #### Step 4 - Formatting USB
 - Launch balenaEtcher or Rufus.
 - Select your USB device.
-- Select the Arch Linux ISO you just downloaded.
+- Select the openSUSE Tumbleweed ISO you just downloaded.
 - Leave the settings as they are.
 - Then start formatting the USB device.
 
@@ -126,21 +121,14 @@ Download the Arch Linux ISO file from the offcial website only which can be foun
 - Disable Secure Boot.
 - Save the changes and reboot the computer.
 
-#### Step 6 - CLI Environment
-You will now be in the CLI Environment, move onto the next section [Arch Linux Install Process](#Arch-Linux-Install-Process)
+#### Step 6 - GUI installer
+You will now be in the GUI installer, move onto the next section [openSUSE Tumbleweed Install Process](#openSUSE-Tumbleweed-Install-Process)
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
-<h2 align="center">Arch Linux Install Process</h2>
+<h2 align="center">openSUSE Tumbleweed Install Process</h2>
 
-Now we will be going through the install process of Arch Linux, follow the steps below.
- 
-> [!TIP]
-> To increase the font size type the command `setfont ter-132n`.
-> 
-> To change it back to the default type `setfont`.
-> 
-> If you want to clear the console screen you can by pressing `Ctrl + L` this can help declutter the console to make it easier to follow along.
+Now we will be going through the install process of openSUSE Tumbleweed, this will feel very familiar to a Windows setup.
 
 - Connecting to the internet.
     - If you are using a ethernet cable you can use the ping command to check the connection. Type `ping google.com` and you should see a ping return.
@@ -240,138 +228,6 @@ To fix this we need to install Flatpak and use it as a backend for Dicover.
 $ sudo pacman -Sy
 $ sudo pacman -Sy flatpak
 ```
-
-![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
-
-<h2 align="center">Tweaks and Improvements</h2>
-
-#### Configure pacman <sup>[Wiki](https://wiki.archlinux.org/title/Pacman)</sup>
-Here we are going to improve the visuals of pacman.
-
-```console
-$ sudo nano /etc/pacman.conf      #Opens the file pacman.conf
-```
-
-- Scroll down the file until you see a line `#Color` and remove the hashtag.
-- Add a new line under `Color` and type `ILoveCandy`.
-- Press Ctrl + O to save the file.
-- Press Ctrl + X to close the nano editor.
-
-```console
-$ sudo pacman -Syu      #Make the changes take effect.
-```
-
-Optional: If you have a good computer and internet connection then remove the hashtag in front of `ParalleDownloads = 5` so pacman will download several packages at the simultaneously.
-
----
-
-#### Make bash colorful
-Here we will make the terminal more colourful, this involves downloading a premade colour scheme.
-
-> [!NOTE]  
-> This terminal colour scheme was made by [Average Linux User](https://averagelinuxuser.com/).
-
-- Download [Linux_terminal_color.zip](https://averagelinuxuser.com/assets/images/posts/2019-01-18-linux-terminal-color/Linux_terminal_color.zip).
-
-```console
-$ sudo pacman -S unzip                      #Installs unzip
-$ cd Downloads/                             #Move into downloads folder
-$ unzip Linux_terminal_color.zip            #Unzip the file you downloaded earlier
-$ sudo mv bash.bashrc /etc/bash.bashrc
-$ sudo mv DIR_COLORS /etc/
-$ mv .bashrc ~/.bashrc
-```
-- Close and reopen Konsole.
-
----
-
-#### Automatic package cache cleaning <sup>[Wiki](https://wiki.archlinux.org/title/Pacman#Cleaning_the_package_cache)</sup>
-Downloading package updates can take up a large amount of space over time, this will automatically clear the cache for you. The below instructions will clear the cache weekly but leave 3 of the most recent versions of each package incase you need to downgrade anything.
-
-```console
-$ sudo pacman -S pacman-contrib
-$ sudo systemctl enable paccache.timer
-```
-
----
-
-#### Installing AUR Helper <sup>[Wiki](https://wiki.archlinux.org/title/Arch_User_Repository)</sup>
-The Arch User Repository (AUR) is a communuty-drive repository of packages. If a package isn't in the official Arch repository it most likey found in the AUR.
-
-```console
-$ sudo pacman -S --needed base-devel git
-$ mkdir Programs
-$ cd Programs/
-$ git clone https://aur.archlinux.org/yay.git
-$ cd yay/
-$ makepkg -si
-```
-
----
-
-#### Create user folders <sup>[Wiki](https://wiki.archlinux.org/title/XDG_user_directories)</sup>
-By default you don't get the common folders like pictures, videos etc like you do in Windows. Here is a easy way to create them without having to do it manually.
-
-```console
-$ sudo pacman -S xdg-user-dirs
-$ xdg-user-dirs-update
-```
-
-#### Install microcode <sup>[Wiki](https://wiki.archlinux.org/title/Microcode)</sup>
-Microcode is a essential part of our CPU's functionality so it's important that it's secure and up to date. Make sure you install the packages based on if you have a AMD or Intel CPU.
-
-```console
-$ sudo pacman -S amd-ucode      #AMD CPU
-$ sudo pacman -S intel-ucode    #Intel CPU
-```
-
----
-
-#### Disable GRUB delay
-To speed up your boot process you can disable the GRUB screen and boot into Arch Linux right away.
-
-> [!TIP]
-> If you need the GRUB screen you can get to it by holding ESC key whilst booting your virtual machine or computer.
-
-```console
-$ sudo nano /etc/default/grub   #Open the grub.cfg file
-```
-
-- Scroll down the file to the line `GRUB_TIMEOUT_STYLE=menu`.
-- Edit where it says 'menu' to 'hidden' `GRUB_TIMEOUT_STYLE=hidden`.
-- Press Ctrl + O to save.
-- Press Ctrl + X to exit.
-
-```console
-$ sudo grub-mkconfig -o /boot/grub/grub.cfg     #Update the grub config
-$ sudo reboot now                               #Powers off your computer or virtual machine
-```
-
----
-
-#### Set up firewall <sup>[Wiki](https://wiki.archlinux.org/title/Uncomplicated_Firewall)</sup>
-Almost all Linux distributions come with a inactive firewall. The Linux kernel has a built-in firewall and technically all Linux distros have this but it is not configured and activated. Linux is still secure even without an active firewall. By default, most of the distributions have no open ports. It is better to be safe than sorry to add a firewall. A firewall does use some system resources, but not enought to make a impact and it adds an extra layer of security making it worth while.
-
-> [!WARNING]
-> Note that this will not work if iptables.service is also enabled.
-
-```console
-$ sudo pacman -S ufw                    # To install ufw
-$ sudo ufw enable                       # Enabled ufw
-$ sudo ufw status verbose               # To check it's status to make sure it's active.
-$ sudo systemctl enable ufw.service`    # To make it auto start with the system.
-```
-
-![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
-
-<h2 align="center">Themes</h2>
-
-### My Setup
-My setup uses the [Vivid Dark Global 6](https://store.kde.org/p/2133856) theme. As for Widgets AkA Plasmoids, it uses [Apdatifier](https://store.kde.org/p/2135796), [Netspeed](https://store.kde.org/p/2136505), [Quick Shutdown](https://store.kde.org/p/1288430) and [Toggle Overview](https://store.kde.org/p/2132554).
-
-### Other Themes
-- [Layan](https://github.com/vinceliuice/Layan-kde)
-
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
 <h1 align="center">Guides</h1>
@@ -379,8 +235,9 @@ My setup uses the [Vivid Dark Global 6](https://store.kde.org/p/2133856) theme. 
 > [!CAUTION]
 > All links here unless specified are NOT affiliated with me.
 
-- [Arch Linux Official Install Guide](https://wiki.archlinux.org/title/Installation_guide)
-- [YouTube Video: How to Install Arch Linux](https://www.youtube.com/watch?v=LiG2wMkcrFE)
+- [openSUSE Tumbleweed Official Install Guide](https://en.opensuse.org/openSUSE:Tumbleweed_installation)
+- [Dual Booting/Secure Boot Setup](https://superuser.com/questions/1851143/dual-booting-opensuse-tumbleweed-with-windows-11-and-secure-boot)
+- [YouTube Video: How to dual boot and install openSUSE](https://youtu.be/JT5dbJ3AkDo?si=X3yDCNzLNBahQ7KY)
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
@@ -389,10 +246,8 @@ My setup uses the [Vivid Dark Global 6](https://store.kde.org/p/2133856) theme. 
 <details>
  <summary>Sources</summary>
   
-  - [Arch Linux](https://archlinux.org/)
-  - [KDE Software](https://kde.org/)
-  - [KDE Store](https://store.kde.org/browse/)
-  - [XeroLinux](https://xerolinux.xyz/)
+  - [openSUSE Tumbleweed](https://get.opensuse.org/tumbleweed/)
+  - [openSUSE Tumbleweed portal](https://en.opensuse.org/Portal:Tumbleweed)
 </details>
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
