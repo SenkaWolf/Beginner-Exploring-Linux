@@ -21,8 +21,7 @@
   
   - [openSUSE-based Distributions](#openSUSE-based-Distributions)
   - [openSUSE Tumbleweed Install Process](#openSUSE-Tumbleweed-Install-Process)
-    - [chroot Environment](#chroot-Environment)
-    - [Fix Discover app backend](#Fix-Discover-app-backend)
+        - [Tweaks and Improvements](Tweaks-and-Improvements)
   - [Guides](#Guides)
   - [Miscellaneous](#Miscellaneous)
 </details>
@@ -46,104 +45,63 @@ This list is OS distributions which are derived from openSUSE Linux either in wh
 
 Now we will be going through the install process of openSUSE Tumbleweed, this will feel very familiar to a Windows setup.
 
-- Connecting to the internet.
-    - If you are using a ethernet cable you can use the ping command to check the connection. Type `ping google.com` and you should see a ping return.
-        - To stop the pings press `Ctrl + C`.
-    - If you are using Wi-Fi then you will need to use iwctl to connect to the internet. Type `iwctl` to enter the iwd shell.
-        - The type `device list` to see a list of network interfaces.
-        - Look for 'wlan0' then type `device wlan0 show` to see more information.
-        - Then type `station wlan0 get-networks` to see a list of Wi-Fi networks.
-        - Then type `station wlan0 connect [name of Wi-Fi network]` replace [] with the name of your Wi-Fi network.
-        - It will then ask for your Wi-Fi password.
-        - Now exit the iwd shell by typing `exit`.
-        - Try using ping command to check the connection by typing `ping google.com`.
-            - To stop the pings press `Ctrl + C`.
-- Syncing system packages and updating.
-    - Type `pacman -Sy` to sync and upgrade system packages.
-- Formatting Disk
-    - Now type `lsblk` to show a list of all the connect drives to the computer.
-    - If you're unsure what drive you need to use, you can type `fdisk -l` to see more information.
-    - **Make sure you are careful as it's important you format the correct drive otherwise you could lose important data.**
-        - If you are using a virtual machine then the drive will most likely be named 'sda'.
-    - Once you have confirmed the correct drive (I'm using sda in this instance) run the command `gdisk /dev/[drive name]` e.g. `gdisk /dev/sda` to enter the gdisk tool.
-    - Once in gdisk press `x` to enter expert mode.
-    - Then press `z` to erase the drive.
-    - Follow the prompts by typing `y` to finish the process.
-    - Now in my case the 'sda' drive should be free of nay partitions and files.
-- Install Script
-    - Now type the command `pacman -Sy archlinux-keyring` which contains the public keys used to verify the authenticity and integrity of Arch Linux packages ensuring they come from trusted sources.
-        - Make sure you press `y` for any prompts.
-    - Now type `pacman -Sy archinstall` to setup the arch install script.
-        - Make sure you press `y` for any prompts.
-    - Now type `archinstall`.
-        - Use the arrow keys to navigate through the options.
-    - Set the system language.
-    - Go into Locales and set the options which best suit you, for me I will configure it for the United Kingdom.
-        - Keyboard layout: uk
-        - Locale language: en_GB
-    - Select Disk Configuration
-        - Select Partitioning
-        - Select Use a best-effort default partition layout
-        - Select the drive where you want to install Arch Linux, the one we identified earlier. So in my case dev/sda.
-        - Select the `btrfs` filesystem.
-        - Select yes to would you like to use BTRFS subvolumes with a default structure.
-        - Select Use compression.
-        - Then go back oto the main menu.
-    - Select Bootloader
-        - Make sure Grub is selected.
-    - Select Root password and set a secure password.
-    - Select User account
-        - Select Add a user (Username must be all lowercase and say yes to being a superuser(sudo)).
-        - Confirm and exit.
-    - Select Profile
-        - Select Type
-        - Select Desktop
-        - Now select the type of desktop environment you want:
-            - KDE Plasma - Best UI
-            - Xfce - Nice compromise between looks and performance, particularly if you have an older computer. 
-    - Select Graphics Driver
-        - Pick the driver which suits your computer hardware configuration.
-        - NVIDIA - Select the `Nvidia (proprietary)` option.
-        - Virtual Machine - If you're using a virtual machine then select `VMware / VirtualBox (open-source)`.
-        - Then go back oto the main menu.
-    - Audio
-        - Then select the option pipewire.
-    - Additional packages
-        - Here you can specify a list of tools to be installed separated by spaces. Below is a list of some packages:
-        - htop fastfetch neofetch git curl wget base-devel
-    - Network configuration
-        - Select NetworkManager
-    - Timezone
-        - Set this to your timezone, in my case it would be `Europe/London`
-    - Finally you are ready to press install, this may take a few minutes.
-    - Once the installtion has been completed you will get a prompt saying wouldl you like to chroot into the newly created installation and perform post-installation configuration.
-        - Select yes.
+- Select your language & keybaord layout then press next.
+- Select your network interface then press next.
+- Select your System Role a.k.a your desktop environment then press next. I prefer KDE Plasma.
+- On the Suggested Partitioning screen you want to select "Expert Partitioner" then "Start with Existing Paritions".
+- On the left hand side their will be a list of installed drives. Select the one you wish to use. 
+- Now we need to create three partitions, so we will need to go through the "Add Partition..." screen three times using the following settings:
+    - EFI Boot Partition
+        - New Partition Size: Select Custom Size and type 1 GiB.
+        - Role: EFI Boot Partition
+        - Formatting Options: Filesystem: "FAT" & Mounting Options: Mount Point "/boot/efi"
+    - Swap
+            - New Partition Size: Select Custom Size and type 8 GiB. - If your PC has 8GB of RAM then put 8GiB. If you have more then half your RAM amount and that should be the number you use. E.g. 32GB RAM you would put 16GiB. 
+            - Role: Operating System
+            - Formatting Options: Filesystem: "Swap" & Mounting Options: Mount Point "swap"
+    - Operating System
+            - New Partition Size: Select Custom Size and type 50 GiB. - Choose between 30GiB-50GiB.
+            - Role: Operating System
+            - Formatting Options: Filesystem: "btrfs" & Mounting Options: Mount Point "/"
+    - Data and ISV Applications
+            - New Partition Size: Select Custom Size and type (amount) GiB. - Use all the free space left on your drive.
+            - Role: Operating System
+            - Formatting Options: Filesystem: "btrfs" & Mounting Options: Mount Point "/"
+- Now pick your region and time zone.
+- Create your user account.
+- On the Installation Settings overview page make sure that "Secure Boot" is enabled. It should be by default but it is recommended to double check!
+- Now install the operating system.
+- Once it restarts remove the USB key/pendrive/memory stick.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
-<h2 align="center">chroot Environment</h2>
+<h2 align="center">Tweaks and Improvements</h2>
 
-Now we are in the chroot environment where we can install useful tools before booting into the desktop environment. These tools are optional, the tools are separated by spaces in the below command.
-
+#### Increase GRUB timeout limit
+- Open the terminal
+- Type in:
 ```console
-$ pacman -Sy enchant mythes-en ttf-liberation hunspell-en_GB ttf-bitstream-vera adobe-source-sans-pro-fonts gst-plugins-good ttf-droid ttf-dejavu aspell-en icedtea-web gst-libav ttf-ubuntu-font-family ttf-anonymous-pro jre8-openjdk languagetool libmythes firefox libreoffice-fresh vlc
-$ exit          #To exit the chroot environment
-$ shutdown now  #Powers off your computer or virtual machine
-````
-> [!IMPORTANT]  
-> If you installed Arch Linus onto bare metal remove the bootsable USB and turn on the computer.
-
-![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
-
-<h2 align="center">Fix Discover app backend</h2>
-The Discover application helps you find and install applications, games, and tools from multiple sources. If you try to launch the application you will get a error saying that Arch Linus is not configured for installing apps through Discover. 
-
-To fix this we need to install Flatpak and use it as a backend for Dicover.
-
-```console
-$ sudo pacman -Sy
-$ sudo pacman -Sy flatpak
+$ sudo nano /etc/default/grub
 ```
+- Input your users password
+- You will then see the content of the grub file which will look simular to this. Look for the `GRUB_TIMEOUT=8` and change it to `GRUB_TIMEOUT=30`.
+```console
+GRUB_DISTRIBUTOR=
+GRUB_DEFAULT=saved
+GRUB_HIDDEN_TIMEOUT=0
+GRUB_HIDDEN_TIMEOUT_QUIET=true
+GRUB_TIMEOUT=8
+GRUB_CMDLINE_LINIX_DEFAULT="splash=silent mitigations=auto quiett security=apparmor"
+GRUB_CMDLINE_LINUX=""
+```
+- Then save changes by pressing `Ctrl + O`.
+- Then exit by pressing `Ctrl + X`.
+- The type the following command to update the grub configuration.
+```console
+$ sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+```
+- Then reboot your system.
+
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
 <h1 align="center">Guides</h1>
