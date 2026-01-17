@@ -23,7 +23,7 @@
   - [Arch Linux Install Process](#Arch-Linux-Install-Process)
     - [chroot Environment](#chroot-Environment)
     - [Fix Discover app backend](#Fix-Discover-app-backend)
-    - [Tweaks and Improvements](Tweaks-and-Improvements)
+    - [Tweaks and Improvements](#Tweaks-and-Improvements)
     - [Themes](#Themes)
   - [Guides](#Guides)
   - [Miscellaneous](#Miscellaneous)
