@@ -171,13 +171,15 @@ Now you will be in a CLI Environment or GUI. Move onto the next section [Distrib
 <h1 align="center">Distributions</h1>
 
 This is a list of distributions which I have explored when learning Linux. Pick the option you have chosen to install.
-   
-<sub>In alphabetical order.<sub>
 
-- [Arch](/docs/Arch-Linux.md)
-- [CachyOS]() <sub>Coming Soon<sub>
-- [Mint]() <sub>Coming Soon<sub>
-- [Nobara]() <sub>Coming Soon<sub>
-- [openSUSE Tumbleweed](/docs/openSUSE-Tumbleweed.md)
+Click the distro name to go to the guide or download to be taken straight to the download page for the ISO file.
+   
+<sub>In alphabetical order.</sub>
+
+- [Arch](/docs/Arch-Linux.md) <sup>|[Download](https://archlinux.org/download/)|</sup>
+- [CachyOS]() <sub>Coming Soon</sub>
+- [Mint]() <sub>Coming Soon</sub>
+- [Nobara]() <sub>Coming Soon</sub>
+- [openSUSE Tumbleweed](/docs/openSUSE-Tumbleweed.md) <sup>|[Download](https://get.opensuse.org/tumbleweed/#download)|</sup>
 
 **[![ ](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/up25.png) Back to Top](#Table-of-Contents)**
