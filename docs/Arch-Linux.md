@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="./media/archlogo.png" />
+<img src="../media/archlogo.png" />
 
 <br>
 
