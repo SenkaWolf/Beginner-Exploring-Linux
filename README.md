@@ -17,7 +17,7 @@
 <details>
  <summary>Expand Table Here</summary>
   
-  - [Beginner Exploring Arch Linux](#Beginner-Exploring-Arch-Linux)
+  - [Beginner Exploring Linux](#Beginner-Exploring-Linux)
     - [Getting Started](#Getting-Started)
     - [Support and Feedback](#Support-and-Feedback)
   - [Distributions](#Distributions)
@@ -25,10 +25,10 @@
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
-<h1 align="center">Beginner Exploring Arch Linux</h1>
+<h1 align="center">Beginner Exploring Linux</h1>
 
 ### Getting Started
- This will be a collection of installation guides, notes and troubleshooting I've used whilst exploring and getting into Linux and more specifically Arch. I'm a rookie when it comes to Linux so this is isn't a fully comprehensive guide and I'm sure there will be mistakes along the way so don't view this as a tutorial.
+ This will be a collection of installation guides, notes and troubleshooting I've used whilst exploring and getting into Linux. I'm a rookie when it comes to Linux so this is isn't a fully comprehensive guide and I'm sure there will be mistakes along the way so don't view this as a tutorial.
 
 ### Support and Feedback
 If you have any suggestions and corrections then please get involved through Github.
