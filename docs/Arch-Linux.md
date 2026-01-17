@@ -38,6 +38,7 @@ This list is OS distributions which are derived from Arch Linux either in whole 
 <sub>In alphabetical order.<sub>
 
 - [Arch Linux](https://archlinux.org)
+- [CachyOS](https://cachyos.org/)
 - [EndeavourOS](https://endeavouros.com/)
 - [Garuda Linux](https://garudalinux.org/) - Targeted towards gaming however does bring alot of bloat and not recommended for low end computers.
 - [Manjaro](https://manjaro.org/)
