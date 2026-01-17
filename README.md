@@ -188,10 +188,10 @@ Click the distro name to go to the guide or download to be taken straight to the
 <sub>In alphabetical order.</sub>
 
 - [Arch](/docs/Arch-Linux.md) <sup>|[Download](https://archlinux.org/download/)|</sup>
-- [CachyOS]() <sub>Coming Soon</sub>
-- [Fedora]() <sub>Coming Soon</sub>
-- [Mint]() <sub>Coming Soon</sub>
-- [Nobara]() <sub>Coming Soon</sub>
+- [CachyOS](/docs/CachyOS.md) <sup>|[Download](https://cachyos.org/download/)|</sup>
+- [Fedora]() <sup>Coming Soon</sup>
+- [Mint]() <sup>Coming Soon</sup>
+- [Nobara]() <sup>Coming Soon</sup>
 - [openSUSE Tumbleweed](/docs/openSUSE-Tumbleweed.md) <sup>|[Download](https://get.opensuse.org/tumbleweed/#download)|</sup>
 
 **[![ ](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/up25.png) Back to Top](#Table-of-Contents)**
