@@ -156,14 +156,25 @@ Download the ISO file for the Linux distro of your choice. Use the [Distribution
 - Leave the settings as they are.
 - Then start formatting the USB device.
 
-#### <sup>Option 2:</sup> Step 5 - Booting from the USB
+#### <sup>Option 2:</sup> Step 5 - Dual Booting/Storage Partitioning  (Optional)
+If you want to keep Windows installed on your computer and be able to boot into Linux or Windows then follow the below steps. If you wish to override your Windows install then skip to step 6.
+
+- You will need to open Disk Manager. To do this either right-clicking the Start button and selecting "Disk Management" or Search for "Disk Manager" in your start menu and you will see an option called "Create and format hard disk partitions".
+- This will list all your connected storage drives and their paritions. Your main C drive should have three paritions and any others typically should just have one.
+- Select the drive you wish to install Linux onto and select the "NTFS" section, right click and choose shrink volume. Note that the drive MUST have free space to be able to do this!
+- Now select the size you wish to shrink the volume by, this is done in megabytes (MB) so 1024MB = 1GB.
+  - It is recommended to have around 30GB-50GB for a Linux install however the more you can spare the more available storage you will have. I like to try and split my drive 50/50 so I have 500GB.
+- After you have shrunk the volumn you will now see a unallocated section within the drive matching the size you chose.
+  - You can always shrink the drive more later or reallocate the volumn back to Windows.
+
+#### <sup>Option 2:</sup> Step 6 - Booting from the USB
 - Restart your computer and enter your BIO settings (use ESC, F8, F9, F10, F12).
 - Enable USB Boot.
 - Change your UEFI Boot Order so that the USB device is the primary (first) in the boot list.
 - Disable Secure Boot.
 - Save the changes and reboot the computer.
 
-#### <sup>Option 2:</sup> Step 6 - CLI/GUI Environment
+#### <sup>Option 2:</sup> Step 7 - CLI/GUI Environment
 Now you will be in a CLI Environment or GUI. Move onto the next section [Distributions](#Distributions).
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
