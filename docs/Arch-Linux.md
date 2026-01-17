@@ -20,13 +20,11 @@
  <summary>Expand Table Here</summary>
   
   - [Arch-based Distributions](#Arch-based-Distributions)
-  - [Installation](#Installation)
-    - [Bare Metal or Virtual Machine](#Bare-Metal-or-Virtual-Machine)
-    - [Arch Linux Install Process](#Arch-Linux-Install-Process)
+  - [Arch Linux Install Process](#Arch-Linux-Install-Process)
     - [chroot Environment](#chroot-Environment)
     - [Fix Discover app backend](#Fix-Discover-app-backend)
-  - [Tweaks and Improvements](Tweaks-and-Improvements)
-  - [Themes](#Themes)
+    - [Tweaks and Improvements](Tweaks-and-Improvements)
+    - [Themes](#Themes)
   - [Guides](#Guides)
   - [Miscellaneous](#Miscellaneous)
 </details>
@@ -48,92 +46,9 @@ This list is OS distributions which are derived from Arch Linux either in whole 
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
-<h1 align="center">Installation</h1>
-
-<h2 align="center">Bare Metal or Virtual Machine</h2>
-
-### Option 1: Virtual Machine
-This option is best for experimenting without needing to partition or format any storage devices.
-
-#### Step 1 - Picking VM Software
-Pick a virtualisation software you wish to run Linux in, below are a few options:
-- [VMWare Workstation Pro](https://www.broadcom.com/)
-    1. Go to [broadcom.com](https://www.broadcom.com/).
-    1. In the upper right corner, select 'Support Portal'.
-    1. Either log in by clicking 'Go To Portal' or '[Register](https://profile.broadcom.com/web/registration)'.
-    1. Once logged in, go to [support.broadcom.com](http://support.broadcom.com/) if you're not redirected there.
-    1. Click the dropdown at the top right to choose the VMware Cloud Foundation.
-    1. Click 'My Downloads'
-    1. The click 'Free Software Downloads available HERE'.
-    1. Click the product name (VMware Fusion or VMware Workstation Pro).
-    1. Pick your operating system.
-    1. Pick the version of the software you want. E.g. 17.6.3
-    1. Finally download and install
-
-
-- [Microsoft Hyper-V (Requires Windows Pro License)](https://techcommunity.microsoft.com/blog/educatordeveloperblog/step-by-step-enabling-hyper-v-for-use-on-windows-11/3745905)
-- [VirtualBox](https://www.virtualbox.org/)
-- [QEMU](https://www.qemu.org/download/)
-
-#### Step 2 - Download ISO
-Download the Arch Linux ISO file from the offcial website only which can be found [here](https://archlinux.org/download/). Make sure you pick a region near you.
-
-#### Step 3 - Setuping up a virtual machine
-I'm using the [VMWare Workstation Pro](https://www.broadcom.com/) software so this section will talk you through how to use it, if you're using something else then your steps will vary.
-
-- Click File
-- Click New Virtual Machine (Ctrl + N)
-- Stay with the 'Typical (recommended) option and press next.
-- Select 'Installer disc image file (iso)' and pick the ISO file you just downloaded, then press next.
-- Select Linux for the Guest operating system then press next. 
-- Give it any name you'd like and leave the location as default.
-- Leave the disk capacity as 'split virtual disk into multiple files' then press next.
-- You can optionally customize hardware but this will depend on your computer specs. The more resources you allocate the better the virtual machine will run depending on what you're doing on it but don't allocate everything as your Windows system requires resources too.
-- Finally press finish.
-
-#### Step 4 - Start virtual machine
-Start the virtual machine and move onto the next section [Arch Linux Install Process](#Arch-Linux-Install-Process)
-
-### Option 2: Bare Metal
-
-This option is best for daily use and without the overhead of using a virtual machine.
-
-Here you will need to either have a dedicate storage device or partition an existing one to install Arch Linux onto.
-
-#### Step 1 - USB Drive
-Make sure that you have an 8GB or higher USB key/pendrive/memory stick and connect it to your computer.
-
-#### Step 2 - Picking a USB Formatting Utility Software
-Pick a USB formatting utility you wish to use to create a bootable USB flash drive, below are a few options:
-- [balenaEtcher](https://etcher.balena.io/)
-- [Rufus](https://rufus.ie/en/)
-- [Ventoy](https://www.ventoy.net/en/index.html)
-
-#### Step 3 - Download ISO
-Download the Arch Linux ISO file from the offcial website only which can be found [here](https://archlinux.org/download/). Make sure you pick a region near you.
-
-#### Step 4 - Formatting USB
-- Launch balenaEtcher or Rufus.
-- Select your USB device.
-- Select the Arch Linux ISO you just downloaded.
-- Leave the settings as they are.
-- Then start formatting the USB device.
-
-#### Step 5 - Booting from the USB
-- Restart your computer and enter your BIO settings (use ESC, F8, F9, F10, F12).
-- Enable USB Boot.
-- Change your UEFI Boot Order so that the USB device is the primary (first) in the boot list.
-- Disable Secure Boot.
-- Save the changes and reboot the computer.
-
-#### Step 6 - CLI Environment
-You will now be in the CLI Environment, move onto the next section [Arch Linux Install Process](#Arch-Linux-Install-Process)
-
-![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
-
 <h2 align="center">Arch Linux Install Process</h2>
 
-Now we will be going through the install process of Arch Linux, follow the steps below.
+Now we will be going through the install process of Arch Linux, you should be in a CLI Environment to be able to follow the steps below.
  
 > [!TIP]
 > To increase the font size type the command `setfont ter-132n`.
