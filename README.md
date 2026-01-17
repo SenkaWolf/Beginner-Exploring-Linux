@@ -178,6 +178,7 @@ Click the distro name to go to the guide or download to be taken straight to the
 
 - [Arch](/docs/Arch-Linux.md) <sup>|[Download](https://archlinux.org/download/)|</sup>
 - [CachyOS]() <sub>Coming Soon</sub>
+- [Fedora]() <sub>Coming Soon</sub>
 - [Mint]() <sub>Coming Soon</sub>
 - [Nobara]() <sub>Coming Soon</sub>
 - [openSUSE Tumbleweed](/docs/openSUSE-Tumbleweed.md) <sup>|[Download](https://get.opensuse.org/tumbleweed/#download)|</sup>
