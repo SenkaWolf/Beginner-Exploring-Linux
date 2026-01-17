@@ -20,7 +20,8 @@
   - [Beginner Exploring Arch Linux](#Beginner-Exploring-Arch-Linux)
     - [Getting Started](#Getting-Started)
     - [Support and Feedback](#Support-and-Feedback)
-  - Installation
+  - [Arch-based Distributions](#Arch-based-Distributions)
+  - [Installation](#Installation)
     - [Bare Metal or Virtual Machine](#Bare-Metal-or-Virtual-Machine)
     - [Arch Linux Install Process](#Arch-Linux-Install-Process)
     - [chroot Environment](#chroot-Environment)
@@ -51,6 +52,23 @@ Anything to do with the terminal (konsole) will be within fenced code blocks thr
 Unless specified any steps which require confirmation with a 'y' or 'n' always confirm it with 'y'.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Arch-Linux/blob/main/media/line.png?raw=true)
+
+<h1 align="center">Arch-based Distributions</h1>
+
+This list is OS distributions which are derived from Arch Linux either in whole or in part. The version you use is down to preference, taste in distros and use case.
+   
+<sub>In alphabetical order.<sub>
+
+- [Arch Linux](https://archlinux.org)
+- [EndeavourOS](https://endeavouros.com/)
+- [Garuda Linux](https://garudalinux.org/) - Targeted towards gaming however does bring alot of bloat and not recommended for low end computers.
+- [Manjaro](https://manjaro.org/)
+- [XeroLinux](https://xerolinux.xyz/) - Simplies installation process and offers pre-configured environments that serve as an elegant but functional starting point for users.
+
+
+![---](https://github.com/senkawolf/Beginner-Exploring-Arch-Linux/blob/main/media/line.png?raw=true)
+
+<h1 align="center">Installation</h1>
 
 <h2 align="center">Bare Metal or Virtual Machine</h2>
 
@@ -133,6 +151,7 @@ You will now be in the CLI Environment, move onto the next section [Arch Linux I
 ![---](https://github.com/senkawolf/Beginner-Exploring-Arch-Linux/blob/main/media/line.png?raw=true)
 
 <h2 align="center">Arch Linux Install Process</h2>
+
 Now we will be going through the install process of Arch Linux, follow the steps below.
  
 > [!TIP]
@@ -218,6 +237,7 @@ Now we will be going through the install process of Arch Linux, follow the steps
 ![---](https://github.com/senkawolf/Beginner-Exploring-Arch-Linux/blob/main/media/line.png?raw=true)
 
 <h2 align="center">chroot Environment</h2>
+
 Now we are in the chroot environment where we can install useful tools before booting into the desktop environment. These tools are optional, the tools are separated by spaces in the below command.
 
 ```console
@@ -374,6 +394,7 @@ My setup uses the [Vivid Dark Global 6](https://store.kde.org/p/2133856) theme. 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Arch-Linux/blob/main/media/line.png?raw=true)
 
 <h1 align="center">Guides</h1>
+
 > [!CAUTION]
 > All links here unless specified are NOT affiliated with me.
 
