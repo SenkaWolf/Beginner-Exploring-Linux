@@ -21,7 +21,8 @@
   
   - [openSUSE-based Distributions](#openSUSE-based-Distributions)
   - [openSUSE Tumbleweed Install Process](#openSUSE-Tumbleweed-Install-Process)
-        - [Tweaks and Improvements](Tweaks-and-Improvements)
+        - [Troubleshooting](#Troubleshooting)
+        - [Tweaks and Improvements](#Tweaks-and-Improvements)
   - [Guides](#Guides)
   - [Miscellaneous](#Miscellaneous)
 </details>
@@ -72,6 +73,17 @@ Now we will be going through the install process of openSUSE Tumbleweed, this wi
 - On the Installation Settings overview page make sure that "Secure Boot" is enabled. It should be by default but it is recommended to double check!
 - Now install the operating system.
 - Once it restarts remove the USB key/pendrive/memory stick.
+
+![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
+
+<h2 align="center">Troubleshooting</h2>
+
+#### Install hanging on "Starting udev"
+If the installer gets stuck on `Starting udev...`, reboot your PC and restart the install following the above steps.
+
+When you get to the GRUB menu during the boot process you will need to edit the boot parameters. This can be done by highlighting the boot entry, pressing "e" to edit, finding the line starting with `linux` and adding `nomodeset` at the end of that line. 
+
+Then press Ctrl + X or F10 to contuniue.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
