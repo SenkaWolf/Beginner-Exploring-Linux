@@ -81,9 +81,9 @@ Now we will be going through the install process of openSUSE Tumbleweed, this wi
 #### Install hanging on "Starting udev"
 If the installer gets stuck on `Starting udev...`, reboot your PC and restart the install following the above steps.
 
-When you get to the GRUB menu during the boot process you will need to edit the boot parameters. This can be done by highlighting the boot entry, pressing "e" to edit, finding the line starting with `linux` and adding `nomodeset` at the end of that line. 
+When you get to the GRUB menu during the boot process you will need to edit the boot parameters. This can be done by highlighting the boot entry, pressing "e" to edit, finding the line starting with `linux` and adding `nomodeset` at the end of that line.
 
-Then press Ctrl + X or F10 to contuniue.
+Then press Ctrl + X or F10 to continue.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
