@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="../media/cachyos.png" />
+<img src="../media/logos/cachyos.png" />
 
 <br>
 

@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="../media/archlogo.png" />
+<img src="../media/logos/archlogo.png" />
 
 <br>
 
@@ -313,4 +313,4 @@ My setup uses the [Vivid Dark Global 6](https://store.kde.org/p/2133856) theme. 
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
-**[![ ](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/up25.png) Back to Top](#Table-of-Contents)**
+**[![ ](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/icons/up25.png) Back to Top](#Table-of-Contents)**

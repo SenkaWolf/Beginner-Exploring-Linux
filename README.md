@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./media/linuxlogo.png" />
+<img src="./media/logos/linuxlogo.png" />
 
 <br>
 
@@ -43,7 +43,7 @@ Anything to do with the terminal (konsole) will be within fenced code blocks thr
 
 Unless specified any steps which require confirmation with a 'y' or 'n' always confirm it with 'y'.
 
-If there are multiple options, I’ll indicate my preferred choice with a star ![Star](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/star14.png?raw=true). Feel free to choose differently.
+If there are multiple options, I’ll indicate my preferred choice with a star ![Star](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/icons/star14.png?raw=true). Feel free to choose differently.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
@@ -58,7 +58,7 @@ This option is best for experimenting without needing to partition or format any
 
 #### <sup>Option 1:</sup> Step 1 - Picking VM Software
 Pick a virtualisation software you wish to run Linux in, below are a few options:
-- [VMWare Workstation Pro](https://www.broadcom.com/) ![Star](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/star14.png?raw=true)
+- [VMWare Workstation Pro](https://www.broadcom.com/) ![Star](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/icons/star14.png?raw=true)
 - [Microsoft Hyper-V (Requires Windows Pro License)](https://techcommunity.microsoft.com/blog/educatordeveloperblog/step-by-step-enabling-hyper-v-for-use-on-windows-11/3745905)
 - [VirtualBox](https://www.virtualbox.org/)
 - [QEMU](https://www.qemu.org/download/)
@@ -73,9 +73,9 @@ Pick a virtualisation software you wish to run Linux in, below are a few options
 5. Scroll down the page and to go '[VMware Workstation Pro](https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Workstation%20Pro&freeDownloads=true)'
 6. Then select the latest version then select the latest release.
 7. You will now see a screen with '☐ I agree to the [Terms and Conditions](https://www.broadcom.com/company/legal/licensing)' you can't tick this until you have opened the Terms and Conditions page. Click the link and they will open in a new tab. Close the tab and you will now be able to tick the Terms and Conditions.
-8. Now you will be able to click the download button (cloud icon ![Broadcoom download icon](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/broadcoom-download-icon.png?raw=true)).
+8. Now you will be able to click the download button (cloud icon ![Broadcoom download icon](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/icons/broadcoom-download-icon.png?raw=true)).
 9. You will then get a popup stating additional verification is required. Click yes then fill in the form.
-10. You will be returned to the previous page. Press the download button (cloud icon ![Broadcoom download icon](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/broadcoom-download-icon.png?raw=true)) again and now the download will begin.
+10. You will be returned to the previous page. Press the download button (cloud icon ![Broadcoom download icon](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/icons/broadcoom-download-icon.png?raw=true)) again and now the download will begin.
 11. <span style="color: #E74C3C;"><b>Before installing the exe file move onto the next section!</b></span>
 
 ---
@@ -98,7 +98,7 @@ To do this:
 ##### BIOS
 Ensure you have CPU Virtualisation enabled in your BIOS, check this by:
 1. Opening Task Manager by right clicking your taskbar.
-2. Go to the ![Performance Icon](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/windows-performance-icon.png?raw=true) performance tab.
+2. Go to the ![Performance Icon](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/icons/windows-performance-icon.png?raw=true) performance tab.
 3. Under CPU it should say Virtualisation followed by enabled or disabled. If it is enabled you don't need to do anything however if it is disabled continue with the steps.
 4. Restart your PC and access your BIOS.
 5. In the BIOS you need to look for either of the following:
@@ -144,7 +144,7 @@ Make sure that you have an 8GB or higher USB key/pendrive/memory stick and conne
 Pick a USB formatting utility you wish to use to create a bootable USB flash drive, below are a few options:
 - [balenaEtcher](https://etcher.balena.io/)
 - [Rufus](https://rufus.ie/en/)
-- [Ventoy](https://www.ventoy.net/en/index.html) ![Star](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/star14.png?raw=true)
+- [Ventoy](https://www.ventoy.net/en/index.html) ![Star](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/icons/star14.png?raw=true)
 
 #### <sup>Option 2:</sup> Step 3 - Download ISO
 Download the ISO file for the Linux distro of your choice. Use the [Distributions](#Distributions) section for ones I have explored.
@@ -194,4 +194,4 @@ Click the distro name to go to the guide or download to be taken straight to the
 - [Nobara]() <sup>Coming Soon</sup>
 - [openSUSE Tumbleweed](/docs/openSUSE-Tumbleweed.md) <sup>|[Download](https://get.opensuse.org/tumbleweed/#download)|</sup>
 
-**[![ ](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/up25.png) Back to Top](#Table-of-Contents)**
+**[![ ](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/icons/up25.png) Back to Top](#Table-of-Contents)**

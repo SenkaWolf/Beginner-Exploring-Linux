@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="../media/openSUSE.png" />
+<img src="../media/logos/openSUSE.png" />
 
 <br>
 
@@ -138,4 +138,4 @@ $ sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
-**[![ ](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/up25.png) Back to Top](#Table-of-Contents)**
+**[![ ](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/icons/up25.png) Back to Top](#Table-of-Contents)**
