@@ -39,7 +39,12 @@ Now we will be going through the install process of CachyOS, this will feel very
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
 <h2 align="center">Software</h2>
-
+Run the following commands in each section:
+- Firmware: `sudo pacman -Sy`
+- Tools: `sudo pacman -Sy flatpak yay zen-browser code git qbittorrent mythes-en`
+- Social: `sudo pacman -Sy discord`
+- Creative: `sudo pacman -Sy obs-studio krita`
+- Office: `sudo pacman -Sy wps-office`
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
