@@ -40,6 +40,7 @@ Now we will be going through the install process of CachyOS, this will feel very
 
 <h2 align="center">Software</h2>
 Run the following commands in each section:
+
 - Firmware: `sudo pacman -Sy`
 - Tools: `sudo pacman -Sy flatpak yay zen-browser code git qbittorrent mythes-en`
 - Social: `sudo pacman -Sy discord`
@@ -53,6 +54,14 @@ Run the following commands in each section:
 #### Configure Fastfetch <sup>[GitHub](https://github.com/fastfetch-cli/fastfetch)</sup>
 In the `../files/fastfetch` folder copy the config and the logo to `~/.config/fastfetch/`. You might need to create the folder using `fastfetch --gen-config` or just `mkdir`.
 
+---
+
+#### Automatic package cache cleaning <sup>[Wiki](https://wiki.archlinux.org/title/Pacman#Cleaning_the_package_cache)</sup>
+Downloading package updates can take up a large amount of space over time, this will automatically clear the cache for you. The below instructions will clear the cache weekly but leave 3 of the most recent versions of each package incase you need to downgrade anything.
+
+```console
+$ sudo systemctl enable paccache.timer
+```
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
