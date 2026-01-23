@@ -14,6 +14,17 @@
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
+## Table of Contents
+<details>
+ <summary>Expand Table Here</summary>
+
+  - [Arch Package Installation Basics](#Arch-Package-Installation-Basics)
+    - [Package installation Basics](#Package-Installation-Basics)
+    - [Package Management Choices](#Package-Management-Choices)
+</details>
+
+![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
+
 <h1 align="center">Arch Package Installation Basics</h1>
 
 This document explains the package installation commands used in my setup guides or personal setups.
@@ -22,7 +33,7 @@ I prefer to use pacman where possible to install packages however there are othe
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
-<h2 align="center">Package installation Basics</h2>
+<h2 align="center">Package Installation Basics</h2>
 Below is a breakdown of how the command works for installing packages:
 
 ```console
