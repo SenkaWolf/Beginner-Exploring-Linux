@@ -94,4 +94,4 @@ While Arch Linux provides multiple ways to install software, my setups primarily
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
-**[![ ](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/up25.png) Back to Top](#Table-of-Contents)**
+**[![ ](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/icons/up25.png) Back to Top](#Table-of-Contents)**
