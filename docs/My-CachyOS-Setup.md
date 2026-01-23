@@ -42,10 +42,12 @@ Now we will be going through the install process of CachyOS, this will feel very
 Run the following commands in each section:
 
 - Firmware: `sudo pacman -Sy`
-- Tools: `sudo pacman -Sy flatpak yay zen-browser code git qbittorrent mythes-en`
+- Tools: `sudo pacman -Sy flatpak yay zen-browser code git github-cli qbittorrent mythes-en ghostty`
 - Social: `sudo pacman -Sy discord`
 - Creative: `sudo pacman -Sy obs-studio krita`
 - Office: `sudo pacman -Sy wps-office`
+
+If you'd like a explanation on the code above or what each package is go [here](../docs/Arch-Package-Installation-Basics.md).
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 

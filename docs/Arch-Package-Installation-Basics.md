@@ -1,0 +1,86 @@
+**[![ ](https://github.com/senkawolf/Software-List/blob/main/media/icons/prev25.png?raw=true) Back](/README.md)**
+
+<div align="center">
+
+<img src="../media/logos/cachyos.png" />
+
+<br>
+
+[![Author](https://img.shields.io/badge/Author-Senka_Wolf-4044ee?style=for-the-badge)](https://github.com/silentz)
+[![License](https://img.shields.io/badge/License-Apache--2.0-blue?style=for-the-badge)](./LICENSE.md)
+![GitHub last commit](https://img.shields.io/github/last-commit/senkawolf/Software-List?style=for-the-badge)
+
+</div>
+
+![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
+
+<h1 align="center">Arch Package Installation Basics</h1>
+
+This document explains the package installation commands used in my setup guides or personal setups.
+
+I prefer to use pacman where possible to install packages however there are other options which I will outline further down the document.
+
+![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
+
+<h2 align="center">Package installation Basics</h2>
+Below is a breakdown of how the command works for installing packages:
+
+```console
+sudo pacman -Sy <packages>
+```
+- `sudo` - run the command with administrator privileges
+- `pacman` - Arch Linux’s package manager
+- `-S` - install packages
+- `-y` - synchronize (refresh) the package database
+- `<packages>` - one or more package names to install
+
+> Any word appearing after -Sy is a package name. These can be replaced with any software you want to install.
+> Multiple packages can be installed in a single command by listing them separated by spaces.
+
+### Common packages
+
+| Package | Description |
+| --- | --- |
+| `flatpak` | Universal, sandboxed application framework. |
+| `yay` | AUR helper for installing packages from the Arch User Repository. |
+| `zen-browser` | Minimalist web browser. |
+| `code` | Visual Studio Code editor. |
+| `git` | Distributed version control system. |
+| `github-cli` | GitHub command-line interface (gh). |
+| `qbittorrent` | Lightweight BitTorrent client. |
+| `mythes-en` | English thesaurus files (used by office applications). |
+| `ghostty` | GPU-accelerated terminal emulator. |
+| `discord` | Voice, video, and text communication platform. |
+| `obs-studio` | Screen recording and live streaming software. |
+| `krita` | Digital painting and illustration application. |
+| `wps-office` | Office suite compatible with Microsoft Office formats. |
+
+![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
+
+<h2 align="center">Package Management Choices</h2>
+While Arch Linux provides multiple ways to install software, my setups primarily uses `pacman`, the native Arch package manager. Other options like AUR helpers (`yay`) and Flatpak exist, but `pacman` is preferred for core tools and system software.
+
+### Why `pacman`?
+- Native and officially supported – packages come directly from Arch maintainers.
+- Predictable and consistent – integrates cleanly with the system and updates reliably.
+- Simpler system state – avoids duplicate libraries or parallel runtimes.
+- Easier troubleshooting – most Arch documentation assumes pacman-managed software.
+
+### Alternatives
+- AUR helpers (`yay`) - I use only for packages unavailable in the official repos. It does offers access to a larger set of software, but packages are user-maintained and require building from source.
+- Flatpak – It is sandboxed applications with bundled dependencies. Useful for desktop apps that need isolation, but less native integration and higher disk usage.
+
+#### Quick Comparison: Pacman vs AUR vs Flatpak
+| Feature | Pacman | AUR (via `yay`) | Flatpak |
+| --- | --- | --- | --- |
+| **Source** | Official Arch repos | Arch User Repository (community) | Flatpak remote repositories |
+| **Trust level** | High (maintainer-reviewed) | Medium (user-maintained) | High (sandboxed) |
+| **System integration** | Full | Full | Partial (sandboxed) |
+| **Updates** | `pacman -Syu` | `yay -Syu` | `flatpak update` |
+| **Disk usage** | Minimal | Minimal | Larger (bundled runtimes) |
+| **Use case in this setup** | Core tools & system software | Packages not in official repos | Optional desktop apps with sandboxing |
+| **Ease of troubleshooting** | Easy | Moderate | Moderate |
+
+![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
+
+**[![ ](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/up25.png) Back to Top](#Table-of-Contents)**
