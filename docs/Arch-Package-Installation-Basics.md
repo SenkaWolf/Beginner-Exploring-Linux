@@ -25,7 +25,7 @@ I prefer to use pacman where possible to install packages however there are othe
 <h2 align="center">Package installation Basics</h2>
 Below is a breakdown of how the command works for installing packages:
 
-```console
+```bash
 sudo pacman -Sy <packages>
 ```
 - `sudo` - run the command with administrator privileges
