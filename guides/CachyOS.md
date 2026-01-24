@@ -36,6 +36,12 @@ Now we will be going through the install process of CachyOS, this will feel very
 
 <h2 align="center">Troubleshooting</h2>
 
+#### VM Install - Asking for liveuser password
+When booting from a USB media to instal CachyOS on a virtual machine you may be greeted by the below screen.
+
+![Live User Login Screen Screenshot](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/CachyOS-liveuser-Login.png?raw=true)
+
+CachyOS doesn't set passwords by default and there is no password. To get past the login screen switch your session to wayland then press enter with no password inputted and this will take you to the live desktop.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
