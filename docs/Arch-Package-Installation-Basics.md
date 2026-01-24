@@ -54,6 +54,7 @@ sudo pacman -Sy <packages>
 | --- | --- |
 | `flatpak` | Universal, sandboxed application framework. |
 | `yay` | AUR helper for installing packages from the Arch User Repository. |
+| `cachy-update` | Update notifier & applier for CachyOS. |
 | `zen-browser` | Minimalist web browser. |
 | `code` | Visual Studio Code editor. |
 | `git` | Distributed version control system. |

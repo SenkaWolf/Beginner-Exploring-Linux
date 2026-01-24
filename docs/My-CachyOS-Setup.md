@@ -42,7 +42,7 @@ Now we will be going through the install process of CachyOS, this will feel very
 Run the following commands in each section:
 
 - Firmware: `sudo pacman -Sy`
-- Tools: `sudo pacman -Sy flatpak yay zen-browser code git github-cli qbittorrent mythes-en ghostty`
+- Tools: `sudo pacman -Sy flatpak yay cachy-update zen-browser code git github-cli qbittorrent mythes-en ghostty`
 - Social: `sudo pacman -Sy discord`
 - Creative: `sudo pacman -Sy obs-studio krita`
 - Office: `sudo pacman -Sy wps-office`
@@ -52,6 +52,16 @@ If you'd like a explanation on the code above or what each package is go [here](
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
 <h2 align="center">Tweaks & Configs</h2>
+
+#### CachyOS Update Config <sup>[GitHub](https://github.com/CachyOS/cachy-update)</sup>
+Once CachyOS Update is installed you should start it automatically at boot using the following command.
+
+```console
+$ arch-update --tray --enable
+```
+> [!NOTE]
+> If you have used the CachyOS Hello GUI and checked "Cachy Update enabled" you don't need to follow this setup.
+> ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/CachyOS-Hello.png?raw=true)
 
 #### Configure Fastfetch <sup>[GitHub](https://github.com/fastfetch-cli/fastfetch)</sup>
 In the `../files/fastfetch` folder copy the config and the logo to `~/.config/fastfetch/`. You might need to create the folder using `fastfetch --gen-config` or just `mkdir`.
@@ -64,7 +74,7 @@ Downloading package updates can take up a large amount of space over time, this 
 $ sudo systemctl enable paccache.timer
 ```
 
-#### GitHub CLI Setup <sup>[Wiki](https://cli.github.com/manual/)</sup>
+#### GitHub CLI Setup <sup>[Manual](https://cli.github.com/manual/)</sup>
 
 Run the command:
 ```console
