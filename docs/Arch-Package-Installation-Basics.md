@@ -62,6 +62,7 @@ sudo pacman -Sy <packages>
 | `qbittorrent` | Lightweight BitTorrent client. |
 | `mythes-en` | English thesaurus files (used by office applications). |
 | `ghostty` | GPU-accelerated terminal emulator. |
+| `gparted` | Partition manager. |
 | `discord` | Voice, video, and text communication platform. |
 | `obs-studio` | Screen recording and live streaming software. |
 | `krita` | Digital painting and illustration application. |
