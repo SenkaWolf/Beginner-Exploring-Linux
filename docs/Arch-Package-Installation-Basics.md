@@ -66,6 +66,8 @@ sudo pacman -Sy <packages>
 | `obs-studio` | Screen recording and live streaming software. |
 | `krita` | Digital painting and illustration application. |
 | `wps-office` | Office suite compatible with Microsoft Office formats. |
+| `cachyos-gaming-meta` | This meta-package includes all necessary gaming libraries and dependencies. |
+| `cachyos-gaming-applications` | This package contains tools and launchers like Steam, Lutris, and others. |
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 

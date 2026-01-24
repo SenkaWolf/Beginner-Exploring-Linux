@@ -46,6 +46,7 @@ Run the following commands in each section:
 - Social: `sudo pacman -Sy discord`
 - Creative: `sudo pacman -Sy obs-studio krita`
 - Office: `sudo pacman -Sy wps-office`
+- Gaming: `sudo pacman -Sy cachyos-gaming-meta cachyos-gaming-applications`
 
 If you'd like a explanation on the code above or what each package is go [here](../docs/Arch-Package-Installation-Basics.md).
 
@@ -61,7 +62,7 @@ $ arch-update --tray --enable
 ```
 > [!NOTE]
 > If you have used the CachyOS Hello GUI and checked "Cachy Update enabled" you don't need to follow this setup.
-> ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/CachyOS-Hello.png?raw=true)
+> ![Cachy Hello Screenshot](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/CachyOS-Hello-Cachy-Update.png?raw=true)
 
 #### Configure Fastfetch <sup>[GitHub](https://github.com/fastfetch-cli/fastfetch)</sup>
 In the `../files/fastfetch` folder copy the config and the logo to `~/.config/fastfetch/`. You might need to create the folder using `fastfetch --gen-config` or just `mkdir`.
