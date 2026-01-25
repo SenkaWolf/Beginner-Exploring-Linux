@@ -194,4 +194,18 @@ Click the distro name to go to the guide or download to be taken straight to the
 - [Nobara]() <sup>Coming Soon</sup>
 - [openSUSE Tumbleweed](/guides/openSUSE-Tumbleweed.md) <sup>|[Download](https://get.opensuse.org/tumbleweed/#download)|</sup>
 
+![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
+
+<h1 align="center">Documents</h1>
+
+Here is a list of documents for a variety of things such as my setups, explantations of Linux features and guides on how to use specific software. 
+
+<sub>In alphabetical order.</sub>
+
+- [Arch Package Installttion Basics](/docs/Arch-Package-Installation-Basics.md)
+- [Managing Dotfiles](/docs/Managing-Dotfiles.md)
+- [My CachyOS Setup](/docs/My-CachyOS-Setup.md)
+
+![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
+
 **[![ ](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/icons/up25.png) Back to Top](#Table-of-Contents)**
