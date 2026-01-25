@@ -64,11 +64,13 @@ sudo pacman -Sy <packages>
 | `mythes-en` | English thesaurus files (used by office applications). |
 | `ghostty` | GPU-accelerated terminal emulator. |
 | `htop` |  CPU process viewer. |
+| `btop` |  CPU process viewer. |
 | `gparted` | Partition manager. |
 | `discord` | Voice, video, and text communication platform. |
 | `obs-studio` | Screen recording and live streaming software. |
 | `krita` | Digital painting and illustration application. |
 | `wps-office` | Office suite compatible with Microsoft Office formats. |
+| `vlc` | Media player. |
 | `cachyos-gaming-meta` | This meta-package includes all necessary gaming libraries and dependencies. |
 | `cachyos-gaming-applications` | This package contains tools and launchers like Steam, Lutris, and others. |
 
