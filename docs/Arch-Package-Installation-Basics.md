@@ -59,6 +59,7 @@ sudo pacman -Sy <packages>
 | `code` | Visual Studio Code editor. |
 | `git` | Distributed version control system. |
 | `github-cli` | GitHub command-line interface (gh). |
+| `stow` | [Symlink farm manager](https://www.gnu.org/software/stow/manual/). |
 | `qbittorrent` | Lightweight BitTorrent client. |
 | `mythes-en` | English thesaurus files (used by office applications). |
 | `ghostty` | GPU-accelerated terminal emulator. |
