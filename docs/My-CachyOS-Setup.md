@@ -64,6 +64,18 @@ $ arch-update --tray --enable
 > If you have used the CachyOS Hello GUI and checked "Cachy Update enabled" you don't need to follow this setup.
 > ![Cachy Hello Screenshot](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/CachyOS-Hello-Cachy-Update.png?raw=true)
 
+#### Number Lock on startup <sup>[GitHub](https://wiki.archlinux.org/title/Activating_numlock_on_bootup#KDE_Plasma)</sup>
+
+Eiter run the below command or navigate to System Settings > Keyboard.
+
+```console
+$ systemsettings kcm_keyboard
+```
+
+![KDE Plasma Keyboard System Settings Screenshot](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/KDE-Plasma-Keyboard-System-Settings.png?raw=true)
+
+Then change NumLock on startup to Turn On.
+
 #### Configure Fastfetch <sup>[GitHub](https://github.com/fastfetch-cli/fastfetch)</sup>
 In the `../files/fastfetch` folder copy the config and the logo to `~/.config/fastfetch/`. You might need to create the folder using `fastfetch --gen-config` or just `mkdir`.
 
@@ -87,6 +99,10 @@ $ git config --global user.email "senkawolf@example.com"
 $ git config --global user.name "SenkaWolf"
 $ git config --global init.defaultBranch main
 ```
+
+![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
+
+<h2 align="center">Tweaks & Configs</h2>
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
