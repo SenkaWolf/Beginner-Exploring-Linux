@@ -87,6 +87,8 @@ Downloading package updates can take up a large amount of space over time, this 
 $ sudo systemctl enable paccache.timer
 ```
 
+---
+
 #### GitHub CLI Setup <sup>[Manual](https://cli.github.com/manual/)</sup>
 
 Run the command:
@@ -102,7 +104,25 @@ $ git config --global init.defaultBranch main
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
-<h2 align="center">Tweaks & Configs</h2>
+<h2 align="center">Visuals</h2>
+
+#### Custom Cursor Theme <sup>[Arch Wiki](https://wiki.archlinux.org/title/Cursor_themes)</sup>
+
+Find a cursor pack you like from [here](). I like [Future-dark cursors](https://store.kde.org/p/1457884) so I will use this.
+
+Download the file then extract/unzip the file and ensure it follows the below layout:
+
+```
+📦 Future-dark-cursors
+├─ cursors
+└─ index.theme
+```
+If this looks correct then run the following commands to move the file and open system settings:
+```console
+$ mv ~/Downloads/Future-dark-cursors ~/.local/share/icons/
+$ systemsettings
+```
+Then navigate to Colours & Themes > Cursors and then select the one you just installed.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
