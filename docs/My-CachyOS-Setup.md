@@ -64,7 +64,7 @@ $ arch-update --tray --enable
 > If you have used the CachyOS Hello GUI and checked "Cachy Update enabled" you don't need to follow this setup.
 > ![Cachy Hello Screenshot](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/CachyOS-Hello-Cachy-Update.png?raw=true)
 
-#### Number Lock on startup <sup>[GitHub](https://wiki.archlinux.org/title/Activating_numlock_on_bootup#KDE_Plasma)</sup>
+#### Number Lock on startup <sup>[Arch Wiki](https://wiki.archlinux.org/title/Activating_numlock_on_bootup#KDE_Plasma)</sup>
 
 Eiter run the below command or navigate to System Settings > Keyboard.
 
