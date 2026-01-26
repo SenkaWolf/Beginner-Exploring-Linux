@@ -108,7 +108,7 @@ $ git config --global init.defaultBranch main
 
 #### Custom Cursor Theme <sup>[Arch Wiki](https://wiki.archlinux.org/title/Cursor_themes)</sup>
 
-Find a cursor pack you like from [here](). I like [Future-dark cursors](https://store.kde.org/p/1457884) so I will use this.
+Find a cursor pack you like from [here](https://store.kde.org/browse?cat=107&ord=latest). I like [Future-dark cursors](https://store.kde.org/p/1457884) so I will use this.
 
 Download the file then extract/unzip the file and ensure it follows the below layout:
 
