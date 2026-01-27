@@ -39,7 +39,7 @@ Now we will be going through the install process of CachyOS, this will feel very
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
 <h2 align="center">Software</h2>
-Run the following commands in each section:
+Run the following commands in each section using pacman:
 
 - Firmware: `sudo pacman -Sy`
 - Tools: `sudo pacman -Sy flatpak yay cachy-update zen-browser code git github-cli stow qbittorrent mythes-en ghostty htop btop gparted openrgb`
@@ -49,6 +49,14 @@ Run the following commands in each section:
 - Gaming: `sudo pacman -Sy cachyos-gaming-meta cachyos-gaming-applications`
 
 If you'd like a explanation on the code above or what each package is go [here](../docs/Arch-Package-Installation-Basics.md).
+
+### Other install methods:
+
+#### OpenDeck <sup>[GitHub](https://github.com/nekename/OpenDeck)</sup>
+```console
+bash -c 'bash <(curl -sSL https://raw.githubusercontent.com/nekename/OpenDeck/main/install_opendeck.sh)'
+```
+Then when you see AUR Explicit/PKGBUILD section type `A` then for deleting select `N`.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
