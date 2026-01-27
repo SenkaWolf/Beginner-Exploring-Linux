@@ -54,9 +54,21 @@ If you'd like a explanation on the code above or what each package is go [here](
 
 #### OpenDeck <sup>[GitHub](https://github.com/nekename/OpenDeck)</sup>
 ```console
-bash -c 'bash <(curl -sSL https://raw.githubusercontent.com/nekename/OpenDeck/main/install_opendeck.sh)'
+$ paru --version
+$ paru -S opendeck-bin
+$ sudo usermod -aG uucp,input $USER #Appendix
+$ sudo udevadm control --reload-rules
+$ sudo udevadm trigger
 ```
-Then when you see AUR Explicit/PKGBUILD section type `A` then for deleting select `N`.
+Appendix: This is important due to streamdeck being a HID device.
+- uucp → raw USB device access
+- input → HID devices (Stream Deck is HID)
+
+> [!NOTE]
+> You can use this method but I recommend the above.
+> ```console
+> $ bash -c 'bash <(curl -sSL https://raw.githubusercontent.com/nekename/OpenDeck/main/install_opendeck.sh)'
+> ```
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
