@@ -42,7 +42,7 @@ Now we will be going through the install process of CachyOS, this will feel very
 Run the following commands in each section:
 
 - Firmware: `sudo pacman -Sy`
-- Tools: `sudo pacman -Sy flatpak yay cachy-update zen-browser code git github-cli stow qbittorrent mythes-en ghostty htop btop gparted`
+- Tools: `sudo pacman -Sy flatpak yay cachy-update zen-browser code git github-cli stow qbittorrent mythes-en ghostty htop btop gparted openrgb`
 - Social: `sudo pacman -Sy discord`
 - Creative: `sudo pacman -Sy obs-studio krita`
 - Office: `sudo pacman -Sy wps-office vlc`

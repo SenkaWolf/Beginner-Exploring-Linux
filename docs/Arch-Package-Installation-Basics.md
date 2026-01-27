@@ -66,6 +66,7 @@ sudo pacman -Sy <packages>
 | `htop` |  CPU process viewer. |
 | `btop` |  CPU process viewer. |
 | `gparted` | Partition manager. |
+| `openrgb` | RGB lighting control. |
 | `discord` | Voice, video, and text communication platform. |
 | `obs-studio` | Screen recording and live streaming software. |
 | `krita` | Digital painting and illustration application. |
