@@ -169,19 +169,19 @@ Then navigate to Colours & Themes > Colours and then select the one you just ins
 
 #### Custom Window Decorations Aurorae <sup>[Arch Wiki](https://wiki.archlinux.org/title/KDE#Themes)</sup>
 
-Find a color scheme you like from [here](https://www.pling.com/browse?cat=717&ord=latest). I like [Magna-Blur-Dark-Aurorae-6](https://www.pling.com/p/2134193/) so I will use this.
+Find a color scheme you like from [here](https://www.pling.com/browse?cat=717&ord=latest). I like [Magna-Dark-Aurorae-6](https://www.pling.com/p/2134194/) so I will use this.
 
 Download the file then extract/unzip the file and ensure it follows the below layout:
 
 ```
-📦 Magna-Blur-Dark-Aurorae-6
+📦 Magna-Dark-Aurorae-6
 ├─ svg files
 └─ metadata.desktop
 ```
 
 If this looks correct then run the following commands to move the file and open system settings:
 ```console
-$ mv ~/Downloads/Magna-Blur-Dark-Aurorae-6 ~/.local/share/aurorae/themes/
+$ mv ~/Downloads/Magna-Dark-Aurorae-6 ~/.local/share/aurorae/themes/
 $ systemsettings
 ```
 Then navigate to Colours & Themes > Window Decorations and then select the one you just installed.
