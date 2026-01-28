@@ -126,7 +126,90 @@ $ git config --global init.defaultBranch main
 
 <h2 align="center">Visuals</h2>
 
-#### Custom Cursor Theme <sup>[Arch Wiki](https://wiki.archlinux.org/title/Cursor_themes)</sup>
+#### Plasma Theme <sup>[Arch Wiki](https://wiki.archlinux.org/title/KDE#Themes)</sup>
+
+Find a theme you like from [here](https://www.pling.com/browse?cat=104&ord=latest). I like [Magna-Dark-Plasma](https://www.pling.com/p/2102246/) so I will use this.
+
+Download the file then extract/unzip the file and ensure it follows the below layout:
+
+```
+📦 Magna-Dark-Plasma
+├─ folders
+├─ colors
+└─ metadata.desktop
+```
+
+If this looks correct then run the following commands to move the file and open system settings:
+```console
+$ mv ~/Downloads/Magna-Dark-Plasma ~/.local/share/plasma/desktoptheme/
+$ systemsettings
+```
+Then navigate to Colours & Themes > Plasma Style and then select the one you just installed.
+
+---
+
+#### Custom Plasma Color Schemes <sup>[Arch Wiki](https://wiki.archlinux.org/title/KDE#Themes)</sup>
+
+Find a color scheme you like from [here](https://www.pling.com/browse?cat=112&ord=latest). I like [Magna-Violet-Dark-Colorscheme](https://www.pling.com/p/2102231/) so I will use this.
+
+Download the file and ensure it follows the below layout:
+
+```
+📦 MagnaVioletDarkColorscheme.colors
+```
+
+If this looks correct then run the following commands to move the file and open system settings:
+```console
+$ mv ~/Downloads/MagnaVioletDarkColorscheme.colors ~/.local/share/color-schemes/
+$ systemsettings
+```
+Then navigate to Colours & Themes > Colours and then select the one you just installed.
+
+---
+
+#### Custom Window Decorations Aurorae <sup>[Arch Wiki](https://wiki.archlinux.org/title/KDE#Themes)</sup>
+
+Find a color scheme you like from [here](https://www.pling.com/browse?cat=717&ord=latest). I like [Magna-Blur-Dark-Aurorae-6](https://www.pling.com/p/2134193/) so I will use this.
+
+Download the file then extract/unzip the file and ensure it follows the below layout:
+
+```
+📦 Magna-Blur-Dark-Aurorae-6
+├─ svg files
+└─ metadata.desktop
+```
+
+If this looks correct then run the following commands to move the file and open system settings:
+```console
+$ mv ~/Downloads/Magna-Blur-Dark-Aurorae-6 ~/.local/share/aurorae/themes/
+$ systemsettings
+```
+Then navigate to Colours & Themes > Window Decorations and then select the one you just installed.
+
+---
+
+#### Icon Theme <sup>[Arch Wiki](https://wiki.archlinux.org/title/Icons)</sup>
+
+Find a icon pack you like from [here](https://www.pling.com/browse?cat=132&ord=latest). I like [Azure Dark Icons](https://www.pling.com/p/2148992/) so I will use this.
+
+Download the file then extract/unzip the file and ensure it follows the below layout:
+
+```
+📦 Azure-Dark-Icons
+├─ Multiple folders
+└─ index.theme
+```
+
+If this looks correct then run the following commands to move the file and open system settings:
+```console
+$ mv ~/Downloads/Azure-Dark-Icons ~/.local/share/icons/
+$ systemsettings
+```
+Then navigate to Colours & Themes > Icons and then select the one you just installed.
+
+---
+
+#### Cursor Theme <sup>[Arch Wiki](https://wiki.archlinux.org/title/Cursor_themes)</sup>
 
 Find a cursor pack you like from [here](https://store.kde.org/browse?cat=107&ord=latest). I like [Future-dark cursors](https://store.kde.org/p/1457884) so I will use this.
 
@@ -143,6 +226,57 @@ $ mv ~/Downloads/Future-dark-cursors ~/.local/share/icons/
 $ systemsettings
 ```
 Then navigate to Colours & Themes > Cursors and then select the one you just installed.
+
+---
+
+#### Custom Splashscreen <sup>[Arch Wiki](https://wiki.archlinux.org/title/Icons)</sup>
+
+Find a icon pack you like from [here](https://www.pling.com/browse?cat=716&ord=latest). I like [Magna-Splash-6](https://www.pling.com/p/2136626) so I will use this.
+
+Download the file then extract/unzip the file and ensure it follows the below layout:
+
+```
+📦 Magna-Splash-6
+├─ contents
+└─ metadata.json
+```
+
+If this looks correct then run the following commands to move the file and open system settings:
+```console
+$ mv ~/Downloads/Magna-Splash-6 ~/.local/share/plasma/look-and-feel/
+$ systemsettings
+```
+Then navigate to Colours & Themes > Splash Screen and then select the one you just installed.
+
+The splashscreen is the only customisation where you cannot edit the background image from the settings. So, if you want to edit the background image, go to the location below (remember to put your splashcreen name) and swap in a different image, ensuring it has the same name and file type as the original.
+
+```console
+$ cd ~/.local/share/plasma/look-and-feel/Magna-Splash-6/contents/splash/images
+$ dolphin .
+```
+
+---
+
+#### SDDM Login Themes <sup>[Arch Wiki](https://wiki.archlinux.org/title/Icons)</sup>
+
+Find a icon pack you like from [here](https://store.kde.org/browse?cat=101&order=latest). I like [Azure-SDDM-6](https://store.kde.org/p/2149189) so I will use this.
+
+Download the file then extract/unzip the file and ensure it follows the below layout:
+
+```
+📦 Azure-SDDM-6
+├─ folders
+├─ Main.qml
+├─ metadata.desktop
+└─ theme.conf
+```
+
+If this looks correct then run the following commands to move the file and open system settings:
+```console
+$ sudo mv ~/Downloads/Azure-SDDM-6 /usr/share/sddm/themes/
+$ systemsettings
+```
+Then navigate to Colours & Themes > Login Screen (SDDM) and then select the one you just installed.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
