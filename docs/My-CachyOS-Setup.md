@@ -190,12 +190,15 @@ Then navigate to Colours & Themes > Window Decorations and then select the one y
 
 #### Icon Theme <sup>[Arch Wiki](https://wiki.archlinux.org/title/Icons)</sup>
 
-Find a icon pack you like from [here](https://www.pling.com/browse?cat=132&ord=latest). I like [Azure Dark Icons](https://www.pling.com/p/2148992/) so I will use this.
+Find a icon pack you like from [here](https://www.pling.com/browse?cat=132&ord=latest). I like [Slot Nord Dark Colorize Icons](https://www.pling.com/p/2338310) so I will use this.
+
+> [!NOTE]
+> [Azure Dark Icons](https://www.pling.com/p/2148992/)
 
 Download the file then extract/unzip the file and ensure it follows the below layout:
 
 ```
-📦 Azure-Dark-Icons
+📦 Slot-Nord-Dark-Colorize-Icons
 ├─ Multiple folders
 └─ index.theme
 ```
