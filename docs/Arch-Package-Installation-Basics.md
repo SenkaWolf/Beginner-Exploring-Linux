@@ -61,7 +61,6 @@ sudo pacman -Sy <packages>
 | `github-cli` | GitHub command-line interface (gh). |
 | `stow` | [Symlink farm manager](https://www.gnu.org/software/stow/manual/). |
 | `qbittorrent` | Lightweight BitTorrent client. |
-| `mythes-en` | English thesaurus files (used by office applications). |
 | `ghostty` | GPU-accelerated terminal emulator. |
 | `htop` |  CPU process viewer. |
 | `btop` |  CPU process viewer. |
@@ -71,6 +70,8 @@ sudo pacman -Sy <packages>
 | `obs-studio` | Screen recording and live streaming software. |
 | `krita` | Digital painting and illustration application. |
 | `wps-office` | Office suite compatible with Microsoft Office formats. |
+| `mythes-en` | English thesaurus files (used by office applications). |
+| `ttc-iosevka` | [A font designed for writing code, using in terminals](https://github.com/be5invis/Iosevka). |
 | `vlc` | Media player. |
 | `cachyos-gaming-meta` | This meta-package includes all necessary gaming libraries and dependencies. |
 | `cachyos-gaming-applications` | This package contains tools and launchers like Steam, Lutris, and others. |
