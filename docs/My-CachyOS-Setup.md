@@ -31,6 +31,8 @@
 
 Now we will be going through the install process of CachyOS, this will feel very familiar to a Windows setup.
 
+![My Desktop](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/My-Desktop.png?raw=true)
+
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
 <h2 align="center">System Settings</h2>
