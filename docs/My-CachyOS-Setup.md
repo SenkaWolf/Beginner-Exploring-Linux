@@ -287,6 +287,23 @@ $ systemsettings
 ```
 Then navigate to Colours & Themes > Login Screen (SDDM) and then select the one you just installed.
 
+---
+
+#### Custom Fonts <sup>[Arch Wiki](https://wiki.archlinux.org/title/KDE#Themes)</sup>
+I like using the fonts iosevka and raleway and we installed these earlier in the [Software](#Software) section so now they just need setting up.
+
+Go to System Settings > Text & Fonts > Fonts and change them to suit your preferences, mine are as follows:
+- General: Raleway SemiBold 10pt
+- Fixed width: Iosevka 10pt
+- Small: Raleway SemiBold 8pt
+- Toolbar: Raleway SemiBold 10pt
+- Menu: Raleway ExtraBold 10pt
+- WIndoww title: Raleway ExtraBold 10pt
+
+![Font Settings](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/Font-Settings.png?raw=true)
+
+
+
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
 **[![ ](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/icons/up25.png) Back to Top](#Table-of-Contents)**
