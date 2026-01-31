@@ -104,6 +104,61 @@ Alt + SysRq + U  # Remount filesystems read-only
 Alt + SysRq + F  # Optional: kill current process if consuming all memory
 Alt + SysRq + B  # Reboot
 ```
+---
+
+#### BTRFS Log Tree Startup Error
+
+During startup if you get a simular error code to the below:
+```console
+$ You are in emergency mode. After logging in, type "journalctl -xb" to view system logs, "systemctl reboot" to reboot, or "exit" to continue boot up.
+$ Cannot open access to console, the root account is locked.
+$ See sulogin(8) man page for more details
+$ Press Enter to continue.
+$ #Press enter then the following appears
+$ Reloading system manager configuration.
+$ Starting initr4.target
+$ BTRFS: error (device nvme2n1p2 state A) in __btfrs_run_delayed_items:1181: errno=-17 Object already exists
+$ BTRFS: error (device nvme2n1p2 state EAO) in do_abort_log_replay:190: errno=-17 Object already exists
+$ BTRFS critical (device nvme2n1p2 state EAO): log tree (for root 257) leaf currently being processed (slot 44 key 23688878 12 74551):
+$ BTRFS critical (device nvme2n1p2 state EAO): log replay failed in unlink_inode_for_log_replay:1062 for root 257, stage 3, with error -17: failed to run delayed items current inode 1720579 parents xt root 257
+$ BTRFS: error (device nvme2n1p2 state EAO) in btrfs_recover_log_trees:7736: errno=-17 Object already exists
+$ BTRFS: error (device nvme2n1p2 state EAO) in btrfs_replay_log:2094: errno=-17 Object already exists (failed to recover log tree)
+```
+
+The key points to the above message is
+```
+BTRFS critical: log replay failed
+errno=-17 Object already exists
+failed to recover log tree
+```
+
+This means:
+- The Btrfs journal (log tree) is corrupted.
+- Btrfs refuses to mount normally so boot halts.
+
+To fix this we need to clear the Btrfs log:
+
+Boot from a live USB (Use the same USB drive setup you used to install CachyOS). Next looking over the error it mentions `device nvme2n1p2` which is the Btrfs partition witth the issue however we will confirm this in the steps below.
+
+In the terminal:
+```console
+$ lsblk -f #This lists block devices and shows filesystem-related information. In my case I should see "nvme2n1p2   btrfs"
+$ sudo btrfs rescue zero-log /dev/nvme2n1p2 #Change nvme2n1p2 to match your device name!
+$ reboot
+```
+
+What this does:
+- Deletes the corrupted journal
+- Does not delete your data
+- Forces a clean mount next boot
+
+Once you are booted back into your system you should run the below command to verify checksums, repairs silent corruption using redundancy and gives peace of mind after a crash.
+```console
+$ sudo btrfs scrub start -Bd /
+```
+
+> [!NOTE]
+> This happened to me during a yay install and build of a package.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
