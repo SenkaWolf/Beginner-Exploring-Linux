@@ -23,6 +23,7 @@
     - [System Settings](#System-Settings)
     - [Software](#Software)
     - [Tweaks & Configs](#Tweaks-&-Configs)
+    - [Visuals](#Visuals)
 </details>
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
