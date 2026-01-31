@@ -53,7 +53,7 @@ Run the following commands in each section using pacman:
 
 If you'd like a explanation on the code above or what each package is go [here](../docs/Arch-Package-Installation-Basics.md).
 
-- AUR Installs: `yay -S ttf-raleway ungoogled-chromium`
+- AUR Installs: `yay -S ttf-raleway ungoogled-chromium-bin`
 
 ### Other install methods:
 
