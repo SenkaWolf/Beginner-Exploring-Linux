@@ -66,6 +66,9 @@ sudo pacman -Sy <packages>
 | `btop` |  CPU process viewer. |
 | `gparted` | Partition manager. |
 | `openrgb` | RGB lighting control. |
+| `snapper` | [Managing file system snapshots in Linux, primarily designed to work with the Btrfs file system](http://snapper.io/). |
+| `snap-pac` |  Hooks and scripts that automatically create pre and post snapshots using Snapper before and after package transactions with Pacman. |
+| `grub-btrfs` | Tool that enhances the GRUB bootloader by allowing you to boot into Btrfs snapshots. |
 | `discord` | Voice, video, and text communication platform. |
 | `obs-studio` | Screen recording and live streaming software. |
 | `krita` | Digital painting and illustration application. |
