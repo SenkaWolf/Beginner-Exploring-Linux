@@ -331,6 +331,13 @@ Or you can right click your panel and click "Add or Manage Widgets" then press "
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/Add-or-Manage-Widgets-Get-New.png?raw=true)
 
+---
+
+#### My Desktop Layout
+
+To Be Completed.
+
+I did use this [YouTube Video](https://www.youtube.com/watch?v=6UCI2OOkOk0) to help me figure out sizing for my primary monitor.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
