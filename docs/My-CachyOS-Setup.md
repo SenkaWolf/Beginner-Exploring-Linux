@@ -302,6 +302,33 @@ Go to System Settings > Text & Fonts > Fonts and change them to suit your prefer
 
 ![Font Settings](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/Font-Settings.png?raw=true)
 
+---
+
+#### Plasma 6 Extensions Widgets (Plasmoids) <sup>[Arch Wiki](https://wiki.archlinux.org/title/KDE#Widgets)</sup>
+Find any Plasma 6 extensions you like from [here](https://store.kde.org/browse?cat=705&ord=latest).
+
+I'm doing to downwload and extract the below files:
+- [KDE Modern Clock](https://store.kde.org/p/2135653)
+- [plasmusic-toolbar](https://store.kde.org/p/2128143)
+- [Resources monitor](https://store.kde.org/p/2143899)
+- [Window Title Applet 6](https://store.kde.org/p/2129423)
+
+Then open the terminal and cd to the extracted files or right click the folder and open the terminal:
+```console
+$ cd ~/Downloads/<widget directory> #Replace <widget directory> with the extracted folder name
+$ kpackagetool6 --type Plasma/Applet --install .
+$ # Then log out and back in again. Restarting plasmashell in the terminal isn't very reliable.
+```
+
+If you get an error saying it already exists or you are trying to update it then run the below:
+```console
+$ cd ~/Downloads/<widget directory> #Replace <widget directory> with the extracted folder name
+$ kpackagetool6 --type Plasma/Applet --upgrade .
+```
+
+Or you can right click your panel and click "Add or Manage Widgets" then press "Get New" as shown in the below screenhot. You can then search for the widget name.
+
+![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/Add-or-Manage-Widgets-Get-New.png?raw=true)
 
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
