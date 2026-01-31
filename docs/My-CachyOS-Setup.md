@@ -236,24 +236,26 @@ Then navigate to Colours & Themes > Cursors and then select the one you just ins
 
 ---
 
-#### Custom Splashscreen <sup>[Arch Wiki](https://wiki.archlinux.org/title/Icons)</sup>
+#### Custom Splashscreen <sup>[Arch Wiki](https://wiki.archlinux.org/title/KDE#Themes)</sup>
 
-Find a icon pack you like from [here](https://www.pling.com/browse?cat=716&ord=latest). I like [Magna-Splash-6](https://www.pling.com/p/2136626) so I will use this.
+Find a plashscreen you like from [here](https://www.pling.com/browse?cat=716&ord=latest). I like to disable this but I will give instructions on how to install one as I use to run the Magna Splash 6.
 
 Download the file then extract/unzip the file and ensure it follows the below layout:
 
-```
-📦 Magna-Splash-6
-├─ contents
-└─ metadata.json
-```
+> [!NOTE]
+> [Magna-Splash-6](https://www.pling.com/p/2136626)
+> ```
+> 📦 Magna-Splash-6
+> ├─ contents
+> └─ metadata.json
+> ```
+> If this looks correct then run the following commands to move the file and open system settings:
+> ```console
+> $ mv ~/Downloads/Magna-Splash-6 ~/.local/share/plasma/look-and-feel/
+> $ systemsettings
+> ```
 
-If this looks correct then run the following commands to move the file and open system settings:
-```console
-$ mv ~/Downloads/Magna-Splash-6 ~/.local/share/plasma/look-and-feel/
-$ systemsettings
-```
-Then navigate to Colours & Themes > Splash Screen and then select the one you just installed.
+Then navigate to Colours & Themes > Splash Screen and then select the one you just installed or in my case I like to select none.
 
 The splashscreen is the only customisation where you cannot edit the background image from the settings. So, if you want to edit the background image, go to the location below (remember to put your splashcreen name) and swap in a different image, ensuring it has the same name and file type as the original.
 
@@ -264,7 +266,7 @@ $ dolphin .
 
 ---
 
-#### SDDM Login Themes <sup>[Arch Wiki](https://wiki.archlinux.org/title/Icons)</sup>
+#### SDDM Login Themes <sup>[Arch Wiki](https://wiki.archlinux.org/title/KDE#Themes)</sup>
 
 Find a icon pack you like from [here](https://store.kde.org/browse?cat=101&order=latest). I like [Azure-SDDM-6](https://store.kde.org/p/2149189) so I will use this.
 
