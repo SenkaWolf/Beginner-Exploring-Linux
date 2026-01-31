@@ -48,7 +48,7 @@ sudo pacman -Sy <packages>
 > Any word appearing after -Sy is a package name. These can be replaced with any software you want to install.
 > Multiple packages can be installed in a single command by listing them separated by spaces.
 
-### Common packages
+### My Common packages
 
 | Package | Description |
 | --- | --- |
