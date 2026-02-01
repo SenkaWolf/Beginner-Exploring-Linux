@@ -54,21 +54,20 @@ sudo pacman -Sy <packages>
 | --- | --- |
 | `flatpak` | Universal, sandboxed application framework. |
 | `yay` | AUR helper for installing packages from the Arch User Repository. |
-| `cachy-update` | Update notifier & applier for CachyOS. |
-| `zen-browser` | Minimalist web browser. |
-| `code` | Visual Studio Code editor. |
-| `git` | Distributed version control system. |
-| `github-cli` | GitHub command-line interface (gh). |
-| `stow` | [Symlink farm manager](https://www.gnu.org/software/stow/manual/). |
-| `qbittorrent` | Lightweight BitTorrent client. |
-| `ghostty` | GPU-accelerated terminal emulator. |
-| `htop` |  CPU process viewer. |
-| `btop` |  CPU process viewer. |
-| `gparted` | Partition manager. |
-| `openrgb` | RGB lighting control. |
 | `snapper` | [Managing file system snapshots in Linux, primarily designed to work with the Btrfs file system](http://snapper.io/). |
 | `snap-pac` |  Hooks and scripts that automatically create pre and post snapshots using Snapper before and after package transactions with Pacman. |
 | `grub-btrfs` | Tool that enhances the GRUB bootloader by allowing you to boot into Btrfs snapshots. |
+| `cachy-update` | Update notifier & applier for CachyOS. |
+| `zen-browser` | Minimalist web browser. |
+| `stow` | [Symlink farm manager](https://www.gnu.org/software/stow/manual/). |
+| `qbittorrent` | Lightweight BitTorrent client. |
+| `ghostty` | GPU-accelerated terminal emulator. |
+| `htop` | CPU process viewer. |
+| `btop` | CPU process viewer. |
+| `cpu-x` | Gathers information on main computer components. |
+| `gparted` | Partition manager. |
+| `openrgb` | RGB lighting control. |
+| `k3b` | Disc burning. |
 | `discord` | Voice, video, and text communication platform. |
 | `obs-studio` | Screen recording and live streaming software. |
 | `krita` | Digital painting and illustration application. |
@@ -78,6 +77,10 @@ sudo pacman -Sy <packages>
 | `vlc` | Media player. |
 | `cachyos-gaming-meta` | This meta-package includes all necessary gaming libraries and dependencies. |
 | `cachyos-gaming-applications` | This package contains tools and launchers like Steam, Lutris, and others. |
+| `code` | Visual Studio Code editor. |
+| `git` | Distributed version control system. |
+| `github-cli` | GitHub command-line interface (gh). |
+| `mysql-workbench` | SQL IDE for mySQL. |
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 

@@ -45,15 +45,18 @@ Now we will be going through the install process of CachyOS, this will feel very
 Run the following commands in each section using pacman:
 
 - Firmware: `sudo pacman -Sy`
-- Tools: `sudo pacman -Sy flatpak yay cachy-update zen-browser code git github-cli stow qbittorrent ghostty htop btop gparted openrgb snapper snap-pac grub-btrfs`
+- Tools: `sudo pacman -Sy flatpak yay snapper snap-pac grub-btrfs cachy-update zen-browser stow qbittorrent ghostty htop btop cpu-x gparted openrgb k3b`
 - Social: `sudo pacman -Sy discord`
 - Creative: `sudo pacman -Sy obs-studio krita`
 - Office: `sudo pacman -Sy wps-office mythes-en ttc-iosevka vlc`
 - Gaming: `sudo pacman -Sy cachyos-gaming-meta cachyos-gaming-applications`
+- Coding: `code git github-cli mysql-workbench`
 
 If you'd like a explanation on the code above or what each package is go [here](../docs/Arch-Package-Installation-Basics.md).
 
-- AUR Installs: `yay -S ttf-raleway github-desktop-bin ungoogled-chromium-bin`
+Below aren't available through pacman so we will use AUR instead: 
+- Tools: `yay -S ttf-raleway ungoogled-chromium-bin qdirstat-bin qdiskinfo-bin nordvpn-bin rustdesk-bin`
+- Coding: `yay -S github-desktop-bin`
 
 ### Other install methods:
 
