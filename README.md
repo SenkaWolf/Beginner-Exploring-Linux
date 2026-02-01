@@ -72,7 +72,7 @@ Pick a virtualisation software you wish to run Linux in, below are a few options
 4. Then click on the 'Free Software Downloads available [HERE](https://support.broadcom.com/group/ecx/free-downloads)'
 5. Scroll down the page and to go '[VMware Workstation Pro](https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Workstation%20Pro&freeDownloads=true)'
 6. Then select the latest version then select the latest release.
-7. You will now see a screen with '[ ] I agree to the [Terms and Conditions](https://www.broadcom.com/company/legal/licensing)' you can't tick this until you have opened the Terms and Conditions page. Click the link and they will open in a new tab. Close the tab and you will now be able to tick the Terms and Conditions.
+7. You will now see a screen with '☐ I agree to the [Terms and Conditions](https://www.broadcom.com/company/legal/licensing)' you can't tick this until you have opened the Terms and Conditions page. Click the link and they will open in a new tab. Close the tab and you will now be able to tick the Terms and Conditions.
 8. Now you will be able to click the download button (cloud icon ![Broadcoom download icon](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/icons/broadcoom-download-icon.png?raw=true)).
 9. You will then get a popup stating additional verification is required. Click yes then fill in the form.
 10. You will be returned to the previous page. Press the download button (cloud icon ![Broadcoom download icon](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/icons/broadcoom-download-icon.png?raw=true)) again and now the download will begin.
