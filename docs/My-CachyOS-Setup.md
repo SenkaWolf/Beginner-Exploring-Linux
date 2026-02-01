@@ -342,6 +342,15 @@ To Be Completed.
 
 I did use this [YouTube Video](https://www.youtube.com/watch?v=6UCI2OOkOk0) to help me figure out sizing for my primary monitor.
 
+---
+
+#### Animations/Desktop Effects
+Go to System Settings > Appearance  & Style > Animations. The change the following:
+- Window minimize: `Magic Lamp` (1000 milliseconds)
+
+Then go to System Settings > Apps & Windows > Window Management > Desktop Effects. Then change the following:
+- ☑ Wobbly WIndows
+
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
 **[![ ](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/icons/up25.png) Back to Top](#Table-of-Contents)**
