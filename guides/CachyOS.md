@@ -170,6 +170,58 @@ $ sudo btrfs scrub start -Bd /
 
 <h2 align="center">Tweaks and Improvements</h2>
 
+#### Enabling Parallel downloads
+When using pacman to install and upgrade you can enable or allow more parallel downloads to speed up the process. To do so 
+
+```console
+$ sudo nano /etc/pacman.conf
+```
+
+Below is the first 42 lines from the config file. Look for `ParallelDownloads = 5` and change this to 10.
+
+```conf
+#
+# /etc/pacman.conf
+#
+# See the pacman.conf(5) manpage for option and repository directives
+
+#
+# GENERAL OPTIONS
+#
+[options]
+# The following paths are commented out with their default values listed.
+# If you wish to use different paths, uncomment and update the paths.
+#RootDir     = /
+#DBPath      = /var/lib/pacman/
+#CacheDir    = /var/cache/pacman/pkg/
+#LogFile     = /var/log/pacman.log
+#GPGDir      = /etc/pacman.d/gnupg/
+#HookDir     = /etc/pacman.d/hooks/
+HoldPkg     = pacman glibc
+#XferCommand = /usr/bin/curl -L -C - -f -o %o %u
+#XferCommand = /usr/bin/wget --passive-ftp -c -O %o %u
+#CleanMethod = KeepInstalled
+#UseDelta    = 0.7
+Architecture = auto
+
+# Pacman won't upgrade packages listed in IgnorePkg and members of IgnoreGroup
+#IgnorePkg   =
+#IgnoreGroup =
+
+#NoUpgrade   =
+#NoExtract   =
+
+# Misc options
+#UseSyslog
+Color
+ILoveCandy
+#NoProgressBar
+#CheckSpace
+VerbosePkgLists
+DisableDownloadTimeout
+ParallelDownloads = 5 #<<<<<<< Edit this line to be 10.
+DownloadUser = alpm
+```
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
