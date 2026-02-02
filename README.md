@@ -204,7 +204,7 @@ Here is a list of documents for a variety of things such as my setups, explantat
 
 - [Arch Package Installttion Basics](/docs/Arch-Package-Installation-Basics.md)
 - [Managing Dotfiles](/docs/Managing-Dotfiles.md)
-- [My CachyOS Setup](/docs/My-CachyOS-Setup.md)
+- [My CachyOS Setup](/docs/My-PlasmaKDE-CachyOS-Setup.md)
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
