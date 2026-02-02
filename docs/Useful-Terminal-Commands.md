@@ -83,6 +83,7 @@ Here I will list a bunch of useful commands to make a central place to search fo
 | `kill`            | Stop a process           |
 | `killall`         | Kill by name             |
 | `systemd-analyze` | Analyze boot performance |
+| `systemd-analyze blame` | Analyze boot performance ordered by the time they took to initialise |
 
 ---
 
