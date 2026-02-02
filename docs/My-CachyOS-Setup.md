@@ -55,6 +55,7 @@ Run the following commands in each section using pacman:
 If you'd like a explanation on the code above or what each package is go [here](../docs/Arch-Package-Installation-Basics.md).
 
 Below aren't available through pacman so we will use AUR instead: 
+- Firmware: `yay -Syu`
 - Tools: `yay -S ttf-raleway ungoogled-chromium-bin qdirstat-bin qdiskinfo-bin nordvpn-bin rustdesk-bin`
 - Coding: `yay -S github-desktop-bin`
 
