@@ -70,18 +70,19 @@ Here I will list a bunch of useful commands to make a central place to search fo
 ---
 
 ### 🧠 Process & System Monitoring
-| Command   | Description             |
-| --------- | ----------------------- |
-| `ps`      | Show processes          |
-| `top`     | Live process list       |
-| `htop`    | Enhanced process viewer |
-| `btop`    | Enhanced process viewer |
-| `uptime`  | System run time         |
-| `free`    | Memory usage            |
-| `df`      | Disk usage              |
-| `du`      | Directory size          |
-| `kill`    | Stop a process          |
-| `killall` | Kill by name            |
+| Command           | Description              |
+| ----------------- | ------------------------ |
+| `ps`              | Show processes           |
+| `top`             | Live process list        |
+| `htop`            | Enhanced process viewer  |
+| `btop`            | Enhanced process viewer  |
+| `uptime`          | System run time          |
+| `free`            | Memory usage             |
+| `df`              | Disk usage               |
+| `du`              | Directory size           |
+| `kill`            | Stop a process           |
+| `killall`         | Kill by name             |
+| `systemd-analyze` | Analyze boot performance |
 
 ---
 
@@ -117,18 +118,26 @@ Here I will list a bunch of useful commands to make a central place to search fo
 | `dnf update`  | Update packages |
 | `dnf remove`  | Remove package  |
 
-#### Arch Linux (Pacman)
-| Command       | Description               |
-| ------------- | ------------------------- |
-| `pacman -Syu` | Update system             |
-| `pacman -S`   | Install a package         |
-| `pacman -R`   | Remove a package          |
-| `pacman -Rs`  | Remove package and unneeded dependencies |
-| `pacman -Rns` | Remove package, unneeded dependencies, and configuration files |
-| `pacman -Ss`  | Search packages           |
-| `pacman -Qi`  | Package information       |
-| `pacman -Qs`  | Search installed packages |
-| `pacman -Sc`  | Clean package cache       |
+#### Arch Linux (Pacman & Yay)
+| Command         | Description                                             |
+| --------------- | ------------------------------------------------------- |
+| `pacman -Syu`   | Update system                                           |
+| `pacman -S`     | Install a package                                       |
+| `pacman -R`     | Remove a package                                        |
+| `pacman -Rs`    | Remove package and unneeded dependencies                |
+| `pacman -Rns`   | Remove package, unneeded dependencies, and config files |
+| `pacman -Ss`    | Search packages                                         |
+| `pacman -Qi`    | Package information                                     |
+| `pacman -Qs`    | Search installed packages                               |
+| `pacman -Sc`    | Clean package cache                                     |
+| `yay -Syu`      | Update system & AUR packages                            |
+| `yay -S <pkg>`  | Install a package from AUR                              |
+| `yay -R <pkg>`  | Remove a package                                        |
+| `yay -Ss <pkg>` | Search for a package                                    |
+| `yay -Qi <pkg>` | Show package info                                       |
+| `yay -Qs <pkg>` | Search installed packages                               |
+| `yay -Sc`       | Clean package cache                                     |
+
 
 #### openSUSE (Zypper)
 | Command          | Description          |
@@ -167,11 +176,22 @@ Here I will list a bunch of useful commands to make a central place to search fo
 ---
 
 ### 🧰 Shell & Utilities
-| Command   | Description            |
-| --------- | ---------------------- |
-| `history` | Command history        |
-| `clear`   | Clear terminal         |
-| `exit`    | Exit shell             |
+| Command   | Description                    |
+| --------- | ------------------------------ |
+| `history` | Command history                |
+| `clear`   | Clear terminal                 |
+| `exit`    | Exit shell                     |
+| `stow`    | Manage dotfiles using GNU Stow |
+
+---
+
+### 💻 Version Control & Git
+| Command            | Description                       |
+| ------------------ | --------------------------------- |
+| `git status`       | Show current repo status          |
+| `git add --all`    | Stage all changes                 |
+| `git commit -m ""` | Commit staged changes             |
+| `git push`         | Push commits to remote repository |
 
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
