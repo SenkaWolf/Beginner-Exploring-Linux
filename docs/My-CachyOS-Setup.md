@@ -48,9 +48,9 @@ Run the following commands in each section using pacman:
 - Tools: `sudo pacman -Sy flatpak yay snapper snap-pac grub-btrfs cachy-update zen-browser stow qbittorrent ghostty htop btop cpu-x gparted openrgb k3b`
 - Social: `sudo pacman -Sy discord`
 - Creative: `sudo pacman -Sy obs-studio krita`
-- Office: `sudo pacman -Sy wps-office mythes-en ttc-iosevka vlc`
+- Office: `sudo pacman -Sy wps-office mythes-en ttc-iosevka ttf-fira-sans ttf-fira-code ttf-firacode-nerd vlc`
 - Gaming: `sudo pacman -Sy cachyos-gaming-meta cachyos-gaming-applications`
-- Coding: `code git github-cli mysql-workbench`
+- Coding: `code git github-cli mysql-workbench ttf-font-awesome`
 
 If you'd like a explanation on the code above or what each package is go [here](../docs/Arch-Package-Installation-Basics.md).
 
