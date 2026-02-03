@@ -50,37 +50,45 @@ sudo pacman -Sy <packages>
 
 ### My Common packages
 
-| Package | Description |
-| --- | --- |
-| `flatpak` | Universal, sandboxed application framework. |
-| `yay` | AUR helper for installing packages from the Arch User Repository. |
-| `snapper` | [Managing file system snapshots in Linux, primarily designed to work with the Btrfs file system](http://snapper.io/). |
-| `snap-pac` |  Hooks and scripts that automatically create pre and post snapshots using Snapper before and after package transactions with Pacman. |
-| `grub-btrfs` | Tool that enhances the GRUB bootloader by allowing you to boot into Btrfs snapshots. |
-| `cachy-update` | Update notifier & applier for CachyOS. |
-| `zen-browser` | Minimalist web browser. |
-| `stow` | [Symlink farm manager](https://www.gnu.org/software/stow/manual/). |
-| `qbittorrent` | Lightweight BitTorrent client. |
-| `ghostty` | GPU-accelerated terminal emulator. |
-| `htop` | CPU process viewer. |
-| `btop` | CPU process viewer. |
-| `cpu-x` | Gathers information on main computer components. |
-| `gparted` | Partition manager. |
-| `openrgb` | RGB lighting control. |
-| `k3b` | Disc burning. |
-| `discord` | Voice, video, and text communication platform. |
-| `obs-studio` | Screen recording and live streaming software. |
-| `krita` | Digital painting and illustration application. |
-| `wps-office` | Office suite compatible with Microsoft Office formats. |
-| `mythes-en` | English thesaurus files (used by office applications). |
-| `ttc-iosevka` | [A font designed for writing code, using in terminals](https://github.com/be5invis/Iosevka). |
-| `vlc` | Media player. |
-| `cachyos-gaming-meta` | This meta-package includes all necessary gaming libraries and dependencies. |
-| `cachyos-gaming-applications` | This package contains tools and launchers like Steam, Lutris, and others. |
-| `code` | Visual Studio Code editor. |
-| `git` | Distributed version control system. |
-| `github-cli` | GitHub command-line interface (gh). |
-| `mysql-workbench` | SQL IDE for mySQL. |
+| Package | Description | Package Manager |
+| --- | --- | --- |
+| `flatpak` | Universal, sandboxed application framework. | pacman |
+| `yay` | AUR helper for installing packages from the Arch User Repository. | pacman |
+| `snapper` | [Managing file system snapshots in Linux, primarily designed to work with the Btrfs file system](http://snapper.io/). | pacman |
+| `snap-pac` |  Hooks and scripts that automatically create pre and post snapshots using Snapper before and after package transactions with Pacman. | pacman |
+| `grub-btrfs` | Tool that enhances the GRUB bootloader by allowing you to boot into Btrfs snapshots. | pacman |
+| `cachy-update` | Update notifier & applier for CachyOS. | pacman |
+| `zen-browser` | Minimalist web browser. | pacman |
+| `stow` | [Symlink farm manager](https://www.gnu.org/software/stow/manual/). | pacman |
+| `qbittorrent` | Lightweight BitTorrent client. | pacman |
+| `ghostty` | GPU-accelerated terminal emulator. | pacman |
+| `htop` | CPU process viewer. | pacman |
+| `btop` | CPU process viewer. | pacman |
+| `cpu-x` | Gathers information on main computer components. | pacman |
+| `gparted` | Partition manager. | pacman |
+| `openrgb` | RGB lighting control. | pacman |
+| `k3b` | Disc burning. | pacman |
+| `discord` | Voice, video, and text communication platform. | pacman |
+| `obs-studio` | Screen recording and live streaming software. | pacman |
+| `krita` | Digital painting and illustration application. | pacman |
+| `wps-office` | Office suite compatible with Microsoft Office formats. | pacman |
+| `mythes-en` | English thesaurus files (used by office applications). | pacman |
+| `ttc-iosevka` | [A font designed for writing code, using in terminals](https://github.com/be5invis/Iosevka). | pacman |
+| `vlc` | Media player. | pacman |
+| `cachyos-gaming-meta` | This meta-package includes all necessary gaming libraries and dependencies. | pacman |
+| `cachyos-gaming-applications` | This package contains tools and launchers like Steam, Lutris, and others. | pacman |
+| `code` | Visual Studio Code editor. | pacman |
+| `git` | Distributed version control system. | pacman |
+| `github-cli` | GitHub command-line interface (gh). | pacman |
+| `mysql-workbench` | SQL IDE for mySQL. | pacman |
+| `ttf-raleway` | Elegant sans-serif typeface font. | yay |
+| `ungoogled-chromium-bin` | Ungoogled Chromium Browser. | yay |
+| `qdirstat-bin` | Powerful disk usage analyzer. | yay |
+| `qdiskinfo-bin` | Frontend for smartctl. | yay |
+| `nordvpn-bin` | VPN service. | yay |
+| `rustdesk-bin` | Remote access. | yay |
+| `wtf` | [Personal information dashboard](https://github.com/wtfutil/wtf). | yay |
+| `github-desktop-bin` | Tool that simplifies your development workflow with Git. | yay |
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
