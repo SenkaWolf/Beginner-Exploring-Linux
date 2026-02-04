@@ -204,6 +204,7 @@ Here is a list of documents for a variety of things such as my setups, explantat
 
 - [Arch Package Installttion Basics](/docs/Arch-Package-Installation-Basics.md)
 - [Useful Terminal Commands](/docs/Useful-Terminal-Commands.md)
+- [Useful Keyboard Shortcuts](/docs/Useful-Keyboard-Shortcuts.md)
 - [Managing Dotfiles](/docs/Managing-Dotfiles.md)
 - [My CachyOS Setup](/docs/My-PlasmaKDE-CachyOS-Setup.md)
 
