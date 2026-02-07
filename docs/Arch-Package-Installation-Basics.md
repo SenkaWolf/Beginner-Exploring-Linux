@@ -81,11 +81,13 @@ sudo pacman -Sy <packages>
 | `git` | Distributed version control system. | pacman |
 | `github-cli` | GitHub command-line interface (gh). | pacman |
 | `mysql-workbench` | SQL IDE for mySQL. | pacman |
+| `filezilla` | FTP Client. | pacman |
 | `ttf-raleway` | Elegant sans-serif typeface font. | yay |
 | `ungoogled-chromium-bin` | Ungoogled Chromium Browser. | yay |
 | `qdirstat-bin` | Powerful disk usage analyzer. | yay |
 | `qdiskinfo-bin` | Frontend for smartctl. | yay |
 | `nordvpn-bin` | VPN service. | yay |
+| `nordvpn-gui-bin` | Nord UI. | yay |
 | `rustdesk-bin` | Remote access. | yay |
 | `wtf` | [Personal information dashboard](https://github.com/wtfutil/wtf). | yay |
 | `github-desktop-bin` | Tool that simplifies your development workflow with Git. | yay |
