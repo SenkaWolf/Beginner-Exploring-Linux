@@ -346,9 +346,6 @@ I did use this [YouTube Video](https://www.youtube.com/watch?v=6UCI2OOkOk0) to h
 ---
 
 #### Animations/Desktop Effects
-Go to System Settings > Appearance  & Style > Animations. The change the following:
-- Window minimize: `Magic Lamp` (1000 milliseconds)
-
 Then go to System Settings > Apps & Windows > Window Management > Desktop Effects. Then change the following:
 - ☑ Wobbly WIndows
 
