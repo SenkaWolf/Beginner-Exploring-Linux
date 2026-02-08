@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="../media/logos/cachyos.png" />
+<img src="../media/logos/useful-terminal-commands.png" />
 
 <br>
 
