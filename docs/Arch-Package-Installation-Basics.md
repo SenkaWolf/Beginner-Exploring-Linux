@@ -68,6 +68,7 @@ sudo pacman -Sy <packages>
 | `gparted` | Partition manager. | pacman |
 | `openrgb` | RGB lighting control. | pacman |
 | `k3b` | Disc burning. | pacman |
+| `cmatrix` | Creates a 'Matrix'-style display with scrolling characters. | pacman |
 | `discord` | Voice, video, and text communication platform. | pacman |
 | `obs-studio` | Screen recording and live streaming software. | pacman |
 | `krita` | Digital painting and illustration application. | pacman |
