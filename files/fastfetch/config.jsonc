@@ -2,8 +2,8 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
   "logo": {
     "type": "kitty",
-    "source": "~/.config/fastfetch/logo.png",
-    "width": 25,
+    "source": "~/.config/fastfetch/wolfv2.png",
+    "width": 50,
     "height": null,
     "preserveAspectRatio": true,
     "padding": {
@@ -82,6 +82,12 @@
     {
       "type": "kernel",
       "key": "│ ├─ ",
+    },
+    {
+      "type": "disk",
+      "key": "│ ├─ 󰄉",
+      "folders": "/",
+      "format": "{days} Days Old",
     },
     {
       "type": "uptime",
