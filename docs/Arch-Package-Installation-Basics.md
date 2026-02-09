@@ -71,6 +71,7 @@ sudo pacman -Sy <packages>
 | `cmatrix` | Creates a 'Matrix'-style display with scrolling characters. | pacman |
 | `discord` | Voice, video, and text communication platform. | pacman |
 | `obs-studio` | Screen recording and live streaming software. | pacman |
+| `gpu-screen-recorder-ui` | A fullscreen overlay UI for GPU Screen Recorder in the style of ShadowPlay. | pacman |
 | `krita` | Digital painting and illustration application. | pacman |
 | `wps-office` | Office suite compatible with Microsoft Office formats. | pacman |
 | `mythes-en` | English thesaurus files (used by office applications). | pacman |
@@ -78,6 +79,7 @@ sudo pacman -Sy <packages>
 | `vlc` | Media player. | pacman |
 | `cachyos-gaming-meta` | This meta-package includes all necessary gaming libraries and dependencies. | pacman |
 | `cachyos-gaming-applications` | This package contains tools and launchers like Steam, Lutris, and others. | pacman |
+| `retroarch` | Open-source frontend for emulators. | pacman |
 | `code` | Visual Studio Code editor. | pacman |
 | `git` | Distributed version control system. | pacman |
 | `github-cli` | GitHub command-line interface (gh). | pacman |
