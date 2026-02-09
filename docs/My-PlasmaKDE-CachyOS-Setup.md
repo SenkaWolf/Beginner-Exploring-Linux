@@ -349,7 +349,7 @@ Or you can right click your panel and click "Add or Manage Widgets" then press "
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/Add-or-Manage-Widgets-Get-New.png?raw=true)
 
 ---
-#### GRUB <sup>[Arch Wiki](https://wiki.archlinux.org/title/GRUB)</sup>
+#### GRUB Theme <sup>[Arch Wiki](https://wiki.archlinux.org/title/GRUB)</sup>
 Find any GRUB theme you like from [here](https://www.gnome-look.org/browse?cat=109&ord=latest). I like [CyberGRUB-2077](https://www.gnome-look.org/p/2235245) so I will use this.
 
 Most GRUB themes will come with a install script using either a `.sh` or `.fish` script. It is recommended to use fish where possible. Follow thes steps provided and that will install the theme.
