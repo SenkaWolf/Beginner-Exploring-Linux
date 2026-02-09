@@ -79,6 +79,19 @@ Appendix: This is important due to streamdeck being a HID device.
 > $ bash -c 'bash <(curl -sSL https://raw.githubusercontent.com/nekename/OpenDeck/main/install_opendeck.sh)'
 > ```
 
+#### Virtual Machine / Virtualisation
+
+> [!NOTE]
+> A shortcut to setting this up you can use [Linutil](https://github.com/ChrisTitusTech/linutil) which is a tool made by Chris Titus to simplify the install of certain applications.
+> 
+> Use the below command to open up the utility in your terminal.
+> ```console
+> $ curl -fsSL https://christitus.com/linux | sh
+> ```
+> 
+> Install Virtual Machine / Virtualisation using this [video](https://www.youtube.com/watch?v=qOrHgEPCtWw).
+
+
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
 <h2 align="center">Tweaks & Configs</h2>
@@ -336,7 +349,34 @@ Or you can right click your panel and click "Add or Manage Widgets" then press "
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/Add-or-Manage-Widgets-Get-New.png?raw=true)
 
 ---
+#### GRUB <sup>[Arch Wiki](https://wiki.archlinux.org/title/GRUB)</sup>
+Find any GRUB theme you like from [here](https://www.gnome-look.org/browse?cat=109&ord=latest). I like [CyberGRUB-2077](https://www.gnome-look.org/p/2235245) so I will use this.
 
+Most GRUB themes will come with a install script using either a `.sh` or `.fish` script. It is recommended to use fish where possible. Follow thes steps provided and that will install the theme.
+
+You can manually install themes as well.
+
+> [!CAUTION]
+> Some theme pages recommend using GRUB Customizer, I do not. It changes your GRUB config files and can make it difficult to apply tweaks or changes.
+
+- Download the theme files and copy them into /boot/grub/themes. You may need to change the folder owner to access it:
+```console
+$ sudo chown $USER /boot/grub/themes
+```
+- Next, tell GRUB to use the theme. Open the GRUB config file located at /etc/default/grub (root permissions required):
+```console
+$ sudoedit /etc/default/grub
+```
+- Find the `GRUB_THEME=` line and set it to the path of the theme’s `theme.txt` file.
+While you’re there, set your desired resolution by uncommenting and editing the `GRUB_GFXMODE=` line.
+- Save the file, then apply the changes by running:
+```console
+$ sudo update-grub
+```
+
+You’ll need to run this command any time you modify GRUB’s configuration.
+
+---
 #### My Desktop Layout
 
 To Be Completed.
