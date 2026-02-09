@@ -62,6 +62,7 @@ sudo pacman -Sy <packages>
 | `stow` | [Symlink farm manager](https://www.gnu.org/software/stow/manual/). | pacman |
 | `qbittorrent` | Lightweight BitTorrent client. | pacman |
 | `ghostty` | GPU-accelerated terminal emulator. | pacman |
+| `starship` | [Customizable prompt for any shell](https://starship.rs/). | pacman |
 | `htop` | CPU process viewer. | pacman |
 | `btop` | CPU process viewer. | pacman |
 | `cpu-x` | Gathers information on main computer components. | pacman |
