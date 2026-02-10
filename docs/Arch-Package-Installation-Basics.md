@@ -70,6 +70,7 @@ sudo pacman -Sy <packages>
 | `openrgb` | RGB lighting control. | pacman |
 | `k3b` | Disc burning. | pacman |
 | `cmatrix` | Creates a 'Matrix'-style display with scrolling characters. | pacman |
+| `strace` | [Diagnostic, debugging and instructional userspace utility](https://strace.io/). | pacman |
 | `discord` | Voice, video, and text communication platform. | pacman |
 | `obs-studio` | Screen recording and live streaming software. | pacman |
 | `gpu-screen-recorder-ui` | A fullscreen overlay UI for GPU Screen Recorder in the style of ShadowPlay. | pacman |

@@ -173,6 +173,13 @@ Doing both these steps should fix the issue:
 - `sudo cachyos-rate-mirrors`
 - `paru -Syu`
 
+#### Programs/apps won’t launch
+Use the utility called strace to find the cause.
+```console
+$ sudo pacman -Sy strace #Install strace
+$ strace vlc #Then use strace <application> and it will print any errors in the terminal.
+```
+
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
 <h2 align="center">Tweaks and Improvements</h2>
