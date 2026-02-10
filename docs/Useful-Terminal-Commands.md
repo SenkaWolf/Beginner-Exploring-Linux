@@ -119,25 +119,31 @@ Here I will list a bunch of useful commands to make a central place to search fo
 | `dnf update`  | Update packages |
 | `dnf remove`  | Remove package  |
 
-#### Arch Linux (Pacman & Yay)
-| Command         | Description                                             |
-| --------------- | ------------------------------------------------------- |
-| `pacman -Syu`   | Update system                                           |
-| `pacman -S`     | Install a package                                       |
-| `pacman -R`     | Remove a package                                        |
-| `pacman -Rs`    | Remove package and unneeded dependencies                |
-| `pacman -Rns`   | Remove package, unneeded dependencies, and config files |
-| `pacman -Ss`    | Search packages                                         |
-| `pacman -Qi`    | Package information                                     |
-| `pacman -Qs`    | Search installed packages                               |
-| `pacman -Sc`    | Clean package cache                                     |
-| `yay -Syu`      | Update system & AUR packages                            |
-| `yay -S <pkg>`  | Install a package from AUR                              |
-| `yay -R <pkg>`  | Remove a package                                        |
-| `yay -Ss <pkg>` | Search for a package                                    |
-| `yay -Qi <pkg>` | Show package info                                       |
-| `yay -Qs <pkg>` | Search installed packages                               |
-| `yay -Sc`       | Clean package cache                                     |
+| Command          | Description                                             |
+| ---------------- | ------------------------------------------------------- |
+| `pacman -Syu`    | Update system                                           |
+| `pacman -S`      | Install a package                                       |
+| `pacman -R`      | Remove a package                                        |
+| `pacman -Rs`     | Remove package and unneeded dependencies                |
+| `pacman -Rns`    | Remove package, unneeded dependencies, and config files |
+| `pacman -Ss`     | Search packages                                         |
+| `pacman -Qi`     | Package information                                     |
+| `pacman -Qs`     | Search installed packages                               |
+| `pacman -Sc`     | Clean package cache                                     |
+| `yay -Syu`       | Update system & AUR packages                            |
+| `yay -S <pkg>`   | Install a package from repos or AUR                     |
+| `yay -R <pkg>`   | Remove a package                                        |
+| `yay -Ss <pkg>`  | Search for a package                                    |
+| `yay -Qi <pkg>`  | Show package info                                       |
+| `yay -Qs <pkg>`  | Search installed packages                               |
+| `yay -Sc`        | Clean package cache                                     |
+| `paru -Syu`      | Update system & AUR packages                            |
+| `paru -S <pkg>`  | Install a package from repos or AUR                     |
+| `paru -R <pkg>`  | Remove a package                                        |
+| `paru -Ss <pkg>` | Search for a package                                    |
+| `paru -Qi <pkg>` | Show package info                                       |
+| `paru -Qs <pkg>` | Search installed packages                               |
+| `paru -Sc`       | Clean package cache                                     |
 
 
 #### openSUSE (Zypper)
