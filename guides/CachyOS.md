@@ -166,6 +166,13 @@ $ sudo btrfs scrub start -Bd /
 > [!NOTE]
 > This happened to me during a yay install and build of a package.
 
+---
+
+#### Downloading through the package manager is slow or there are network errors
+Doing both these steps should fix the issue:
+- `sudo cachyos-rate-mirrors`
+- `paru -Syu`
+
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
 <h2 align="center">Tweaks and Improvements</h2>
@@ -222,6 +229,20 @@ DisableDownloadTimeout
 ParallelDownloads = 5 #<<<<<<< Edit this line to be 10.
 DownloadUser = alpm
 ```
+
+---
+
+#### Automatic package cache cleaning <sup>[Wiki](https://wiki.archlinux.org/title/Pacman#Cleaning_the_package_cache)</sup>
+Downloading package updates can take up a large amount of space over time, this will automatically clear the cache for you. The below instructions will clear the cache weekly but leave 3 of the most recent versions of each package incase you need to downgrade anything.
+```console
+$ sudo systemctl enable paccache.timer
+```
+- Go to Steam Settings → Downloads.
+- Scroll down until you see "Shader Pre-Caching", then disable "Enable Shader Pre-caching".
+
+---
+
+#### Making Steam games launch much faster
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 

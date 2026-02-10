@@ -123,14 +123,6 @@ In the `../files/fastfetch` folder copy the config and the logo to `~/.config/fa
 
 ---
 
-#### Automatic package cache cleaning <sup>[Wiki](https://wiki.archlinux.org/title/Pacman#Cleaning_the_package_cache)</sup>
-Downloading package updates can take up a large amount of space over time, this will automatically clear the cache for you. The below instructions will clear the cache weekly but leave 3 of the most recent versions of each package incase you need to downgrade anything.
-```console
-$ sudo systemctl enable paccache.timer
-```
-
----
-
 #### GitHub CLI Setup <sup>[Manual](https://cli.github.com/manual/)</sup>
 
 Run the command:
