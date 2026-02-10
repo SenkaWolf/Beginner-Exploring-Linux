@@ -144,6 +144,18 @@ $ git config --global user.name "SenkaWolf"
 $ git config --global init.defaultBranch main
 ```
 
+#### Uncomplicated Firewall (Ufw) Configuration <sup>[Wiki](https://wiki.archlinux.org/title/Uncomplicated_Firewall)</sup>
+
+To allow certain programs to work you will need to open the below ports on the firewall:
+```console
+$ sudo ufw allow 1714:1764/udp #KDE Connect
+$ sudo ufw allow 1714:1764/tcp #KDE Connect 
+$ sudo ufw allow 53317/udp #LocalSend
+$ sudo ufw allow 53317/tcp #LocalSend
+$
+$ sudo ufw reload #Run this after using any of the above.
+```
+
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
 <h2 align="center">Visuals</h2>
