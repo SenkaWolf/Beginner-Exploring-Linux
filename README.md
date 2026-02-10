@@ -202,11 +202,12 @@ Here is a list of documents for a variety of things such as my setups, explantat
 
 <sub>In alphabetical order.</sub>
 
-- [Arch Package Installttion Basics](/docs/Arch-Package-Installation-Basics.md)
+- [Arch Package Installation Basics](/docs/Arch-Package-Installation-Basics.md)
 - [Useful Terminal Commands](/docs/Useful-Terminal-Commands.md)
 - [Useful Keyboard Shortcuts](/docs/Useful-Keyboard-Shortcuts.md)
 - [Managing Dotfiles](/docs/Managing-Dotfiles.md)
-- [My CachyOS Setup](/docs/My-PlasmaKDE-CachyOS-Setup.md)
+- My Setups
+  - [CachyOS Plasma KDE Setup](/docs/My-PlasmaKDE-CachyOS-Setup.md)
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
