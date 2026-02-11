@@ -79,7 +79,7 @@ Appendix: This is important due to streamdeck being a HID device.
 > $ bash -c 'bash <(curl -sSL https://raw.githubusercontent.com/nekename/OpenDeck/main/install_opendeck.sh)'
 > ```
 
-#### Virtual Machine / Virtualisation
+#### Virtual Machine / Virtualisation <sup>[Wiki](https://wiki.cachyos.org/virtualization/qemu_and_vmm_setup/)</sup>
 
 > [!NOTE]
 > A shortcut to setting this up you can use [Linutil](https://github.com/ChrisTitusTech/linutil) which is a tool made by Chris Titus to simplify the install of certain applications.
