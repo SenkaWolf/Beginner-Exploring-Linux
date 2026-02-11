@@ -20,8 +20,8 @@
  <summary>Expand Table Here</summary>
 
   - [CachyOS Install Process](#CachyOS-Install-Process)
-        - [Troubleshooting](#Troubleshooting)
-        - [Tweaks and Improvements](#Tweaks-and-Improvements)
+      - [Troubleshooting](#Troubleshooting)
+      - [Tweaks and Improvements](#Tweaks-and-Improvements)
   - [Guides](#Guides)
   - [Miscellaneous](#Miscellaneous)
 </details>
@@ -244,12 +244,25 @@ Downloading package updates can take up a large amount of space over time, this 
 ```console
 $ sudo systemctl enable paccache.timer
 ```
+---
+
+#### Making Steam games launch much faster
 - Go to Steam Settings → Downloads.
 - Scroll down until you see "Shader Pre-Caching", then disable "Enable Shader Pre-caching".
 
 ---
 
-#### Making Steam games launch much faster
+#### CPU Core Balancing <sup>[Github](https://github.com/Irqbalance/irqbalance)</sup>
+
+Using irqbalance we can use this to distribute hardware interrupts across CPU cores to prevent one core (often CPU0) from becoming overloaded. This helps with reduces microstutter in games, improves frametime consistency and especially useful on 6+ core CPUs.
+
+```console
+$ sudo pacman -Sy irqbalance #Install irqbalance
+$ sudo systemctl enable --now irqbalance.service #Enable
+```
+
+> [!CAUTION]
+> If your CPU only has 4 cores or you are manually pinning CPUs for gaming then don't follow this section.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
