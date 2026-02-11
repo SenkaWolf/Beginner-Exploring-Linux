@@ -22,6 +22,7 @@
   - [CachyOS Install Process](#CachyOS-Install-Process)
       - [Troubleshooting](#Troubleshooting)
       - [Tweaks and Improvements](#Tweaks-and-Improvements)
+      - [Gaming Fixes](#Gaming-Fixes)
   - [Guides](#Guides)
   - [Miscellaneous](#Miscellaneous)
 </details>
@@ -246,12 +247,6 @@ $ sudo systemctl enable paccache.timer
 ```
 ---
 
-#### Making Steam games launch much faster
-- Go to Steam Settings → Downloads.
-- Scroll down until you see "Shader Pre-Caching", then disable "Enable Shader Pre-caching".
-
----
-
 #### CPU Core Balancing <sup>[Github](https://github.com/Irqbalance/irqbalance)</sup>
 
 Using irqbalance we can use this to distribute hardware interrupts across CPU cores to prevent one core (often CPU0) from becoming overloaded. This helps with reduces microstutter in games, improves frametime consistency and especially useful on 6+ core CPUs.
@@ -263,6 +258,18 @@ $ sudo systemctl enable --now irqbalance.service #Enable
 
 > [!CAUTION]
 > If your CPU only has 4 cores or you are manually pinning CPUs for gaming then don't follow this section.
+
+![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
+
+<h2 align="center">Gaming Fixes</h2>
+
+#### Making Steam games launch much faster
+- Go to Steam Settings → Downloads.
+- Scroll down until you see "Shader Pre-Caching", then disable "Enable Shader Pre-caching".
+
+#### Counter-Strike 2
+
+- No Audio - Add `-sdlaudiodriver pulse` on Steam launch options setting.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
