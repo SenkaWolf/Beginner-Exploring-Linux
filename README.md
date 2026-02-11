@@ -45,6 +45,9 @@ Unless specified any steps which require confirmation with a 'y' or 'n' always c
 
 If there are multiple options, I’ll indicate my preferred choice with a star ![Star](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/icons/star14.png?raw=true). Feel free to choose differently.
 
+> [!IMPORTANT]
+> Documents in this repository have been prepared using information gathered from various wikis, YouTube, and ChatGPT.
+
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
 <h1 align="center">Prepairing for Installation</h1>
