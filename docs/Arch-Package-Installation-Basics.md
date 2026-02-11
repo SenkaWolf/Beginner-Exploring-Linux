@@ -81,6 +81,7 @@ sudo pacman -Sy <packages>
 | `vlc` | Media player. | pacman |
 | `cachyos-gaming-meta` | This meta-package includes all necessary gaming libraries and dependencies. | pacman |
 | `cachyos-gaming-applications` | This package contains tools and launchers like Steam, Lutris, and others. | pacman |
+| `piper` | GTK+ application to configure gaming mice. | pacman |
 | `retroarch` | Open-source frontend for emulators. | pacman |
 | `code` | Visual Studio Code editor. | pacman |
 | `git` | Distributed version control system. | pacman |
