@@ -209,7 +209,7 @@ Finally we need to disable [Fast Startup](https://windowsforum.com/threads/fast-
 - Save the changes and reboot the computer.
 
 #### <sup>Option 2:</sup> Step 7 - CLI/GUI Environment
-Now you will be in a CLI Environment or GUI. Move onto the next section [Distributions](#Distributions).
+Now you will be in a CLI Environment or GUI. Move onto the next section of the install by selecting the [distribution](#Distributions) of Linux you installed.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
