@@ -160,7 +160,7 @@ Download the ISO file for the Linux distro of your choice. Use the [Distribution
 - Then start formatting the USB device.
 
 #### <sup>Option 2:</sup> Step 5 - Dual Booting/Storage Partitioning  (Optional)
-If you want to keep Windows installed on your computer and be able to boot into Linux or Windows then follow the below steps. If you wish to override your Windows install then skip to step 6.
+If you want to keep Windows installed on your computer and be able to boot into Linux or Windows then follow the below steps. If you wish to override your Windows install then skip to [step 6](#option-2-step-6---booting-from-the-usb).
 
 - You will need to open Disk Manager. To do this either right-clicking the Start button and selecting "Disk Management" or Search for "Disk Manager" in your start menu and you will see an option called "Create and format hard disk partitions".
 - This will list all your connected storage drives and their paritions. Your main C drive should have three paritions and any others typically should just have one.
@@ -169,6 +169,37 @@ If you want to keep Windows installed on your computer and be able to boot into 
   - It is recommended to have around 30GB-50GB for a Linux install however the more you can spare the more available storage you will have. I like to try and split my drive 50/50 so I have 500GB.
 - After you have shrunk the volumn you will now see a unallocated section within the drive matching the size you chose.
   - You can always shrink the drive more later or reallocate the volumn back to Windows.
+
+Now we will make a [system restore point](https://support.microsoft.com/en-us/windows/system-restore-a5ae3ed9-07c4-fd56-45ee-096777ecd14e) in case Windows gets effected by the install, this will allow you to restore your system without needing to do a fresh install. 
+- Go to your taskbar and search "Create a restore point".
+- Ensure your C drive is selected then click "Create..." button.
+
+We also need to disable [BitLocker](https://support.microsoft.com/en-us/windows/bitlocker-drive-encryption-76b92ac9-1040-48d6-9f5f-d14b3c5fa178) and this method will vary depending on on version of Windows you are running. To find out what version you have:
+- Open Settings: Click on the Start menu and select Settings.
+- Go to System: In the Settings window, click on System.
+- Select About: Scroll down and click on About.
+- View Edition: Under Windows specifications, you will see the edition (Home or Pro) listed.
+
+##### Windows 11 Home
+- Open Settings.
+- Click on Privacy & security.
+- Select Device encryption.
+- Toggle the switch to Turn off.
+
+##### Windows 11 Pro
+- Open Control Panel.
+- Click on System and Security.
+- Select BitLocker Drive Encryption.
+- Click on Turn off BitLocker for the desired drive.
+- Confirm your choice to disable BitLocker.
+
+Finally we need to disable [Fast Startup](https://windowsforum.com/threads/fast-startup-in-windows-11-benefits-risks-and-how-to-disable-it.369470/) otherwise you could have issues wtih drive lockouts and/or file system errors on either Windows or Linux. To do this:
+- Open the Control Panel by searching for it in the Start Menu.
+- Click on Power Options.
+- Select Choose what the power buttons do from the left sidebar.
+- Click on Change settings that are currently unavailable at the top (if the Fast Startup option is greyed out).
+- Uncheck the box for Turn on fast startup (recommended).
+- Click Save changes.
 
 #### <sup>Option 2:</sup> Step 6 - Booting from the USB
 - Restart your computer and enter your BIO settings (use ESC, F8, F9, F10, F12).
