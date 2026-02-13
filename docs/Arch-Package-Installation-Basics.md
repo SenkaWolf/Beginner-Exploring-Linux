@@ -57,6 +57,7 @@ sudo pacman -Sy <packages>
 | `snapper` | [Managing file system snapshots in Linux, primarily designed to work with the Btrfs file system](http://snapper.io/). | pacman |
 | `snap-pac` |  Hooks and scripts that automatically create pre and post snapshots using Snapper before and after package transactions with Pacman. | pacman |
 | `grub-btrfs` | Tool that enhances the GRUB bootloader by allowing you to boot into Btrfs snapshots. | pacman |
+| `os-prober` | Tool for adding other distros to GRUB. | pacman |
 | `cachy-update` | Update notifier & applier for CachyOS. | pacman |
 | `zen-browser` | Minimalist web browser. | pacman |
 | `stow` | [Symlink farm manager](https://www.gnu.org/software/stow/manual/). | pacman |
