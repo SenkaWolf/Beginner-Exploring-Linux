@@ -31,13 +31,139 @@
 
 <h2 align="center">CachyOS Install Process</h2>
 
-Now we will be going through the install process of CachyOS, this will feel very familiar to a Windows setup.
+Now we will be going through the install process of CachyOS, this will put you into a live user environment desktop.
+
+- Connect to the internet by using the taskbar if you are using Wi-Fi. If you are using ethernet then you should already be connected.
+- You should see a CachyOS Hello screen open, if not go to the app menu and search for "hello" and you will see the CachyOS Hello application.
+- Now press the "Launch installer" button.
+- Bootloader - Pick Grub.
+- Select your language then press next.
+- Select your region then press next.
+- Select your keybaord layout then press next.
+- Select storage device: Pick the drive you wish to install Linux on or the parition you made earlier if you are dual booting.
+  - Select "Replace a partition".
+  - Make sure the dropdown says "btrfs".
+  - Select a partition to install on: Click on the grey free space on the bar and the install will select all the free space on the partition.
+  - Then press next.
+- Now pick the desktop environment you want to use. I prefer and recommend Plasma.
+- Packages: Leave the default ticked ones as is. If you use a HP printer/scanner then you may want to tick "Support for HP Printer/Scanner".
+- Users: Now fill out your user account information.
+- Summary: Now press install.
+- Once it is done restart your computer and remove your USB device.
+
+Now we need to ensure Windows shows up in the GRUB boot manager screen so you can boot to either system. To do this open the console/terminal and do the following:
+```console
+$ sudo nano /etc/default/grub
+```
+
+This will open the grub config in the terminal which will look simular to the below. Look for the below lines and change them, I have added comments to the example below as well.
+- `GRUB_TIMEOUT='5'` → `GRUB_TIMEOUT='30'` - Changes the default timer.
+- `#GRUB_DISABLE_OS_PROBER=false` → `GRUB_DISABLE_OS_PROBER=false` - Uncomment this line so GRUB can look for the Windows boot loader and can add it to the GRUB boot manager screen.
+
+```console
+$ # GRUB boot loader configuration
+$ 
+$ GRUB_DEFAULT=0
+$ GRUB_TIMEOUT='5' #Change this from 5 to 30.
+$ $ $ GRUB_DISTRIBUTOR='CachyOS'
+$ GRUB_CMDLINE_LINUX_DEFAULT='nowatchdog nvme_load=YES zswap.enabled=0 splash loglevel=3'
+$ GRUB_CMDLINE_LINUX=""
+$ 
+$ # Preload both GPT and MBR modules so that they are not missed
+$ GRUB_PRELOAD_MODULES="part_gpt part_msdos"
+$ 
+$ # Uncomment to enable booting from LUKS encrypted devices
+$ #GRUB_ENABLE_CRYPTODISK=y
+$ 
+$ # Set to 'countdown' or 'hidden' to change timeout behavior,
+$ # press ESC key to display menu.
+$ GRUB_TIMEOUT_STYLE=menu
+$ 
+$ # Uncomment to use basic console
+$ GRUB_TERMINAL_INPUT=console
+$ 
+$ # Uncomment to disable graphical terminal
+$ #GRUB_TERMINAL_OUTPUT=console
+$ 
+$ # The resolution used on graphical terminal
+$ # note that you can use only modes which your graphic card supports via VBE
+$ # you can see them in real GRUB with the command `videoinfo'
+$ GRUB_GFXMODE=auto
+$ 
+# Uncomment to allow the kernel use the same resolution used by grub
+$ GRUB_GFXPAYLOAD_LINUX=keep
+$ 
+$ # Uncomment if you want GRUB to pass to the Linux kernel the old parameter
+$ # format "root=/dev/xxx" instead of "root=/dev/disk/by-uuid/xxx"
+$ #GRUB_DISABLE_LINUX_UUID=true
+$ 
+$ # Uncomment to disable generation of recovery mode menu entries
+$ GRUB_DISABLE_RECOVERY='true'
+$ 
+$ # Uncomment and set to the desired menu colors.  Used by normal and wallpaper
+$ # modes only.  Entries specified as foreground/background.
+$ #GRUB_COLOR_NORMAL="light-blue/black"
+$ #GRUB_COLOR_HIGHLIGHT="light-cyan/blue"
+$ 
+$ # Uncomment one of them for the gfx desired, a image background or a gfxtheme
+$ #GRUB_BACKGROUND="/path/to/wallpaper"
+$ GRUB_THEME="/boot/grub/themes/CyberGRUB-2077/theme.txt"
+$ 
+$ # Uncomment to get a beep at GRUB start
+$ #GRUB_INIT_TUNE="480 440 1"
+$ 
+$ # Uncomment to make GRUB remember the last selection. This requires
+$ # setting 'GRUB_DEFAULT=saved' above.
+$ #GRUB_SAVEDEFAULT=true
+$ 
+$ # Uncomment to disable submenus in boot menu
+$ GRUB_DISABLE_SUBMENU='false'
+$ 
+$ # Probing for other operating systems is disabled for security reasons. Read
+$ # documentation on GRUB_DISABLE_OS_PROBER, if still want to enable this
+$ # functionality install os-prober and uncomment to detect and include other
+$ # operating systems.
+$ #GRUB_DISABLE_OS_PROBER=false #Remove the # at the beginning to uncomment this line.
+$ GRUB_EARLY_INITRD_LINUX_STOCK=''
+$ GRUB_TOP_LEVEL='/boot/vmlinuz-linux-cachyos'
+```
+
+- Press Ctrl + O then Enter to save the changes.
+- Press Ctrl + X to exit the nano file editor.
+
+Now we need to install `os-prober` as mentioned in the comment in the above file. To do so run the following commands in the terminal:
+```console
+$ sudo pacman -Sy os-prober #Installs os-prober
+$ sudo grub-mkconfig -o /boot/grub/grub.cfg #This command updates GRUB 
+```
+
+You should now see a output in the terminal which should look like the below. It should say "Found Windows Boot Manager" and this means it has added Windows to the GRUB boot manager screen.
+
+```console
+$ Generating grub configuration file ...
+$ Found theme: /boot/grub/themes/cachyos/theme.txt
+$ Found linux image: /boot/vmlinuz-linux-cachyos
+$ Found initrd image: /boot/initramfs-linux-cachyos.img
+$ Warning: os-prober will be executed to detect other bootable partitions.
+$ Its output will be used to detect bootable binaries on them and create new boot entries.
+$ Found Windows Boot Manager on /dev/nvme0n1p1@/EFI/Microsoft/Boot/bootmgfw.efi
+$ Adding boot menu entry for UEFI Firmware Settings ...
+$  done
+```
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
 <h2 align="center">Troubleshooting</h2>
 
-#### VM Install - Asking for liveuser password
+#### Boots into Windows and not the GRUB boot manager screen 
+If you boot straight into Windows after the install then we need to change the boot loader order in the BIOs.
+- Restart your computer and enter your BIO settings (use ESC, F8, F9, F10 or F12).
+- Change your UEFI Boot Order so that the GRUB optionis the primary (first) in the boot list.
+- Save the changes and reboot the computer.
+- This will now open the GRUB boot manager screen on startup.
+
+
+#### Virtual Machine Install - Asking for liveuser password
 When booting from a USB media to instal CachyOS on a virtual machine you may be greeted by the below screen.
 
 ![Live User Login Screen Screenshot](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/CachyOS-liveuser-Login.png?raw=true)
