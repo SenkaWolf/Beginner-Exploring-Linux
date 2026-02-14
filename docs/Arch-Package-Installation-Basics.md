@@ -34,9 +34,12 @@ You don't have to install packages via a terminal/console. Depending on the desk
 
 Here you can search for packages to install, update or even remove all without needing to use or remember any commands.
 
-Octopi is a very simple designed app manager however if you would like something which is more graphical then you can use Discover instead. Discover does not come pre-installed on CachyOS but is often installed on other distribution which use the KDE desktop enviroment. To get Discover simply install it via Octopi or `sudo pacman -Sy discover` in the terminal. Then you can search for it in the start menu.
+Octopi is a very simple designed app manager however if you would like something which is more graphical then you can use Discover instead. Discover does not come pre-installed on CachyOS but is often installed on other distribution which use the KDE desktop enviroment. To get Discover simply install it via Octopi or `sudo pacman -Sy discover flatpak` in the terminal. Then you can search for it in the start menu.
 
 ![Discover screenshot](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/Discover.jpg?raw=true)
+
+> [!NOTE]
+> GUI package managers are a bit of a niche on Arch based distros as Arch doesn’t ship a app store/app manager by default. Most GUIs are front-ends to pacman and/or AUR helpers rather than native, fully integrated stores like on Ubuntu or Fedora distros.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
