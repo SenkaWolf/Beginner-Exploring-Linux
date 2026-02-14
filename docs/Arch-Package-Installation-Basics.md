@@ -18,14 +18,29 @@
 <details>
  <summary>Expand Table Here</summary>
 
-  - [Arch Package Installation Basics](#Arch-Package-Installation-Basics)
+  - [Arch Package Installation GUI Basics](#Arch-Package-Installation-GUI-Basics)
+  - [Arch Package Installation Basics](#Arch-Package-Installation-Terminal/Console-Basics)
     - [Package installation Basics](#Package-Installation-Basics)
     - [Package Management Choices](#Package-Management-Choices)
 </details>
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
-<h1 align="center">Arch Package Installation Basics</h1>
+<h1 align="center">Arch Package Installation GUI Basics</h1>
+
+You don't have to install packages via a terminal/console. Depending on the desktop enviroment or distribution you are using you may have a pre-installed app manager. CachyOS comes bundled with Octopi, you can search for it in the start menu and will look like the below.
+
+![Octopi screenshot](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/CachyOS-octopi.jpg?raw=true)
+
+Here you can search for packages to install, update or even remove all without needing to use or remember any commands.
+
+Octopi is a very simple designed app manager however if you would like something which is more graphical then you can use Discover instead. Discover does not come pre-installed on CachyOS but is often installed on other distribution which use the KDE desktop enviroment. To get Discover simply install it via Octopi or `sudo pacman -Sy discover` in the terminal. Then you can search for it in the start menu.
+
+![Discover screenshot](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/Discover.jpg?raw=true)
+
+![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
+
+<h1 align="center">Arch Package Installation Terminal/Console Basics</h1>
 
 This document explains the package installation commands used in my setup guides or personal setups.
 
@@ -58,6 +73,7 @@ sudo pacman -Sy <packages>
 | `snap-pac` |  Hooks and scripts that automatically create pre and post snapshots using Snapper before and after package transactions with Pacman. | pacman |
 | `grub-btrfs` | Tool that enhances the GRUB bootloader by allowing you to boot into Btrfs snapshots. | pacman |
 | `os-prober` | Tool for adding other distros to GRUB. | pacman |
+| `irqbalance` |  [A daemon that helps distribute hardware interrupts across multiple processors in a system to improve performance](https://github.com/Irqbalance/irqbalance). | pacman |
 | `cachy-update` | Update notifier & applier for CachyOS. | pacman |
 | `zen-browser` | Minimalist web browser. | pacman |
 | `stow` | [Symlink farm manager](https://www.gnu.org/software/stow/manual/). | pacman |
@@ -76,10 +92,11 @@ sudo pacman -Sy <packages>
 | `obs-studio` | Screen recording and live streaming software. | pacman |
 | `gpu-screen-recorder-ui` | A fullscreen overlay UI for GPU Screen Recorder in the style of ShadowPlay. | pacman |
 | `krita` | Digital painting and illustration application. | pacman |
-| `wps-office` | Office suite compatible with Microsoft Office formats. | pacman |
+| `libreoffice-fresh` | Office suite. |
 | `mythes-en` | English thesaurus files (used by office applications). | pacman |
 | `ttc-iosevka` | [A font designed for writing code, using in terminals](https://github.com/be5invis/Iosevka). | pacman |
 | `vlc` | Media player. | pacman |
+| `ffmpeg` | Suite of libraries and programs for handling video, audio, and other multimedia files and streams. VLC can use this to play more file types. | pacman |
 | `cachyos-gaming-meta` | This meta-package includes all necessary gaming libraries and dependencies. | pacman |
 | `cachyos-gaming-applications` | This package contains tools and launchers like Steam, Lutris, and others. | pacman |
 | `piper` | GTK+ application to configure gaming mice. | pacman |
