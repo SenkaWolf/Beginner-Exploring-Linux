@@ -45,10 +45,10 @@ Now we will be going through the install process of CachyOS, this will feel very
 Run the following commands in each section using pacman:
 
 - Firmware: `sudo pacman -Sy`
-- Tools: `sudo pacman -Sy flatpak yay snapper snap-pac grub-btrfs os-prober cachy-update zen-browser stow qbittorrent ghostty starship htop btop cpu-x gparted openrgb k3b cmatrix strace`
+- Tools: `sudo pacman -Sy flatpak yay snapper snap-pac grub-btrfs os-prober irqbalance cachy-update os-prober irqbalance zen-browser stow qbittorrent ghostty starship htop btop cpu-x gparted openrgb k3b cmatrix strace`
 - Social: `sudo pacman -Sy discord`
 - Creative: `sudo pacman -Sy obs-studio gpu-screen-recorder-ui krita`
-- Office: `sudo pacman -Sy wps-office mythes-en ttc-iosevka ttf-fira-sans ttf-fira-code ttf-firacode-nerd vlc`
+- Office: `sudo pacman -Sy libreoffice-fresh wps-office mythes-en ttc-iosevka ttf-fira-sans ttf-fira-code ttf-firacode-nerd vlc ffmpeg`
 - Gaming: `sudo pacman -Sy cachyos-gaming-meta cachyos-gaming-applications piper retroarch`
 - Coding: `code git github-cli mysql-workbench filezilla ttf-font-awesome`
 
