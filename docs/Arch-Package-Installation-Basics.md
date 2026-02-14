@@ -122,6 +122,7 @@ sudo pacman -Sy <packages>
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
 <h2 align="center">Package Management Choices</h2>
+
 While Arch Linux provides multiple ways to install software, my setups primarily uses `pacman`, the native Arch package manager. Other options like AUR helpers (`yay`) and Flatpak exist, but `pacman` is preferred for core tools and system software.
 
 ### Why `pacman`?
