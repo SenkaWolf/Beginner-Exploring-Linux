@@ -172,12 +172,6 @@ CachyOS doesn't set passwords by default and there is no password. To get past t
 
 ---
 
-#### Snapper (Snapshot Setup) <sup>[Wiki](https://wiki.archlinux.org/title/Snapper)</sup>
-
-Use this useful guide [here](https://gist.github.com/doganay-ozturk/d6766bae8999adbc5b42e2ab4acea2f5#file-snapper-config-md).
-
----
-
 #### System Freezes During Package Building - Out of Memory (OOM) <sup>[Wiki](https://en.wikipedia.org/wiki/Magic_SysRq_key)</sup>
 The Magic SysRq key is a powerful low-level feature in Linux that allows you to perform various commands directly to the kernel, even if the system seems completely unresponsive. It’s extremely useful for troubleshooting and safely recovering from system crashes.
 
@@ -384,6 +378,12 @@ $ sudo systemctl enable --now irqbalance.service #Enable
 
 > [!CAUTION]
 > If your CPU only has 4 cores or you are manually pinning CPUs for gaming then don't follow this section.
+
+---
+
+#### Snapper (Snapshot Setup) <sup>[Wiki](https://wiki.archlinux.org/title/Snapper)</sup>
+
+Use this useful guide [here](https://gist.github.com/doganay-ozturk/d6766bae8999adbc5b42e2ab4acea2f5#file-snapper-config-md).
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
