@@ -45,7 +45,7 @@ Now we will be going through the install process of CachyOS, this will feel very
 Run the following commands in each section using pacman:
 
 - Firmware: `sudo pacman -Sy`
-- Tools: `sudo pacman -Sy flatpak yay snapper snap-pac grub-btrfs os-prober irqbalance cachy-update os-prober irqbalance zen-browser stow qbittorrent ghostty starship htop btop cpu-x gparted openrgb k3b cmatrix strace`
+- Tools: `sudo pacman -Sy flatpak yay snapper snap-pac grub-btrfs os-prober irqbalance cachy-update zen-browser stow qbittorrent ghostty starship htop btop cpu-x gparted openrgb k3b cmatrix strace`
 - Social: `sudo pacman -Sy discord`
 - Creative: `sudo pacman -Sy obs-studio gpu-screen-recorder-ui krita`
 - Office: `sudo pacman -Sy libreoffice-fresh wps-office mythes-en ttc-iosevka ttf-fira-sans ttf-fira-code ttf-firacode-nerd vlc ffmpeg`
@@ -120,6 +120,28 @@ Then change NumLock on startup to Turn On.
 
 #### Configure Fastfetch <sup>[GitHub](https://github.com/fastfetch-cli/fastfetch)</sup>
 In the `../files/fastfetch` folder copy the config and the logo to `~/.config/fastfetch/`. You might need to create the folder using `fastfetch --gen-config` or just `mkdir`.
+
+---
+#### Starship Configuration <sup>[Website](https://starship.rs/config/)</sup>
+
+Starship is a customizable prompt for a shell enviroment in a terminal.
+
+To get started configuring starship, create the following file: `~/.config/starship.toml`.
+
+```console
+$ mkdir -p ~/.config && touch ~/.config/starship.toml #Create config file.
+$ nano ~/.config/starship.toml #Edit File
+```
+
+Copy the content from the .toml file found in the [Tokyo Night Preset ](https://starship.rs/presets/tokyo-night) and save the changes.
+
+CachyOS default shell is fish so to add starship to the shell edit the following file and add `starship init fish | source` to the end of the file.
+
+```console
+$ nano ~/.config/fish/config.fish
+```
+
+Now simply close and reopen your terminal to see the changes.
 
 ---
 
