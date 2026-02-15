@@ -34,10 +34,6 @@ Now we will be going through the install process of CachyOS, this will feel very
 
 ![My Desktop](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/My-Desktop.png?raw=true)
 
-![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
-
-<h2 align="center">System Settings</h2>
-
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
@@ -176,20 +172,28 @@ $ sudo ufw reload #Run this after using any of the above.
 
 #### Plasma Theme <sup>[Arch Wiki](https://wiki.archlinux.org/title/KDE#Themes)</sup>
 
-Find a theme you like from [here](https://www.pling.com/browse?cat=104&ord=latest). I like [Magna-Dark-Plasma](https://www.pling.com/p/2102246/) so I will use this.
+Find a theme you like from [here](https://www.pling.com/browse?cat=104&ord=latest). I like [Ant-Dracula KDE](https://store.kde.org/p/1370687/) so I will use this.
 
 Download the file then extract/unzip the file and ensure it follows the below layout:
 
 ```
-📦 Magna-Dark-Plasma
-├─ folders
-├─ colors
-└─ metadata.desktop
+📦 Dracula/
+    ├── metadata.desktop
+    ├── colors
+    ├── dialogs/
+    │   └── background.svgz
+    ├── icons/
+    │   ├── applications.svg
+    │   ├── bookmarks.svg
+    │   ├── computer.svg
+    │   ├── system.svg
+    │   └── view.svg
+    └── widgets/
 ```
 
 If this looks correct then run the following commands to move the file and open system settings:
 ```console
-$ mv ~/Downloads/Magna-Dark-Plasma ~/.local/share/plasma/desktoptheme/
+$ mv ~/Downloads/Dracula ~/.local/share/plasma/desktoptheme/
 $ systemsettings
 ```
 Then navigate to Colours & Themes > Plasma Style and then select the one you just installed.
@@ -198,17 +202,19 @@ Then navigate to Colours & Themes > Plasma Style and then select the one you jus
 
 #### Custom Plasma Color Schemes <sup>[Arch Wiki](https://wiki.archlinux.org/title/KDE#Themes)</sup>
 
-Find a color scheme you like from [here](https://www.pling.com/browse?cat=112&ord=latest). I like [Magna-Violet-Dark-Colorscheme](https://www.pling.com/p/2102231/) so I will use this.
+Find a color scheme you like from [here](https://www.pling.com/browse?cat=112&ord=latest). I like [Ant-Dracula KDE](https://store.kde.org/p/1370679/) so I will use this.
 
 Download the file and ensure it follows the below layout:
 
 ```
-📦 MagnaVioletDarkColorscheme.colors
+📦 Dracula/
+    ├── Dracula.colors
+    └── DraculaPurple.colors
 ```
 
-If this looks correct then run the following commands to move the file and open system settings:
+If this looks correct then run the following commands to move the files and open system settings:
 ```console
-$ mv ~/Downloads/MagnaVioletDarkColorscheme.colors ~/.local/share/color-schemes/
+$ mmv ~/Downloads/Dracula/*.colors ~/.local/share/color-schemes/
 $ systemsettings
 ```
 Then navigate to Colours & Themes > Colours and then select the one you just installed.
@@ -217,19 +223,28 @@ Then navigate to Colours & Themes > Colours and then select the one you just ins
 
 #### Custom Window Decorations Aurorae <sup>[Arch Wiki](https://wiki.archlinux.org/title/KDE#Themes)</sup>
 
-Find a color scheme you like from [here](https://www.pling.com/browse?cat=717&ord=latest). I like [Magna-Dark-Aurorae-6](https://www.pling.com/p/2134194/) so I will use this.
+Find a color scheme you like from [here](https://www.pling.com/browse?cat=717&ord=latest). I like [Ant-Dracula KDE](https://store.kde.org/p/1370682/) so I will use this.
 
 Download the file then extract/unzip the file and ensure it follows the below layout:
 
 ```
-📦 Magna-Dark-Aurorae-6
-├─ svg files
-└─ metadata.desktop
+📦 Dracula/
+    ├── .shade.svg
+    ├── alldesktops.svg
+    ├── close.svg
+    ├── decoration.svg
+    ├── keepabove.svg
+    ├── keepbelow.svg
+    ├── maximize.svg
+    ├── metadata.desktop
+    ├── minimize.svg
+    ├── restore.svg
+    └── Dracularc
 ```
 
 If this looks correct then run the following commands to move the file and open system settings:
 ```console
-$ mv ~/Downloads/Magna-Dark-Aurorae-6 ~/.local/share/aurorae/themes/
+$ mv ~/Downloads/Dracula ~/.local/share/aurorae/themes/
 $ systemsettings
 ```
 Then navigate to Colours & Themes > Window Decorations and then select the one you just installed.
@@ -239,9 +254,6 @@ Then navigate to Colours & Themes > Window Decorations and then select the one y
 #### Icon Theme <sup>[Arch Wiki](https://wiki.archlinux.org/title/Icons)</sup>
 
 Find a icon pack you like from [here](https://www.pling.com/browse?cat=132&ord=latest). I like [Slot Nord Dark Colorize Icons](https://www.pling.com/p/2338310) so I will use this.
-
-> [!NOTE]
-> [Azure Dark Icons](https://www.pling.com/p/2148992/)
 
 Download the file then extract/unzip the file and ensure it follows the below layout:
 
@@ -253,7 +265,7 @@ Download the file then extract/unzip the file and ensure it follows the below la
 
 If this looks correct then run the following commands to move the file and open system settings:
 ```console
-$ mv ~/Downloads/Azure-Dark-Icons ~/.local/share/icons/
+$ mv ~/Downloads/Slot-Nord-Dark-Colorize-Icons ~/.local/share/icons/
 $ systemsettings
 ```
 Then navigate to Colours & Themes > Icons and then select the one you just installed.
@@ -286,18 +298,17 @@ Find a plashscreen you like from [here](https://www.pling.com/browse?cat=716&ord
 
 Download the file then extract/unzip the file and ensure it follows the below layout:
 
-> [!NOTE]
-> [Magna-Splash-6](https://www.pling.com/p/2136626)
-> ```
-> 📦 Magna-Splash-6
-> ├─ contents
-> └─ metadata.json
-> ```
-> If this looks correct then run the following commands to move the file and open system settings:
-> ```console
-> $ mv ~/Downloads/Magna-Splash-6 ~/.local/share/plasma/look-and-feel/
-> $ systemsettings
-> ```
+[Magna-Splash-6](https://www.pling.com/p/2136626)
+```
+📦 Magna-Splash-6
+├─ contents
+└─ metadata.json
+```
+If this looks correct then run the following commands to move the file and open system settings:
+```console
+$ mv ~/Downloads/Magna-Splash-6 ~/.local/share/plasma/look-and-feel/
+$ systemsettings
+```
 
 Then navigate to Colours & Themes > Splash Screen and then select the one you just installed or in my case I like to select none.
 
@@ -345,6 +356,54 @@ Go to System Settings > Text & Fonts > Fonts and change them to suit your prefer
 - WIndoww title: Raleway ExtraBold 10pt
 
 ![Font Settings](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/Font-Settings.png?raw=true)
+
+---
+
+#### Custom Sounds
+Find any custom sounds you like from [here](https://store.kde.org/browse?cat=316&ord=latest). I like [MacOS System Sounds](https://store.kde.org/p/1891375) so I will use this.
+
+Download the file then extract/unzip the file and ensure it follows the below layout:
+
+```
+📦 MacOS Sounds/
+    ├── index.theme
+    └── stereo/
+        ├── dialog-information.ogg
+        ├── message-new-email.ogg
+        ├── dialog-error.ogg
+        ├── button-toggle-off.ogg
+        ├── button-toggle-on.ogg
+        ├── dialog-warning.ogg
+        ├── phone-outgoing-calling.ogg
+        ├── trash-empty.ogg
+        ├── phone-outgoing-busy.ogg
+        ├── message.ogg
+        ├── device-ready.ogg
+        ├── message-new-instant.ogg
+        ├── desktop-login.ogg
+        ├── device-removed.ogg
+        ├── phone-incoming-call.ogg
+        ├── screen-capture.ogg
+        ├── power-unplug.ogg
+        ├── bell.ogg
+        ├── complete.ogg
+        ├── count-down.ogg
+        ├── camera-shutter.ogg
+        ├── power-plug.ogg
+        ├── battery-low.ogg
+        ├── dialog-question.ogg
+        ├── audio-volume-change.ogg
+        ├── message-sent-instant.ogg
+        └── device-added.ogg
+```
+
+If this looks correct then run the following commands to move the file and open system settings:
+```console
+$ mkdir -p ~/.local/share/sounds #Make the directory
+$ sudo mv ~/Downloads/"MacOS Sounds" ~/.local/share/sounds/
+$ systemsettings
+```
+Then navigate to Colours & Themes > System Sounds and then select the one you just installed.
 
 ---
 
