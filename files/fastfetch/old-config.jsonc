@@ -1,0 +1,147 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "type": "kitty",
+    "source": "~/.config/fastfetch/wolfv2.png",
+    "width": 50,
+    "height": null,
+    "preserveAspectRatio": true,
+    "padding": {
+      "top": 3,
+      "left": 2,
+      "right": 4,
+    },
+  },
+  "display": {
+    "separator": " ",
+    "color": {
+      "keys": "38;2;170;255;255",
+      "title": "38;2;76;87;127",
+      "output": "38;2;255;255;255",
+    },
+    "size": {
+      "binaryPrefix": "si",
+    },
+  },
+  "modules": [
+    "title",
+
+    // ============================================
+    //  HARDWARE CARD (ZIG YELLOW)
+    // ============================================
+    {
+      "type": "custom",
+      "format": "{#title}┌── {#keys} Hardware {#title}────────────────────────────────────┐",
+    },
+    {
+      "type": "host",
+      "key": "│ ",
+    },
+    {
+      "type": "cpu",
+      "key": "│ ├─ ",
+      "format": "{1}",
+    },
+    {
+      "type": "gpu",
+      "key": "│ ├─ ",
+    },
+    {
+      "type": "display",
+      "key": "│ ├─ 󰍹",
+    },
+    {
+      "type": "memory",
+      "key": "│ ├─ ",
+    },
+    {
+      "type": "disk",
+      "key": "│ ├─ ",
+      "folders": "/",
+    },
+    {
+      "type": "battery",
+      "key": "│ └─ ",
+    },
+    {
+      "type": "custom",
+      "format": "{#title}└──────────────────────────────────────────────────┘",
+    },
+
+    // ============================================
+    //  SOFTWARE CARD (RUST ORANGE)
+    // ============================================
+    {
+      "type": "custom",
+      "format": "{#title}┌── {#keys} Software {#title}──────────────┐",
+    },
+    {
+      "type": "os",
+      "key": "│ ",
+    },
+    {
+      "type": "kernel",
+      "key": "│ ├─ ",
+    },
+    {
+      "type": "disk",
+      "key": "│ ├─ 󰄉",
+      "folders": "/",
+      "format": "{days} Days Old",
+    },
+    {
+      "type": "uptime",
+      "key": "│ ├─ ",
+    },
+    {
+      "type": "packages",
+      "key": "│ ├─ ",
+    },
+    {
+      "type": "shell",
+      "key": "│ ├─ ",
+    },
+    {
+      "type": "terminal",
+      "key": "│ └─ ",
+    },
+    {
+      "type": "custom",
+      "format": "{#title}└────────────────────────────┘",
+    },
+
+    // ============================================
+    //  DESKTOP CARD (ZIG YELLOW)
+    // ============================================
+    {
+      "type": "custom",
+      "format": "{#title}┌── {#keys} Desktop {#title}──────────────┐",
+    },
+    {
+      "type": "de",
+      "key": "│ ",
+    },
+    {
+      "type": "wm",
+      "key": "│ ├─ ",
+    },
+    {
+      "type": "wmtheme",
+      "key": "│ ├─ ",
+    },
+    {
+      "type": "theme",
+      "key": "│ └─ ",
+      "format": "{1}",
+    },
+    {
+      "type": "custom",
+      "format": "{#title}└───────────────────────────┘",
+    },
+    {
+      "type": "colors",
+      "symbol": "square",
+      "paddingLeft": 2,
+    },
+  ],
+}

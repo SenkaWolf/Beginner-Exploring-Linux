@@ -2,146 +2,146 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
   "logo": {
     "type": "kitty",
-    "source": "~/.config/fastfetch/wolfv2.png",
+    "source": "~/.config/fastfetch/wolf-dracula-colour-pallet.png",
     "width": 50,
     "height": null,
     "preserveAspectRatio": true,
     "padding": {
       "top": 3,
       "left": 2,
-      "right": 4,
-    },
+      "right": 4
+    }
   },
   "display": {
     "separator": " ",
     "color": {
-      "keys": "38;2;170;255;255",
-      "title": "38;2;76;87;127",
-      "output": "38;2;255;255;255",
+      "keys": "38;2;189;147;249",      // Dracula Purple
+      "title": "38;2;255;121;198",     // Dracula Pink for titles
+      "output": "38;2;248;248;242"     // Dracula foreground (light gray)
     },
     "size": {
-      "binaryPrefix": "si",
-    },
+      "binaryPrefix": "si"
+    }
   },
   "modules": [
     "title",
 
     // ============================================
-    //  HARDWARE CARD (ZIG YELLOW)
+    //  HARDWARE CARD (DRACULA PURPLE)
     // ============================================
     {
       "type": "custom",
-      "format": "{#title}┌── {#keys} Hardware {#title}────────────────────────────────────┐",
+      "format": "{#title}┌── \u001b[38;2;80;250;123m Hardware\u001b[0m {#title}────────────────────────────────────┐"
     },
     {
       "type": "host",
-      "key": "│ ",
+      "key": "│ "
     },
     {
       "type": "cpu",
       "key": "│ ├─ ",
-      "format": "{1}",
+      "format": "{1}"
     },
     {
       "type": "gpu",
-      "key": "│ ├─ ",
+      "key": "│ ├─ "
     },
     {
       "type": "display",
-      "key": "│ ├─ 󰍹",
+      "key": "│ ├─ 󰍹"
     },
     {
       "type": "memory",
-      "key": "│ ├─ ",
+      "key": "│ ├─ "
     },
     {
       "type": "disk",
       "key": "│ ├─ ",
-      "folders": "/",
+      "folders": "/"
     },
     {
       "type": "battery",
-      "key": "│ └─ ",
+      "key": "│ └─ "
     },
     {
       "type": "custom",
-      "format": "{#title}└──────────────────────────────────────────────────┘",
+      "format": "{#title}└──────────────────────────────────────────────────┘"
     },
 
     // ============================================
-    //  SOFTWARE CARD (RUST ORANGE)
+    //  SOFTWARE CARD (DRACULA PINK/ORANGE)
     // ============================================
     {
       "type": "custom",
-      "format": "{#title}┌── {#keys} Software {#title}──────────────┐",
+      "format": "{#title}┌── \u001b[38;2;80;250;123m Software\u001b[0m {#title}──────────────┐"
     },
     {
       "type": "os",
-      "key": "│ ",
+      "key": "│ "
     },
     {
       "type": "kernel",
-      "key": "│ ├─ ",
+      "key": "│ ├─ "
     },
     {
       "type": "disk",
       "key": "│ ├─ 󰄉",
       "folders": "/",
-      "format": "{days} Days Old",
+      "format": "{days} Days Old"
     },
     {
       "type": "uptime",
-      "key": "│ ├─ ",
+      "key": "│ ├─ "
     },
     {
       "type": "packages",
-      "key": "│ ├─ ",
+      "key": "│ ├─ "
     },
     {
       "type": "shell",
-      "key": "│ ├─ ",
+      "key": "│ ├─ "
     },
     {
       "type": "terminal",
-      "key": "│ └─ ",
+      "key": "│ └─ "
     },
     {
       "type": "custom",
-      "format": "{#title}└────────────────────────────┘",
+      "format": "{#title}└────────────────────────────┘"
     },
 
     // ============================================
-    //  DESKTOP CARD (ZIG YELLOW)
+    //  DESKTOP CARD (DRACULA PURPLE)
     // ============================================
     {
       "type": "custom",
-      "format": "{#title}┌── {#keys} Desktop {#title}──────────────┐",
+      "format": "{#title}┌── \u001b[38;2;80;250;123m Desktop\u001b[0m {#title}──────────────┐"
     },
     {
       "type": "de",
-      "key": "│ ",
+      "key": "│ "
     },
     {
       "type": "wm",
-      "key": "│ ├─ ",
+      "key": "│ ├─ "
     },
     {
       "type": "wmtheme",
-      "key": "│ ├─ ",
+      "key": "│ ├─ "
     },
     {
       "type": "theme",
       "key": "│ └─ ",
-      "format": "{1}",
+      "format": "{1}"
     },
     {
       "type": "custom",
-      "format": "{#title}└───────────────────────────┘",
+      "format": "{#title}└───────────────────────────┘"
     },
     {
       "type": "colors",
       "symbol": "square",
-      "paddingLeft": 2,
-    },
-  ],
+      "paddingLeft": 2
+    }
+  ]
 }
