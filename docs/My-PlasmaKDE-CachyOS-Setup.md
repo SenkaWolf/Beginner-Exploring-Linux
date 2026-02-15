@@ -52,7 +52,7 @@ If you'd like a explanation on the code above or what each package is go [here](
 
 Below aren't available through pacman so we will use AUR instead: 
 - Firmware: `yay -Syu`
-- Tools: `yay -S ttf-raleway ungoogled-chromium-bin qdirstat-bin qdiskinfo-bin nordvpn-bin nordvpn-gui-bin rustdesk-bin wtf`
+- Tools: `yay -S ttf-raleway ungoogled-chromium-bin qdirstat-bin qdiskinfo-bin nordvpn-bin nordvpn-gui-bin rustdesk-bin wtf vicinae-bin`
 - Coding: `yay -S github-desktop-bin`
 
 ### Other install methods:

@@ -117,6 +117,7 @@ sudo pacman -Sy <packages>
 | `nordvpn-gui-bin` | Nord UI. | yay |
 | `rustdesk-bin` | Remote access. | yay |
 | `wtf` | [Personal information dashboard](https://github.com/wtfutil/wtf). | yay |
+| `vicinae-bin` | [Focused launcher for your desktop](https://github.com/vicinaehq/vicinae). | yay |
 | `github-desktop-bin` | Tool that simplifies your development workflow with Git. | yay |
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
