@@ -443,6 +443,19 @@ $ # Then log out and back in again. Restarting plasmashell in the terminal isn't
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/Add-or-Manage-Widgets-Get-New.png?raw=true)
 
+#### Widgets (Plasmoids) Customisation
+Some Widgets (Plasmoids) offer some customisation in their settings and some don't. In this section I will list how I've done some workarounds to tweak things to my liking.
+
+
+**[ToDo-List By Marc](https://www.pling.com/p/2342835)** 
+
+I don't like the icon used by this widget as it doesn't match my panels style so I will swap it out for something else.
+
+- Go to `~/.local/share/plasma/plasmoids/de.marc.todo/`.
+- Edit the `metadata.json` file.
+- Change `"Icon": "view-task",` → `"Icon": "todo-indicator",`
+- Then log out and back in again. Restarting plasmashell in the terminal isn't very reliable.
+
 ---
 #### GRUB Theme <sup>[Arch Wiki](https://wiki.archlinux.org/title/GRUB)</sup>
 Find any GRUB theme you like from [here](https://www.gnome-look.org/browse?cat=109&ord=latest). I like [CyberGRUB-2077](https://www.gnome-look.org/p/2235245) so I will use this.
