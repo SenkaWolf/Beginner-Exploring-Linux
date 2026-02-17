@@ -154,6 +154,8 @@ $ git config --global user.name "SenkaWolf"
 $ git config --global init.defaultBranch main
 ```
 
+---
+
 #### Uncomplicated Firewall (Ufw) Configuration <sup>[Wiki](https://wiki.archlinux.org/title/Uncomplicated_Firewall)</sup>
 
 To allow certain programs to work you will need to open the below ports on the firewall:
@@ -165,6 +167,104 @@ $ sudo ufw allow 53317/tcp #LocalSend
 $
 $ sudo ufw reload #Run this after using any of the above.
 ```
+
+---
+
+#### Login Screen (SDDM) on Multi Monitors Setup Config <sup>[Wiki](https://wiki.archlinux.org/title/SDDM)</sup>
+
+If you have a multi monitor setup and when you get to the login screen you find that your cursor may start on another monitor to your primary one or if you have a rotated display it displays incorrectly at the login screen but is corrected once logged in.
+
+You can edit the SDDM config to display the correct rotation and change the priority of which monitor should be the primary when met with the login screen.
+
+You can edit the file `/var/lib/sddm/.config/kwinoutputconfig.json` but to assist in editing this as it may not be clear which monitor is which you can use your local display configuration settings from the file `~/.config/kwinoutputconfig.json`. Use the reference from `edidHash` to compare the settings across the files.
+
+**Wrong Rotation**
+- Find the "edidHash" e.g `"edidHash": "ea0ebe39eb825dc64a3f770bc8b95bd1",`
+- Look for the setting "transform" to get the correct orientation  `"transform": "Rotated90",`
+- Copy this across from the local display settings to the SDDM file.
+
+```json
+        "data": [
+            {
+                "allowDdcCi": true,
+                "allowSdrSoftwareBrightness": true,
+                "autoRotation": "InTabletMode",
+                "brightness": 1,
+                "colorPowerTradeoff": "PreferEfficiency",
+                "colorProfileSource": "sRGB",
+                "connectorName": "HDMI-A-2",
+                "detectedDdcCi": false,
+                "edidHash": "ea0ebe39eb825dc64a3f770bc8b95bd1",
+                "edidIdentifier": "ACR 714 1669380668 38 2016 0",
+                "edrPolicy": "always",
+                "highDynamicRange": false,
+                "iccProfilePath": "",
+                "maxBitsPerColor": 0,
+                "mode": {
+                    "height": 1080,
+                    "refreshRate": 60000,
+                    "width": 1920
+                },
+                "overscan": 0,
+                "rgbRange": "Automatic",
+                "scale": 1,
+                "sdrBrightness": 200,
+                "sdrGamutWideness": 0,
+                "transform": "Rotated90",
+                "uuid": "4aa0e7f9-f720-4ae9-ad08-c45589802f61",
+                "vrrPolicy": "Never",
+                "wideColorGamut": false
+            },
+        ],
+```
+
+**Wrong Primary**
+Go towards the bottom of the config file and you will see the below section, everything grouped between the sets of `{}` brackets are the monitors and they go in the same order to the monitors in the section previously. All you need to do is change the priority starting from 0 upwards in the order you want them to be.
+
+> [!NOTE]
+> If you want to disable the monitor so it's just blank at the login screen simply change "enabled" to false. 
+
+```json
+        "data": [
+            {
+                "lidClosed": false,
+                "outputs": [
+                    {
+                        "enabled": true,
+                        "outputIndex": 0,
+                        "position": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "priority": 2,
+                        "replicationSource": ""
+                    },
+                    {
+                        "enabled": true,
+                        "outputIndex": 1,
+                        "position": {
+                            "x": 1920,
+                            "y": 0
+                        },
+                        "priority": 0,
+                        "replicationSource": ""
+                    },
+                    {
+                        "enabled": true,
+                        "outputIndex": 2,
+                        "position": {
+                            "x": 3840,
+                            "y": 0
+                        },
+                        "priority": 1,
+                        "replicationSource": ""
+                    }
+                ]
+            }
+        ],
+```
+
+Source: https://www.reddit.com/r/archlinux/comments/143b6we/how_to_display_login_screen_sddm_on_a_single/
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
