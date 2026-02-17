@@ -410,13 +410,15 @@ Then navigate to Colours & Themes > System Sounds and then select the one you ju
 #### Plasma 6 Extensions Widgets (Plasmoids) <sup>[Arch Wiki](https://wiki.archlinux.org/title/KDE#Widgets)</sup>
 Find any Plasma 6 extensions you like from [here](https://store.kde.org/browse?cat=705&ord=latest).
 
-I'm doing to downwload and extract the below files:
+I'm doing to downwload the below files:
 - [KDE Modern Clock](https://store.kde.org/p/2135653)
 - [plasmusic-toolbar](https://store.kde.org/p/2128143)
 - [Resources monitor](https://store.kde.org/p/2143899)
+- [ToDo-List](https://www.pling.com/p/2342835)
+- [Weather Widget Plus](https://www.pling.com/p/2281196/)
 - [Window Title Applet 6](https://store.kde.org/p/2129423)
 
-Then open the terminal and cd to the extracted files or right click the folder and open the terminal:
+***Option 1:*** If the files are compressed in a zip/tar.gz folder extract them and then open the terminal and cd to the extracted files or right click the folder and open the terminal:
 ```console
 $ cd ~/Downloads/<widget directory> #Replace <widget directory> with the extracted folder name
 $ kpackagetool6 --type Plasma/Applet --install .
@@ -429,7 +431,15 @@ $ cd ~/Downloads/<widget directory> #Replace <widget directory> with the extract
 $ kpackagetool6 --type Plasma/Applet --upgrade .
 ```
 
-Or you can right click your panel and click "Add or Manage Widgets" then press "Get New" as shown in the below screenhot. You can then search for the widget name.
+***Option 2:*** If it is a `.plasmoid` file then simply use the below command. Trying to use the above will give an error if you have other files in the folder with it.
+
+```console
+$ cd ~/Downloads/
+$ kpackagetool6 --type=Plasma/Applet --install <downloaded-widget>.plasmoid #Replace <downloaded-widget> with the file name
+$ # Then log out and back in again. Restarting plasmashell in the terminal isn't very reliable.
+```
+
+***Option 3:*** Some are available by right clicking your panel and click "Add or Manage Widgets" then press "Get New" as shown in the below screenhot. You can then search for the widget name but some are only available from the KDE Store.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/Add-or-Manage-Widgets-Get-New.png?raw=true)
 
@@ -472,7 +482,17 @@ I did use this [YouTube Video](https://www.youtube.com/watch?v=6UCI2OOkOk0) to h
 
 #### Animations/Desktop Effects
 Then go to System Settings > Apps & Windows > Window Management > Desktop Effects. Then change the following:
-- ☑ Wobbly WIndows
+- ☑ Blur
+    - Blur strength - Light (Far left)
+    - Noise strength - Light (Far left)
+- ☑ Translucency
+    - Inactive windows - 100%
+    - Moving windows - 80%
+    - Dialogues - 100%
+    - Combobox popups - 100%
+    - Menus - 100%
+- ☑ Wobbly Windows
+    - Wobbliness - Less (Far left)
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
