@@ -46,13 +46,14 @@ Run the following commands in each section using pacman:
 - Creative: `sudo pacman -Sy obs-studio gpu-screen-recorder-ui krita`
 - Office: `sudo pacman -Sy libreoffice-fresh wps-office mythes-en ttc-iosevka ttf-fira-sans ttf-fira-code ttf-firacode-nerd vlc ffmpeg`
 - Gaming: `sudo pacman -Sy cachyos-gaming-meta cachyos-gaming-applications piper retroarch`
-- Coding: `code git github-cli mysql-workbench filezilla ttf-font-awesome`
+- Coding: `sudo pacman -Sy neovim code git github-cli mysql-workbench filezilla ttf-font-awesome`
 
 If you'd like a explanation on the code above or what each package is go [here](../docs/Arch-Package-Installation-Basics.md).
 
 Below aren't available through pacman so we will use AUR instead: 
 - Firmware: `yay -Syu`
 - Tools: `yay -S ttf-raleway ungoogled-chromium-bin qdirstat-bin qdiskinfo-bin nordvpn-bin nordvpn-gui-bin rustdesk-bin wtf vicinae-bin`
+- Social: `yay -S fluxer-git`
 - Coding: `yay -S github-desktop-bin`
 
 ### Other install methods:
