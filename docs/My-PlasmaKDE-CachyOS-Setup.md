@@ -78,6 +78,46 @@ Appendix: This is important due to streamdeck being a HID device.
 
 #### Virtual Machine / Virtualisation <sup>[Wiki](https://wiki.cachyos.org/virtualization/qemu_and_vmm_setup/)</sup>
 
+To install and start the services needed to use a VM run the below in your console:
+
+```console
+$ sudo pacman -Syy #Update packages
+$ sudo pacman -S archlinux-keyring #Update keyring
+$ sudo pacman -S qemu-desktop virt-manager virt-viewer dnsmasq vde2 openbsd-netcat ebtables iptables-nft #Install needed packages
+$ sudo systemctl enable libvirtd.service #Start libvirt service
+$ sudo systemctl start libvirtd.service
+$ systemctl status libvirtd.service #Check that the service is running
+```
+Now we need to allow low-level users to use the VM. Edit the `/etc/libvirt/libvirtd.conf` file by navigating to it in your file explorer or from the terminal:
+
+```console
+$ sudo nano /etc/libvirt/libvirtd.conf
+```
+
+Go to line 85 and uncomment by removing the hashtag (#) from the begining:
+```
+unix_sock_group = "libvirt"
+```
+
+Then go to line 108 and uncomment by removing the hashtag (#) from the begining:
+```
+unix_sock_rw_perms = "0770"
+```
+
+Now we need to add our user to the `libvirt` group.
+```console
+$ sudo usermod -a -G libvirt $(whoami)
+$ sudo systemctl restart libvirtd.service #Restart libvirt deamon
+```
+
+**Enable Nested Virtualization (Optional)**
+
+Nested Virtualization is the ability to run virtual machines inside virtual machines.
+- Intel: `echo "options kvm-intel nested=1" | sudo tee /etc/modprobe.d/kvm-intel.conf`
+- AMD: `echo "options kvm-amd nested=1" | sudo tee /etc/modprobe.d/kvm-amd.conf`
+
+Now you can run the `virt-manager` command to open the GUI virtual machine manger, or you can open it through your DE application menu.
+
 > [!NOTE]
 > A shortcut to setting this up you can use [Linutil](https://github.com/ChrisTitusTech/linutil) which is a tool made by Chris Titus to simplify the install of certain applications.
 > 
@@ -86,7 +126,7 @@ Appendix: This is important due to streamdeck being a HID device.
 > $ curl -fsSL https://christitus.com/linux | sh
 > ```
 > 
-> Install Virtual Machine / Virtualisation using this [video](https://www.youtube.com/watch?v=qOrHgEPCtWw).
+> Watch this [video](https://www.youtube.com/watch?v=qOrHgEPCtWw) on how to use the above tool.
 
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
