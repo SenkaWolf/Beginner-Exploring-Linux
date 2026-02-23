@@ -109,6 +109,7 @@ sudo pacman -Sy <packages>
 | `github-cli` | GitHub command-line interface (gh). | pacman |
 | `mysql-workbench` | SQL IDE for mySQL. | pacman |
 | `filezilla` | FTP Client. | pacman |
+| `kvantum` | SVG-based theme engine for Qt4/Qt5 and KDE. | pacman |
 | `ttf-raleway` | Elegant sans-serif typeface font. | yay |
 | `ungoogled-chromium-bin` | Ungoogled Chromium Browser. | yay |
 | `qdirstat-bin` | Powerful disk usage analyzer. | yay |
