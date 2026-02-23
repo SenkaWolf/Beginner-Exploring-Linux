@@ -47,6 +47,7 @@ Run the following commands in each section using pacman:
 - Office: `sudo pacman -Sy libreoffice-fresh wps-office mythes-en ttc-iosevka ttf-fira-sans ttf-fira-code ttf-firacode-nerd vlc ffmpeg`
 - Gaming: `sudo pacman -Sy cachyos-gaming-meta cachyos-gaming-applications piper retroarch`
 - Coding: `sudo pacman -Sy neovim code git github-cli mysql-workbench filezilla ttf-font-awesome`
+- Visuals: `sudo pacman -Sy kvantum`
 
 If you'd like a explanation on the code above or what each package is go [here](../docs/Arch-Package-Installation-Basics.md).
 
@@ -389,6 +390,24 @@ $ mv ~/Downloads/Dracula ~/.local/share/aurorae/themes/
 $ systemsettings
 ```
 Then navigate to Colours & Themes > Window Decorations and then select the one you just installed.
+
+---
+
+#### Custom Application Style <sup>[Arch Wiki](https://wiki.archlinux.org/title/KDE#Themes)</sup>
+
+For this it is recommended to use the program [Kvantum](https://github.com/tsujan/Kvantum/blob/master/Kvantum/README.md) which allows you to fully customise your application style and install custom ones as well. As a disclaimer Kvantum is only maintained on the Github page and the KDE Store version is outdated!
+```console
+$ sudo pacman -Sy kvantum
+```
+
+Find a application style you like from [here](https://store.kde.org/browse?cat=123&ord=latest). I like [Ant-Dracula KDE](https://store.kde.org/p/1370681/) so I will use this and download the Dracula-purple-solid version.
+
+- Extact the downloaded files.
+- Search for "Kvantum Manager" from your start menu and open the application. 
+- In the Install/Update Theme section navigate to the extract files and select the folder.
+- Then go to Change/Delete Theme and pick the theme you just intalled in my case "Dracula-purple-solid" then click Use this theme.
+- Close Kvantum Manager.
+- Finally navigate to your System Settings > Colours & Themes > Application Style and then select "kvantum-dark" and apply.
 
 ---
 
