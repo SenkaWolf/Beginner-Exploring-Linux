@@ -48,6 +48,7 @@ Run the following commands in each section using pacman:
 - Gaming: `sudo pacman -Sy cachyos-gaming-meta cachyos-gaming-applications piper retroarch`
 - Coding: `sudo pacman -Sy neovim code git github-cli mysql-workbench filezilla ttf-font-awesome`
 - Visuals: `sudo pacman -Sy kvantum`
+- Widgets (Plasmoids) Dependencies: `sudo pacman -Sy cava qt6-websockets python-websockets`
 
 If you'd like a explanation on the code above or what each package is go [here](../docs/Arch-Package-Installation-Basics.md).
 
@@ -572,6 +573,7 @@ Find any Plasma 6 extensions you like from [here](https://store.kde.org/browse?c
 
 I'm doing to downwload the below files:
 - [KDE Modern Clock](https://store.kde.org/p/2135653)
+- [Kurve - Audio Visualizer](https://store.kde.org/p/2299506) <sup>`sudo pacman -Syu cava qt6-websockets python-websockets`</sup>
 - [plasmusic-toolbar](https://store.kde.org/p/2128143)
 - [Resources monitor](https://store.kde.org/p/2143899)
 - [ToDo-List](https://www.pling.com/p/2342835)
