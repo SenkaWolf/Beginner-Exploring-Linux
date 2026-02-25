@@ -119,6 +119,8 @@ sudo pacman -Sy <packages>
 | `rustdesk-bin` | Remote access. | yay |
 | `wtf` | [Personal information dashboard](https://github.com/wtfutil/wtf). | yay |
 | `vicinae-bin` | [Focused launcher for your desktop](https://github.com/vicinaehq/vicinae). | yay |
+| `fluxer-git` | Fluxer is a free and open source Swedish-based Instant Messaging app. | yay |
+| `millennium` | Open-source project designed to enhance the Steam client experience. | yay |
 | `github-desktop-bin` | Tool that simplifies your development workflow with Git. | yay |
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)

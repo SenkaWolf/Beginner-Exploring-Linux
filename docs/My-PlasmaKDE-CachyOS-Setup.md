@@ -56,6 +56,7 @@ Below aren't available through pacman so we will use AUR instead:
 - Firmware: `yay -Syu`
 - Tools: `yay -S ttf-raleway ungoogled-chromium-bin qdirstat-bin qdiskinfo-bin nordvpn-bin nordvpn-gui-bin rustdesk-bin wtf vicinae-bin`
 - Social: `yay -S fluxer-git`
+- Gaming: `yay -S millennium`
 - Coding: `yay -S github-desktop-bin`
 
 ### Other install methods:
