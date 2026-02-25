@@ -392,6 +392,17 @@ $ systemsettings
 ```
 Then navigate to Colours & Themes > Window Decorations and then select the one you just installed.
 
+##### Additional Window Decorations
+Under Colours & Themes > Window Decorations their are more settings you can adjust to change the look and feel of the windows. 
+
+Their is a dropdown in the top middle of the screen you can pick how thick/thin you want the boarders to be or can go with no borders. I like to go with the `No window borders`.
+
+![Window Decorations Borders Dropdown](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/Window-Decorations-Borders.png?raw=true)
+
+To the right of the above dropdown their is the "Configure Titlebar Buttons..." button where you can change which buttons are displayed and the locations of them on the window. I like to swap the buttons around to give a more mac style setup.
+
+![Titlebar Buttons](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/Titlebar-Buttons.png?raw=true)
+
 ---
 
 #### Custom Application Style <sup>[Arch Wiki](https://wiki.archlinux.org/title/KDE#Themes)</sup>
