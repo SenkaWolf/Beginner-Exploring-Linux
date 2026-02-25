@@ -140,7 +140,7 @@
     },
     {
       "type": "colors",
-      "symbol": "square",
+      "custom": "circle",
       "paddingLeft": 2
     }
   ]
