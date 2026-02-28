@@ -166,16 +166,15 @@ In the `../files/fastfetch` folder copy the config and the logo to `~/.config/fa
 
 Starship is a customizable prompt for a shell enviroment in a terminal.
 
-To get started configuring starship, create the following file: `~/.config/starship.toml`.
-
+To get started open your terminal and do the following:
 ```console
+$ sudo pacman -Sy starship #Install starship
 $ mkdir -p ~/.config && touch ~/.config/starship.toml #Create config file.
 $ nano ~/.config/starship.toml #Edit File
 ```
-
 Copy the content from the .toml file found in the [Tokyo Night Preset ](https://starship.rs/presets/tokyo-night) and save the changes.
 
-CachyOS default shell is fish so to add starship to the shell edit the following file and add `starship init fish | source` to the end of the file.
+CachyOS default shell is fish so to add starship to the shell, edit the following file and add `starship init fish | source` to the end of the file.
 
 ```console
 $ nano ~/.config/fish/config.fish
@@ -196,6 +195,68 @@ After authenticating onfigure the following:
 $ git config --global user.email "senkawolf@example.com"
 $ git config --global user.name "SenkaWolf"
 $ git config --global init.defaultBranch main
+```
+
+---
+#### fish shell Configuration <sup>[Website](https://fishshell.com/)</sup>
+Fish, or the Friendly Interactive Shell, is a user-friendly command line shell for Unix-like operating systems which comes pre configured with CachyOS by default. Hower fish is very configurable and you can streamline many processes by creating functions and aliases.
+
+To edit the fish shell config you can go to `~/.config/fish/` in your file explorer or use `nano ~/.config/fish/config.fish`. Within the config file CachyOS refrences the file `/usr/share/cachyos-fish-config/cachyos-config.fish` which is their take on additonal tweaks for the shell, I recommend keeping them as they are additions I would have added myself.
+
+To add an alias to fish simply open the `~/.config/fish/config.fish` from their add a new line using the format of where anything inside [] you replace to suit your needs `alias [alias name]="[command]"`. Below are some examples in my config:
+
+```console
+$ alias update="sudo pacman -Syu" #Update system
+$ alias rnm "sudo systemctl restart NetworkManager" #restart network
+$ alias pip="curl -s ifconfig.me" #Public IP
+```
+Using the last alias to breakdown if I type `pip` into my terminal it will give me my public IP address and simulates as if I typed out `curl -s ifconfig.me`.
+
+Now we will make a function and these can use arguments and complex logic to do more complex tasks. Follow the steps below:
+
+```console
+$ touch ~/.config/fish/functions/[command].fish #Make a file in this directory, name it something which suits the commands use
+$ nano ~/.config/fish/functions/[command].fish #Edit the file
+```
+Within the file you need to set the file up like do:
+```console
+$ function [command name]
+$ #commands or code here
+$ end
+```
+
+Below is a example where I have a git repo in a folder called "dotfiles" in my home directory. I use this with a symlink to backup my configs files, you can learn more about this setup in the [Managing Dotfiles](/docs/Managing-Dotfiles.md) section. The below function when I run `dotpush [commit message]` it cds into the dotfiles directory and goes through the git process to push the changes to GitHub.
+
+```console
+$function dotpush
+$    # Ensure we're in the dotfiles directory
+$    cd ~/dotfiles; or begin
+$        echo "Failed to cd into ~/dotfiles"
+$        return 1
+$    end
+$
+$    if test (count $argv) -eq 0
+$        echo "Please provide a commit message."
+$        echo "Usage: dotpush \"Your commit message\""
+$        return 1
+$    end
+$
+$    set msg $argv
+$
+$    echo "==> Running git status"
+$    git status; or return 1
+$
+$    echo "\n==> Running git add --all"
+$    git add --all; or return 1
+$
+$    echo "\n==> Running git commit"
+$    git commit -m "$msg"; or return 1
+$
+$    echo "\n==> Running git push"
+$    git push; or return 1
+$
+$    echo "\nAll done."
+$end
 ```
 
 ---
