@@ -47,6 +47,7 @@ Run the following commands in each section using pacman:
 - Office: `sudo pacman -Sy libreoffice-fresh wps-office mythes-en ttc-iosevka ttf-fira-sans ttf-fira-code ttf-firacode-nerd vlc ffmpeg`
 - Gaming: `sudo pacman -Sy cachyos-gaming-meta cachyos-gaming-applications piper retroarch`
 - Coding: `sudo pacman -Sy neovim code git github-cli mysql-workbench filezilla ttf-font-awesome`
+- Virtual Machine: `sudo pacman -Sy archlinux-keyring qemu-desktop virt-manager virt-viewer dnsmasq vde2 openbsd-netcat ebtables iptables-nft winboat`
 - Visuals: `sudo pacman -Sy kvantum`
 - Widgets (Plasmoids) Dependencies: `sudo pacman -Sy cava qt6-websockets python-websockets`
 
@@ -55,7 +56,7 @@ If you'd like a explanation on the code above or what each package is go [here](
 Below aren't available through pacman so we will use AUR instead: 
 - Firmware: `yay -Syu`
 - Tools: `yay -S ttf-raleway ungoogled-chromium-bin qdirstat-bin qdiskinfo-bin nordvpn-bin nordvpn-gui-bin rustdesk-bin wtf vicinae-bin`
-- Social: `yay -S fluxer-git`
+- Social: `yay -S vesktop fluxer-git`
 - Gaming: `yay -S millennium`
 - Coding: `yay -S github-desktop-bin`
 
@@ -228,7 +229,7 @@ $ end
 Below is a example where I have a git repo in a folder called "dotfiles" in my home directory. I use this with a symlink to backup my configs files, you can learn more about this setup in the [Managing Dotfiles](/docs/Managing-Dotfiles.md) section. The below function when I run `dotpush [commit message]` it cds into the dotfiles directory and goes through the git process to push the changes to GitHub.
 
 ```console
-$function dotpush
+$ function dotpush
 $    # Ensure we're in the dotfiles directory
 $    cd ~/dotfiles; or begin
 $        echo "Failed to cd into ~/dotfiles"
@@ -256,7 +257,7 @@ $    echo "\n==> Running git push"
 $    git push; or return 1
 $
 $    echo "\nAll done."
-$end
+$ end
 ```
 
 ---

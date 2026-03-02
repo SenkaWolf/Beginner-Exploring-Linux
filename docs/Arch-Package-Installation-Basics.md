@@ -109,6 +109,7 @@ sudo pacman -Sy <packages>
 | `github-cli` | GitHub command-line interface (gh). | pacman |
 | `mysql-workbench` | SQL IDE for mySQL. | pacman |
 | `filezilla` | FTP Client. | pacman |
+| `winboat` | [Run Windows apps on Linux](https://github.com/TibixDev/winboat). | pacman |
 | `kvantum` | SVG-based theme engine for Qt4/Qt5 and KDE. | pacman |
 | `ttf-raleway` | Elegant sans-serif typeface font. | yay |
 | `ungoogled-chromium-bin` | Ungoogled Chromium Browser. | yay |
@@ -119,6 +120,7 @@ sudo pacman -Sy <packages>
 | `rustdesk-bin` | Remote access. | yay |
 | `wtf` | [Personal information dashboard](https://github.com/wtfutil/wtf). | yay |
 | `vicinae-bin` | [Focused launcher for your desktop](https://github.com/vicinaehq/vicinae). | yay |
+| `vesktop` | [Custom Discord client with Vencord preinstalled](https://github.com/Vencord/Vesktop).  | yay |
 | `fluxer-git` | Fluxer is a free and open source Swedish-based Instant Messaging app. | yay |
 | `millennium` | Open-source project designed to enhance the Steam client experience. | yay |
 | `github-desktop-bin` | Tool that simplifies your development workflow with Git. | yay |
