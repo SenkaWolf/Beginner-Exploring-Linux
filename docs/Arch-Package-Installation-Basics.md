@@ -120,6 +120,7 @@ sudo pacman -Sy <packages>
 | `rustdesk-bin` | Remote access. | yay |
 | `wtf` | [Personal information dashboard](https://github.com/wtfutil/wtf). | yay |
 | `vicinae-bin` | [Focused launcher for your desktop](https://github.com/vicinaehq/vicinae). | yay |
+| `peaclock` | [responsive and customizable clock, timer, and stopwatch for the terminal](https://github.com/octobanana/peaclock). | yay |
 | `vesktop` | [Custom Discord client with Vencord preinstalled](https://github.com/Vencord/Vesktop).  | yay |
 | `fluxer-git` | Fluxer is a free and open source Swedish-based Instant Messaging app. | yay |
 | `millennium` | Open-source project designed to enhance the Steam client experience. | yay |
