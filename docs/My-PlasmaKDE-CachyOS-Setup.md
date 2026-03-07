@@ -721,16 +721,11 @@ $ sudo update-grub
 You’ll need to run this command any time you modify GRUB’s configuration.
 
 ---
-#### My Desktop Layout
-
-To Be Completed.
-
-I did use this [YouTube Video](https://www.youtube.com/watch?v=6UCI2OOkOk0) to help me figure out sizing for my primary monitor.
-
----
 
 #### Animations/Desktop Effects
-Then go to System Settings > Apps & Windows > Window Management > Desktop Effects. Then change the following:
+Go to System Settings > Apps & Windows > Window Management > Desktop Effects. 
+
+Then change the following defaults:
 - ☑ Blur
     - Blur strength - Light (Far left)
     - Noise strength - Light (Far left)
@@ -742,6 +737,30 @@ Then go to System Settings > Apps & Windows > Window Management > Desktop Effect
     - Menus - 100%
 - ☑ Wobbly Windows
     - Wobbliness - Less (Far left)
+
+
+Now we want to get some custom effects, go to "Get New..." in the top right and install:
+- [Geometry Change](https://store.kde.org/p/2136283) - Animation for windows moved or resized by programs or scripts.
+    - Change the duration to 400 milliseconds
+
+---
+#### KWin Scripts
+Go to System Settings > Apps & Windows > Window Management > KWin Scripts.
+
+Now we want to get some custom scripts, go to "Get New..." in the top right and install:
+- [Krohnkite](https://store.kde.org/p/2144146) - Dynamic tiling extension for KWin6
+    - Layouts Tab
+        - Tile Layout Order: 4
+        - Spiral Layout Order: 1
+    - Geometry Tab
+        - Between tiles: 4px
+
+---
+#### My Desktop Layout
+
+To Be Completed.
+
+I did use this [YouTube Video](https://www.youtube.com/watch?v=6UCI2OOkOk0) to help me figure out sizing for my primary monitor.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
