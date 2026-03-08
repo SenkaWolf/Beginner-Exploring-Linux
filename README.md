@@ -240,6 +240,7 @@ Here is a list of documents for a variety of things such as my setups, explantat
 - [Useful Terminal Commands](/docs/Useful-Terminal-Commands.md)
 - [Useful Keyboard Shortcuts](/docs/Useful-Keyboard-Shortcuts.md)
 - [Managing Dotfiles](/docs/Managing-Dotfiles.md)
+- [Managing Partitions](/docs/Partitions.md)
 - My Setups
   - [CachyOS Plasma KDE Setup](/docs/My-PlasmaKDE-CachyOS-Setup.md)
 

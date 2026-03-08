@@ -175,4 +175,15 @@ $ drwxr-xr-x SenkaWolf SenkaWolf
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
+<h1 align="center">Miscellaneous</h1>
+
+<details>
+ <summary>Sources</summary>
+  
+  - [TECHMIMIC YouTube Video](https://www.youtube.com/watch?v=Q1vybl1X3_s)
+  - [ChatGPT](https://chatgpt.com)
+</details>
+
+![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
+
 **[![ ](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/icons/up25.png) Back to Top](#Table-of-Contents)**
