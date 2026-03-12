@@ -44,9 +44,9 @@ Run the following commands in each section using pacman:
 - Tools: `sudo pacman -Sy flatpak yay snapper snap-pac grub-btrfs os-prober irqbalance cachy-update zen-browser stow qbittorrent ghostty starship htop btop cpu-x gparted openrgb k3b cmatrix strace`
 - Social: `sudo pacman -Sy discord`
 - Creative: `sudo pacman -Sy obs-studio gpu-screen-recorder-ui krita`
-- Office: `sudo pacman -Sy libreoffice-fresh wps-office mythes-en ttc-iosevka ttf-fira-sans ttf-fira-code ttf-firacode-nerd vlc ffmpeg`
-- Gaming: `sudo pacman -Sy cachyos-gaming-meta cachyos-gaming-applications piper retroarch`
-- Coding: `sudo pacman -Sy neovim code git github-cli mysql-workbench filezilla ttf-font-awesome`
+- Office: `sudo pacman -Sy libreoffice-fresh mythes-en ttc-iosevka ttf-fira-sans ttf-fira-code ttf-firacode-nerd vlc ffmpeg`
+- Gaming: `sudo pacman -Sy cachyos-gaming-meta cachyos-gaming-applications piper retroarch prismlauncher`
+- Coding: `sudo pacman -Sy code git github-cli mysql-workbench filezilla ttf-font-awesome`
 - Virtual Machine: `sudo pacman -Sy archlinux-keyring qemu-desktop virt-manager virt-viewer dnsmasq vde2 openbsd-netcat ebtables iptables-nft winboat`
 - Visuals: `sudo pacman -Sy kvantum`
 - Widgets (Plasmoids) Dependencies: `sudo pacman -Sy cava qt6-websockets python-websockets`
