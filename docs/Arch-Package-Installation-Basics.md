@@ -125,6 +125,7 @@ sudo pacman -Sy <packages>
 | `vesktop` | [Custom Discord client with Vencord preinstalled](https://github.com/Vencord/Vesktop).  | yay |
 | `fluxer-git` | Fluxer is a free and open source Swedish-based Instant Messaging app. | yay |
 | `millennium` | Open-source project designed to enhance the Steam client experience. | yay |
+| `bolt-launcher` | [Third-party Jagex Launcher](https://codeberg.org/Adamcake/Bolt). | yay |
 | `github-desktop-bin` | Tool that simplifies your development workflow with Git. | yay |
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
