@@ -122,6 +122,8 @@ sudo pacman -Sy <packages>
 | `wtfutil` | [Personal information dashboard](https://github.com/wtfutil/wtf). | yay |
 | `vicinae-bin` | [Focused launcher for your desktop](https://github.com/vicinaehq/vicinae). | yay |
 | `peaclock` | [responsive and customizable clock, timer, and stopwatch for the terminal](https://github.com/octobanana/peaclock). | yay |
+| `solaar` | [Linux device manager for Logitech devices](github.com/pwr-Solaar/Solaar). | yay |
+| `rclone-browser` | [A simple cross platform GUI for Rclone](https://github.com/kapitainsky/RcloneBrowser). | yay |
 | `vesktop` | [Custom Discord client with Vencord preinstalled](https://github.com/Vencord/Vesktop).  | yay |
 | `fluxer-git` | Fluxer is a free and open source Swedish-based Instant Messaging app. | yay |
 | `millennium` | Open-source project designed to enhance the Steam client experience. | yay |
