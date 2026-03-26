@@ -217,17 +217,58 @@ Now you will be in a CLI Environment or GUI. Move onto the next section of the i
 
 This is a list of distributions which I have explored when learning Linux. Pick the option you have chosen to install.
 
-Click the distro name to go to the guide or download to be taken straight to the download page for the ISO file.
-   
-<sub>In alphabetical order.</sub>
-
-- [Arch](/guides/Arch-Linux.md) <sup>|[Download](https://archlinux.org/download/)|</sup>
-- [CachyOS](/guides/CachyOS.md) <sup>|Arch Based|[Download](https://cachyos.org/download/)|</sup>
-- [EndeavourOS]() <sup>|Arch Based|Coming Soon</sup>
-- [Fedora]() <sup>Coming Soon</sup>
-- [Mint]() <sup>|Ubuntu Based|Coming Soon</sup>
-- [Nobara]() <sup>|Fedora Based|Coming Soon</sup>
-- [openSUSE Tumbleweed](/guides/openSUSE-Tumbleweed.md) <sup>|[Download](https://get.opensuse.org/tumbleweed/#download)|</sup>
+<table>
+  <thead>
+    <tr>
+      <th colspan="3">Click the distro name to go to the guide or the url to be taken straight to the download page for the ISO file. <sup><i>(In alphabetical order)</i></sup></th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <th>Download</th>
+      <th>Note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/guides/CachyOS.md">CachyOS</a></td>
+      <td><a href="https://cachyos.org/download/">cachyos.org</a></td>
+      <td>Arch Based</td>
+    </tr>
+    <tr>
+      <td><a href="/guides/Arch-Linux.md">Arch</a></td>
+      <td><a href="https://ubuntu.com/">ubuntu.com</a></td>
+      <td>Arch Based</td>
+    </tr>
+    <tr>
+      <td><a href="#">EndeavourOS</a></td>
+      <td><a href="https://endeavouros.com/">endeavouros.com</a></td>
+      <td>Arch Based</td>
+    </tr>
+    <tr>
+      <td><a href="#">Fedora</a></td>
+      <td><a href="https://fedoraproject.org/kde/">fedoraproject.org</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a href="#">Mint</a></td>
+      <td><a href="https://www.linuxmint.com/edition.php?id=326">linuxmint.com</a></td>
+      <td>Ubuntu Based</td>
+    </tr>
+    <tr>
+      <td><a href="#">Nobara</a></td>
+      <td><a href="https://nobaraproject.org/download.html">nobaraproject.org</a></td>
+      <td>Fedora Based</td>
+    </tr>
+    <tr>
+      <td><a href="/guides/openSUSE-Tumbleweed.md">openSUSE</a></td>
+      <td><a href="https://get.opensuse.org/tumbleweed/#download">opensuse.org</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td colspan="3">Desktop environment: KDE</td>
+    </tr>
+  </tbody>
+</table>
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
