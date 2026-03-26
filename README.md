@@ -232,37 +232,37 @@ This is a list of distributions which I have explored when learning Linux. Pick 
     <tr>
       <td><a href="/guides/CachyOS.md">CachyOS</a></td>
       <td><a href="https://cachyos.org/download/">cachyos.org</a></td>
-      <td>Arch Based</td>
+      <td>Arch Based and focuses on performance. Simplifies Arch install process.</td>
     </tr>
     <tr>
       <td><a href="/guides/Arch-Linux.md">Arch</a></td>
-      <td><a href="https://ubuntu.com/">ubuntu.com</a></td>
-      <td>Arch Based</td>
+      <td><a href="https://archlinux.org/download/">archlinux.org</a></td>
+      <td>Must be build from scratch or use a installer script. Not user friendly.</td>
     </tr>
     <tr>
       <td><a href="#">EndeavourOS</a></td>
       <td><a href="https://endeavouros.com/">endeavouros.com</a></td>
-      <td>Arch Based</td>
+      <td>Arch Based and simplifies Arch install process. Closest distro to standard Arch.</td>
     </tr>
     <tr>
       <td><a href="#">Fedora</a></td>
       <td><a href="https://fedoraproject.org/kde/">fedoraproject.org</a></td>
-      <td></td>
+      <td>Beginner friendly and almost cutting edge but stable.</td>
     </tr>
     <tr>
       <td><a href="#">Mint</a></td>
       <td><a href="https://www.linuxmint.com/edition.php?id=326">linuxmint.com</a></td>
-      <td>Ubuntu Based</td>
+      <td>Ubuntu Based. Beginner friendly but focuses on the Cinnamon DE rather than KDE.</td>
     </tr>
     <tr>
       <td><a href="#">Nobara</a></td>
       <td><a href="https://nobaraproject.org/download.html">nobaraproject.org</a></td>
-      <td>Fedora Based</td>
+      <td>Fedora Based. All the points of Fedora with added tunning for gaming, streaming, and content creation.</td>
     </tr>
     <tr>
       <td><a href="/guides/openSUSE-Tumbleweed.md">openSUSE</a></td>
       <td><a href="https://get.opensuse.org/tumbleweed/#download">opensuse.org</a></td>
-      <td></td>
+      <td>Beginner friendly and is more hardened by default compared to other distros. Packages are tested before being shipped through their OpenQA process. Can be cutting edge if you choice Tumbleweed.</td>
     </tr>
     <tr>
       <td colspan="3">Desktop environment: KDE</td>
