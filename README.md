@@ -217,6 +217,8 @@ Now you will be in a CLI Environment or GUI. Move onto the next section of the i
 
 This is a list of distributions which I have explored when learning Linux. Pick the option you have chosen to install.
 
+You can test drive Linux distrobutions online using the tool [DistroSea](https://distrosea.com/).
+
 <table>
   <thead>
     <tr>
@@ -230,14 +232,14 @@ This is a list of distributions which I have explored when learning Linux. Pick 
   </thead>
   <tbody>
     <tr>
-      <td><a href="/guides/CachyOS.md">CachyOS</a></td>
-      <td><a href="https://cachyos.org/download/">cachyos.org</a></td>
-      <td>Arch Based and focuses on performance. Simplifies Arch install process.</td>
-    </tr>
-    <tr>
       <td><a href="/guides/Arch-Linux.md">Arch</a></td>
       <td><a href="https://archlinux.org/download/">archlinux.org</a></td>
       <td>Must be build from scratch or use a installer script. Not user friendly.</td>
+    </tr>
+    <tr>
+      <td><a href="/guides/CachyOS.md">CachyOS</a></td>
+      <td><a href="https://cachyos.org/download/">cachyos.org</a></td>
+      <td>Arch Based and focuses on performance. Simplifies Arch install process.</td>
     </tr>
     <tr>
       <td><a href="#">EndeavourOS</a></td>
@@ -248,6 +250,11 @@ This is a list of distributions which I have explored when learning Linux. Pick 
       <td><a href="#">Fedora</a></td>
       <td><a href="https://fedoraproject.org/kde/">fedoraproject.org</a></td>
       <td>Beginner friendly and almost cutting edge but stable.</td>
+    </tr>
+    <tr>
+      <td><a href="#">Kubuntu</a></td>
+      <td><a href="https://kubuntu.org/download/">kubuntu.org</a></td>
+      <td>Ubuntu Based and official flavor that uses the KDE Plasma desktop.</td>
     </tr>
     <tr>
       <td><a href="#">Mint</a></td>
@@ -263,6 +270,11 @@ This is a list of distributions which I have explored when learning Linux. Pick 
       <td><a href="/guides/openSUSE-Tumbleweed.md">openSUSE</a></td>
       <td><a href="https://get.opensuse.org/tumbleweed/#download">opensuse.org</a></td>
       <td>Beginner friendly and is more hardened by default compared to other distros. Packages are tested before being shipped through their OpenQA process. Can be cutting edge if you choice Tumbleweed.</td>
+    </tr>
+    <tr>
+      <td><a href="#">PikaOS</a></td>
+      <td><a href="https://wiki.pika-os.com/en/home#download-pikaos">pika-os.com</a></td>
+      <td>Debian Based. Gaming/optimization-focused distro.</td>
     </tr>
     <tr>
       <td colspan="3">Desktop environment: KDE</td>
