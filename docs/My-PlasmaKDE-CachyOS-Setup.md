@@ -20,10 +20,35 @@
  <summary>Expand Table Here</summary>
 
   - [My CachyOS Setup](#My-CachyOS-Setup)
-    - [System Settings](#System-Settings)
     - [Software](#Software)
-    - [Tweaks & Configs](#Tweaks-&-Configs)
+      - [Other Install Methods](#other-install-methods)
+      - [Virtual Machine / Virtualisation](#virtual-machine--virtualisation-wiki)
+    - [Tweaks & Configs](#tweaks--configs)
+      - [CachyOS Update Config](#cachyos-update-config-github)
+      - [Number Lock on startup](#number-lock-on-startup-arch-wiki)
+      - [Configure Fastfetch](#configure-fastfetch-github)
+      - [Starship Configuration](#starship-configuration-website)
+      - [GitHub CLI Setup](#github-cli-setup-manual)
+      - [fish shell Configuration](#fish-shell-configuration-website)
+      - [Uncomplicated Firewall (Ufw) Configuration](#uncomplicated-firewall-ufw-configuration-wiki)
+      - [Login Screen (SDDM) on Multi Monitors Setup Config](#login-screen-sddm-on-multi-monitors-setup-config-wiki)
     - [Visuals](#Visuals)
+      - [Plasma Theme](#plasma-theme-arch-wiki)
+      - [Custom Plasma Color Schemes](#custom-plasma-color-schemes-arch-wiki)
+      - [Custom Window Decorations Aurorae](#custom-window-decorations-aurorae-arch-wiki)
+      - [Custom Application Style](#custom-application-style-arch-wiki)
+      - [Icon Theme](#icon-theme-arch-wiki)
+      - [Cursor Theme](#cursor-theme-arch-wiki)
+      - [Custom Splashscreen](#custom-splashscreen-arch-wiki)
+      - [SDDM Login Themes](#sddm-login-themes-arch-wiki)
+      - [Custom Fonts](#custom-fonts-arch-wiki)
+      - [Custom Sounds](#custom-sounds)
+      - [Plasma 6 Extensions Widgets (Plasmoids)](#plasma-6-extensions-widgets-plasmoids-arch-wiki)
+        - [Widgets (Plasmoids) Customisation](#widgets-plasmoids-customisation)
+      - [GRUB Theme](#grub-theme-arch-wiki)
+      - [Animations/Desktop Effects](#animationsdesktop-effects)
+      - [KWin Scripts](#kwin-scripts)
+      - [My Desktop Layout](#my-desktop-layout)
 </details>
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
@@ -60,7 +85,8 @@ Below aren't available through pacman so we will use AUR instead:
 - Gaming: `yay -S millennium bolt-launcher`
 - Coding: `yay -S github-desktop-bin`
 
-### Other install methods:
+---
+### Other Install Methods:
 
 #### OpenDeck <sup>[GitHub](https://github.com/nekename/OpenDeck)</sup>
 ```console
@@ -147,6 +173,7 @@ $ arch-update --tray --enable
 > If you have used the CachyOS Hello GUI and checked "Cachy Update enabled" you don't need to follow this setup.
 > ![Cachy Hello Screenshot](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/CachyOS-Hello-Cachy-Update.png?raw=true)
 
+---
 #### Number Lock on startup <sup>[Arch Wiki](https://wiki.archlinux.org/title/Activating_numlock_on_bootup#KDE_Plasma)</sup>
 
 Eiter run the below command or navigate to System Settings > Keyboard.
@@ -159,6 +186,7 @@ $ systemsettings kcm_keyboard
 
 Then change NumLock on startup to Turn On.
 
+---
 #### Configure Fastfetch <sup>[GitHub](https://github.com/fastfetch-cli/fastfetch)</sup>
 In the `../files/fastfetch` folder copy the config and the logo to `~/.config/fastfetch/`. You might need to create the folder using `fastfetch --gen-config` or just `mkdir`.
 
