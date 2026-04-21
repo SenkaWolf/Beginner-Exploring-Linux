@@ -212,7 +212,6 @@ $ nano ~/.config/fish/config.fish
 Now simply close and reopen your terminal to see the changes.
 
 ---
-
 #### GitHub CLI Setup <sup>[Manual](https://cli.github.com/manual/)</sup>
 
 Run the command:
@@ -289,7 +288,6 @@ $ end
 ```
 
 ---
-
 #### Uncomplicated Firewall (Ufw) Configuration <sup>[Wiki](https://wiki.archlinux.org/title/Uncomplicated_Firewall)</sup>
 
 To allow certain programs to work you will need to open the below ports on the firewall:
@@ -303,7 +301,6 @@ $ sudo ufw reload #Run this after using any of the above.
 ```
 
 ---
-
 #### Login Screen (SDDM) on Multi Monitors Setup Config <sup>[Wiki](https://wiki.archlinux.org/title/SDDM)</sup>
 
 If you have a multi monitor setup and when you get to the login screen you find that your cursor may start on another monitor to your primary one or if you have a rotated display it displays incorrectly at the login screen but is corrected once logged in.
@@ -399,6 +396,11 @@ Go towards the bottom of the config file and you will see the below section, eve
 ```
 
 Source: https://www.reddit.com/r/archlinux/comments/143b6we/how_to_display_login_screen_sddm_on_a_single/
+
+---
+#### Ungoogled Chromium How to install Extentions
+
+Use this tool: https://www.ungoogledextensions.com/
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
