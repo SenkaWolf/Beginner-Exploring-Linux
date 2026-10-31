@@ -20,7 +20,7 @@
   - [Beginner Exploring Linux](#Beginner-Exploring-Linux)
     - [Getting Started](#Getting-Started)
     - [Support and Feedback](#Support-and-Feedback)
-  - [Prepairing for Installation](#Prepairing-for-Installation)
+  - [Preparing for Installation](#Preparing-for-Installation)
   - [Distributions](#Distributions)
 </details>
 
@@ -29,7 +29,7 @@
 <h1 align="center">Beginner Exploring Linux</h1>
 
 ### Getting Started
- This will be a collection of installation guides, notes and troubleshooting I've used whilst exploring and getting into Linux. I'm a rookie when it comes to Linux so this is isn't a fully comprehensive guide and I'm sure there will be mistakes along the way so don't view this as a tutorial.
+ This will be a collection of installation guides, notes and troubleshooting I've used whilst exploring and getting into Linux. I'm a rookie when it comes to Linux so this isn't a fully comprehensive guide and I'm sure there will be mistakes along the way so don't view this as a tutorial.
 
 ### Support and Feedback
 If you have any suggestions and corrections then please get involved through Github.
@@ -50,7 +50,7 @@ If there are multiple options, I’ll indicate my preferred choice with a star !
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
-<h1 align="center">Prepairing for Installation</h1>
+<h1 align="center">Preparing for Installation</h1>
 
 The initial setup is the same across all Linux Distros, follow the below for the initial setup steps then move onto the specific distro for further guidance.
 
@@ -73,12 +73,12 @@ Pick a virtualisation software you wish to run Linux in, below are a few options
 2.  You will be redirected to Broadcom's website. Create an account or login if you have an account already.
 3. Once logged in go to the 'My Downloads' section down the left hand side of the web page.
 4. Then click on the 'Free Software Downloads available [HERE](https://support.broadcom.com/group/ecx/free-downloads)'
-5. Scroll down the page and to go '[VMware Workstation Pro](https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Workstation%20Pro&freeDownloads=true)'
+5. Scroll down the page and go to '[VMware Workstation Pro](https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Workstation%20Pro&freeDownloads=true)'
 6. Then select the latest version then select the latest release.
 7. You will now see a screen with '☐ I agree to the [Terms and Conditions](https://www.broadcom.com/company/legal/licensing)' you can't tick this until you have opened the Terms and Conditions page. Click the link and they will open in a new tab. Close the tab and you will now be able to tick the Terms and Conditions.
-8. Now you will be able to click the download button (cloud icon ![Broadcoom download icon](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/icons/broadcoom-download-icon.png?raw=true)).
+8. Now you will be able to click the download button (cloud icon ![Broadcom download icon](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/icons/broadcoom-download-icon.png?raw=true)).
 9. You will then get a popup stating additional verification is required. Click yes then fill in the form.
-10. You will be returned to the previous page. Press the download button (cloud icon ![Broadcoom download icon](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/icons/broadcoom-download-icon.png?raw=true)) again and now the download will begin.
+10. You will be returned to the previous page. Press the download button (cloud icon ![Broadcom download icon](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/icons/broadcoom-download-icon.png?raw=true)) again and now the download will begin.
 11. <span style="color: #E74C3C;"><b>Before installing the exe file move onto the next section!</b></span>
 
 ---
@@ -86,7 +86,7 @@ Pick a virtualisation software you wish to run Linux in, below are a few options
 Some of the following steps will help prevent issues when installing/setting up virtual machines.
 
 ##### Windows Features
-If you have either of the below enabled on your PC then VMWare won't be able to use CPU hardware virtualilasion directly so your virtual machines will run slower.
+If you have any of the below enabled on your PC then VMWare won't be able to use CPU hardware virtualisation directly so your virtual machines will run slower.
 - Windows Hyper-V
 - Virtual Machine Platform
 - Windows Hypervisor Platform
@@ -105,11 +105,11 @@ Ensure you have CPU Virtualisation enabled in your BIOS, check this by:
 3. Under CPU it should say Virtualisation followed by enabled or disabled. If it is enabled you don't need to do anything however if it is disabled continue with the steps.
 4. Restart your PC and access your BIOS.
 5. In the BIOS you need to look for either of the following:
-    - Intel CPU: Intel Virttualisation Technology or Intel VT-x.
+    - Intel CPU: Intel Virtualisation Technology or Intel VT-x.
     - AMD CPU: Secure Virtual Machine, or AMD-V, or AMD SVM.
 
 > [!NOTE]
-> Consult your motherboard manufactures website on how to access the BIOS and locate the CPU Virtualisation setting if you need further assistance.
+> Consult your motherboard manufacturer's website on how to access the BIOS and locate the CPU Virtualisation setting if you need further assistance.
 
 
 #### <span style="color: #2ECC71;">Install VMware Workstation Pro from the file downloaded earlier.</span> 
@@ -118,7 +118,7 @@ Ensure you have CPU Virtualisation enabled in your BIOS, check this by:
 #### <sup>Option 1:</sup> Step 2 - Download ISO
 Download the ISO file for the Linux distro of your choice. Use the [Distributions](#Distributions) section for ones I have explored.
 
-#### <sup>Option 1:</sup> Step 3 - Setuping up a virtual machine
+#### <sup>Option 1:</sup> Step 3 - Setting up a virtual machine
 I'm using the [VMWare Workstation Pro](https://www.broadcom.com/) software so this section will talk you through how to use it, if you're using something else then your steps will vary.
 
 - Click File
@@ -138,7 +138,7 @@ Start the virtual machine and move onto the next section [Distributions](#Distri
 
 This option is best for daily use and without the overhead of using a virtual machine.
 
-Here you will need to either have a dedicate storage device or partition an existing one to install Arch Linux onto.
+Here you will need to either have a dedicated storage device or partition an existing one to install Linux onto.
 
 #### <sup>Option 2:</sup> Step 1 - USB Drive
 Make sure that you have an 8GB or higher USB key/pendrive/memory stick and connect it to your computer.
@@ -162,19 +162,19 @@ Download the ISO file for the Linux distro of your choice. Use the [Distribution
 #### <sup>Option 2:</sup> Step 5 - Dual Booting/Storage Partitioning  (Optional)
 If you want to keep Windows installed on your computer and be able to boot into Linux or Windows then follow the below steps. If you wish to override your Windows install then skip to [step 6](#option-2-step-6---booting-from-the-usb).
 
-- You will need to open Disk Manager. To do this either right-clicking the Start button and selecting "Disk Management" or Search for "Disk Manager" in your start menu and you will see an option called "Create and format hard disk partitions".
-- This will list all your connected storage drives and their paritions. Your main C drive should have three paritions and any others typically should just have one.
+- You will need to open Disk Manager. To do this either right-click the Start button and select "Disk Management" or search for "Disk Manager" in your start menu and you will see an option called "Create and format hard disk partitions".
+- This will list all your connected storage drives and their partitions. Your main C drive should have three partitions and any others typically should just have one.
 - Select the drive you wish to install Linux onto and select the "NTFS" section, right click and choose shrink volume. Note that the drive MUST have free space to be able to do this!
 - Now select the size you wish to shrink the volume by, this is done in megabytes (MB) so 1024MB = 1GB.
   - It is recommended to have around 30GB-50GB for a Linux install however the more you can spare the more available storage you will have. I like to try and split my drive 50/50 so I have 500GB.
-- After you have shrunk the volumn you will now see a unallocated section within the drive matching the size you chose.
-  - You can always shrink the drive more later or reallocate the volumn back to Windows.
+- After you have shrunk the volume you will now see a unallocated section within the drive matching the size you chose.
+  - You can always shrink the drive more later or reallocate the volume back to Windows.
 
-Now we will make a [system restore point](https://support.microsoft.com/en-us/windows/system-restore-a5ae3ed9-07c4-fd56-45ee-096777ecd14e) in case Windows gets effected by the install, this will allow you to restore your system without needing to do a fresh install. 
+Now we will make a [system restore point](https://support.microsoft.com/en-us/windows/system-restore-a5ae3ed9-07c4-fd56-45ee-096777ecd14e) in case Windows gets affected by the install, this will allow you to restore your system without needing to do a fresh install. 
 - Go to your taskbar and search "Create a restore point".
 - Ensure your C drive is selected then click "Create..." button.
 
-We also need to disable [BitLocker](https://support.microsoft.com/en-us/windows/bitlocker-drive-encryption-76b92ac9-1040-48d6-9f5f-d14b3c5fa178) and this method will vary depending on on version of Windows you are running. To find out what version you have:
+We also need to disable [BitLocker](https://support.microsoft.com/en-us/windows/bitlocker-drive-encryption-76b92ac9-1040-48d6-9f5f-d14b3c5fa178) and this method will vary depending on the version of Windows you are running. To find out what version you have:
 - Open Settings: Click on the Start menu and select Settings.
 - Go to System: In the Settings window, click on System.
 - Select About: Scroll down and click on About.
@@ -193,7 +193,7 @@ We also need to disable [BitLocker](https://support.microsoft.com/en-us/windows/
 - Click on Turn off BitLocker for the desired drive.
 - Confirm your choice to disable BitLocker.
 
-Finally we need to disable [Fast Startup](https://windowsforum.com/threads/fast-startup-in-windows-11-benefits-risks-and-how-to-disable-it.369470/) otherwise you could have issues wtih drive lockouts and/or file system errors on either Windows or Linux. To do this:
+Finally we need to disable [Fast Startup](https://windowsforum.com/threads/fast-startup-in-windows-11-benefits-risks-and-how-to-disable-it.369470/) otherwise you could have issues with drive lockouts and/or file system errors on either Windows or Linux. To do this:
 - Open the Control Panel by searching for it in the Start Menu.
 - Click on Power Options.
 - Select Choose what the power buttons do from the left sidebar.
@@ -202,7 +202,7 @@ Finally we need to disable [Fast Startup](https://windowsforum.com/threads/fast-
 - Click Save changes.
 
 #### <sup>Option 2:</sup> Step 6 - Booting from the USB
-- Restart your computer and enter your BIO settings (use ESC, F8, F9, F10, F12).
+- Restart your computer and enter your BIOS settings (use ESC, F8, F9, F10, F12).
 - Enable USB Boot.
 - Change your UEFI Boot Order so that the USB device is the primary (first) in the boot list.
 - Disable Secure Boot.
@@ -217,7 +217,7 @@ Now you will be in a CLI Environment or GUI. Move onto the next section of the i
 
 This is a list of distributions which I have explored when learning Linux. Pick the option you have chosen to install.
 
-You can test drive Linux distrobutions online using the tool [DistroSea](https://distrosea.com/).
+You can test drive Linux distributions online using the tool [DistroSea](https://distrosea.com/).
 
 <table>
   <thead>
@@ -234,7 +234,7 @@ You can test drive Linux distrobutions online using the tool [DistroSea](https:/
     <tr>
       <td><a href="/guides/Arch-Linux.md">Arch</a></td>
       <td><a href="https://archlinux.org/download/">archlinux.org</a></td>
-      <td>Must be build from scratch or use a installer script. Not user friendly.</td>
+      <td>Must be built from scratch or use an installer script. Not user friendly.</td>
     </tr>
     <tr>
       <td><a href="/guides/CachyOS.md">CachyOS</a></td>
@@ -264,12 +264,12 @@ You can test drive Linux distrobutions online using the tool [DistroSea](https:/
     <tr>
       <td><a href="#">Nobara</a></td>
       <td><a href="https://nobaraproject.org/download.html">nobaraproject.org</a></td>
-      <td>Fedora Based. All the points of Fedora with added tunning for gaming, streaming, and content creation.</td>
+      <td>Fedora Based. All the points of Fedora with added tuning for gaming, streaming, and content creation.</td>
     </tr>
     <tr>
       <td><a href="/guides/openSUSE-Tumbleweed.md">openSUSE</a></td>
       <td><a href="https://get.opensuse.org/tumbleweed/#download">opensuse.org</a></td>
-      <td>Beginner friendly and is more hardened by default compared to other distros. Packages are tested before being shipped through their OpenQA process. Can be cutting edge if you choice Tumbleweed.</td>
+      <td>Beginner friendly and is more hardened by default compared to other distros. Packages are tested before being shipped through their OpenQA process. Can be cutting edge if you choose Tumbleweed.</td>
     </tr>
     <tr>
       <td><a href="#">PikaOS</a></td>
@@ -286,7 +286,7 @@ You can test drive Linux distrobutions online using the tool [DistroSea](https:/
 
 <h1 align="center">Documents</h1>
 
-Here is a list of documents for a variety of things such as my setups, explantations of Linux features and guides on how to use specific software. 
+Here is a list of documents for a variety of things such as my setups, explanations of Linux features and guides on how to use specific software. 
 
 <sub>In alphabetical order.</sub>
 
