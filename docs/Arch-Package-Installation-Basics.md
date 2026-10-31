@@ -19,8 +19,8 @@
  <summary>Expand Table Here</summary>
 
   - [Arch Package Installation GUI Basics](#Arch-Package-Installation-GUI-Basics)
-  - [Arch Package Installation Basics](#Arch-Package-Installation-Terminal/Console-Basics)
-    - [Package installation Basics](#Package-Installation-Basics)
+  - [Arch Package Installation Terminal/Console Basics](#arch-package-installation-terminalconsole-basics)
+    - [Package Installation Basics](#Package-Installation-Basics)
     - [Package Management Choices](#Package-Management-Choices)
 </details>
 
@@ -28,18 +28,18 @@
 
 <h1 align="center">Arch Package Installation GUI Basics</h1>
 
-You don't have to install packages via a terminal/console. Depending on the desktop enviroment or distribution you are using you may have a pre-installed app manager. CachyOS comes bundled with Octopi, you can search for it in the start menu and will look like the below.
+You don't have to install packages via a terminal/console. Depending on the desktop environment or distribution you are using you may have a pre-installed app manager. CachyOS comes bundled with Octopi, you can search for it in the start menu and it will look like the below.
 
 ![Octopi screenshot](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/CachyOS-octopi.jpg?raw=true)
 
 Here you can search for packages to install, update or even remove all without needing to use or remember any commands.
 
-Octopi is a very simple designed app manager however if you would like something which is more graphical then you can use Discover instead. Discover does not come pre-installed on CachyOS but is often installed on other distribution which use the KDE desktop enviroment. To get Discover simply install it via Octopi or `sudo pacman -Sy discover flatpak` in the terminal. Then you can search for it in the start menu.
+Octopi is a very simply designed app manager however if you would like something which is more graphical then you can use Discover instead. Discover does not come pre-installed on CachyOS but is often installed on other distributions which use the KDE desktop environment. To get Discover simply install it via Octopi or `sudo pacman -Sy discover flatpak` in the terminal. Then you can search for it in the start menu.
 
 ![Discover screenshot](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/Discover.jpg?raw=true)
 
 > [!NOTE]
-> GUI package managers are a bit of a niche on Arch based distros as Arch doesn’t ship a app store/app manager by default. Most GUIs are front-ends to pacman and/or AUR helpers rather than native, fully integrated stores like on Ubuntu or Fedora distros.
+> GUI package managers are a bit of a niche on Arch based distros as Arch doesn’t ship an app store/app manager by default. Most GUIs are front-ends to pacman and/or AUR helpers rather than native, fully integrated stores like on Ubuntu or Fedora distros.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
@@ -95,9 +95,9 @@ sudo pacman -Sy <packages>
 | `obs-studio` | Screen recording and live streaming software. | pacman |
 | `gpu-screen-recorder-ui` | A fullscreen overlay UI for GPU Screen Recorder in the style of ShadowPlay. | pacman |
 | `krita` | Digital painting and illustration application. | pacman |
-| `libreoffice-fresh` | Office suite. |
+| `libreoffice-fresh` | Office suite. | pacman |
 | `mythes-en` | English thesaurus files (used by office applications). | pacman |
-| `ttc-iosevka` | [A font designed for writing code, using in terminals](https://github.com/be5invis/Iosevka). | pacman |
+| `ttc-iosevka` | [A font designed for writing code, used in terminals](https://github.com/be5invis/Iosevka). | pacman |
 | `vlc` | Media player. | pacman |
 | `ffmpeg` | Suite of libraries and programs for handling video, audio, and other multimedia files and streams. VLC can use this to play more file types. | pacman |
 | `cachyos-gaming-meta` | This meta-package includes all necessary gaming libraries and dependencies. | pacman |
@@ -107,7 +107,7 @@ sudo pacman -Sy <packages>
 | `code` | Visual Studio Code editor. | pacman |
 | `git` | Distributed version control system. | pacman |
 | `github-cli` | GitHub command-line interface (gh). | pacman |
-| `mysql-workbench` | SQL IDE for mySQL. | pacman |
+| `mysql-workbench` | SQL IDE for MySQL. | pacman |
 | `filezilla` | FTP Client. | pacman |
 | `winboat` | [Run Windows apps on Linux](https://github.com/TibixDev/winboat). | pacman |
 | `kvantum` | SVG-based theme engine for Qt4/Qt5 and KDE. | pacman |
@@ -121,8 +121,8 @@ sudo pacman -Sy <packages>
 | `wtf` | [Acronym dictionary within the terminal](https://sourceforge.net/projects/bsdwtf/). | yay |
 | `wtfutil` | [Personal information dashboard](https://github.com/wtfutil/wtf). | yay |
 | `vicinae-bin` | [Focused launcher for your desktop](https://github.com/vicinaehq/vicinae). | yay |
-| `peaclock` | [responsive and customizable clock, timer, and stopwatch for the terminal](https://github.com/octobanana/peaclock). | yay |
-| `solaar` | [Linux device manager for Logitech devices](github.com/pwr-Solaar/Solaar). | yay |
+| `peaclock` | [Responsive and customizable clock, timer, and stopwatch for the terminal](https://github.com/octobanana/peaclock). | yay |
+| `solaar` | [Linux device manager for Logitech devices](https://github.com/pwr-Solaar/Solaar). | yay |
 | `rclone-browser` | [A simple cross platform GUI for Rclone](https://github.com/kapitainsky/RcloneBrowser). | yay |
 | `vesktop` | [Custom Discord client with Vencord preinstalled](https://github.com/Vencord/Vesktop).  | yay |
 | `fluxer-git` | Fluxer is a free and open source Swedish-based Instant Messaging app. | yay |
@@ -134,7 +134,7 @@ sudo pacman -Sy <packages>
 
 <h2 align="center">Package Management Choices</h2>
 
-While Arch Linux provides multiple ways to install software, my setups primarily uses `pacman`, the native Arch package manager. Other options like AUR helpers (`yay`) and Flatpak exist, but `pacman` is preferred for core tools and system software.
+While Arch Linux provides multiple ways to install software, my setups primarily use `pacman`, the native Arch package manager. Other options like AUR helpers (`yay`) and Flatpak exist, but `pacman` is preferred for core tools and system software.
 
 ### Why `pacman`?
 - Native and officially supported – packages come directly from Arch maintainers.
@@ -143,8 +143,8 @@ While Arch Linux provides multiple ways to install software, my setups primarily
 - Easier troubleshooting – most Arch documentation assumes pacman-managed software.
 
 ### Alternatives
-- AUR helpers (`yay`) - I use only for packages unavailable in the official repos. It does offers access to a larger set of software, but packages are user-maintained and require building from source.
-- Flatpak – It is sandboxed applications with bundled dependencies. Useful for desktop apps that need isolation, but less native integration and higher disk usage.
+- AUR helpers (`yay`) - I use only for packages unavailable in the official repos. It does offer access to a larger set of software, but packages are user-maintained and require building from source.
+- Flatpak – It provides sandboxed applications with bundled dependencies. Useful for desktop apps that need isolation, but less native integration and higher disk usage.
 
 #### Quick Comparison: Pacman vs AUR vs Flatpak
 | Feature | Pacman | AUR (via `yay`) | Flatpak |

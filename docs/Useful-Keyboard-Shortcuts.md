@@ -25,7 +25,7 @@
 
 <h1 align="center">Useful Keyboard Shortcuts</h1>
 
-Here I will list a bunch of useful keyboard shortcuts to make a central place to search for them. I will also list the orginal keybind and if I have changed it.
+Here I will list a bunch of useful keyboard shortcuts to make a central place to search for them. I will also list the original keybind and if I have changed it.
 
 
 ## Plasma KDE
@@ -36,13 +36,13 @@ Here I will list a bunch of useful keyboard shortcuts to make a central place to
 | `Ctrl + F1 / F2 / F3 / F4` or `Ctrl + Meta + ← / →` | N/A | Switch virtual desktops |
 | `Meta + ← / →` | N/A | Tile window to screen edges left / right |
 | `Meta + ↑ / ↓` | N/A | Tile window to screen edges up / down |
-| `Meta + Shift ← / → / ↑ / ↓` | N/A | Move window between screens |
+| `Meta + Shift + ← / → / ↑ / ↓` | N/A | Move window between screens |
 
 ### 🚀 Launcher, Panels & System
 | Default Shortcuts | Custom Shortcuts | Action |
 | ------- | -------------------------- | ---- |
-| `Ctrl + Alt + T` | `Meta + C` | Opem Terminal |
-| `Alt  + Space` or `Alt  + F2` | N/A | KRunner (powerful search/command runner) |
+| `Ctrl + Alt + T` | `Meta + C` | Open Terminal |
+| `Alt + Space` or `Alt + F2` | N/A | KRunner (powerful search/command runner) |
 | `Meta + W` | N/A | Overview (windows + desktops) |
 | `Meta + D` | N/A | Show desktop |
 | `Meta + Esc` | N/A | System Monitor |

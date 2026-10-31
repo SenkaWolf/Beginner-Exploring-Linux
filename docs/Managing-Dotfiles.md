@@ -19,7 +19,8 @@
 <details>
  <summary>Expand Table Here</summary>
 
-  - [My CachyOS Setup](#My-CachyOS-Setup)
+  - [CachyOS Plasma KDE dotfiles (backup with GNU stow)](#cachyos-plasma-kde-dotfiles-backup-with-gnu-stow)
+  - [Notes](#notes)
 </details>
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
@@ -47,7 +48,7 @@ $ mkdir dotfiles
 ### Step 2 - Files
 If you are setting it up for the first time you need to move your current files to the folder we just made to make the backup or clone a repo into the directory if you are restoring a backup.
 
-Move onto either [Step 2.1 - Moving Current Files](#step-21---moving-current-files) or [Step 2.2 Restoring Backup](#step-22-restoring-backup) depending on your situation.
+Move onto either [Step 2.1 - Moving Current Files](#step-21---moving-current-files) or [Step 2.2 - Restoring Backup](#step-22---restoring-backup) depending on your situation.
 
 ---
 
@@ -60,12 +61,12 @@ $ cd dotfiles #Navigate into the directory
 $ mv ~/.zshrc ./ #Move the files you want to backup
 ```
 
-Below explains a breakdown of the command, the files being moved can be change to suit the files you wish to backup.
+Below explains a breakdown of the command, the files being moved can be changed to suit the files you wish to backup.
 - `mv` - move
 - `~/.zshrc` - .zshrc file found in the home directory. Change this path to any dotfiles you wish to include in the backup.
 - `./` - Put the files in the current directory you are in.
 
-If you want some examples of dotfiles to backup look at the [Files To Backup](#files-to-backup) section. Here is an example of how your folder should look after you have moved your files, remember this will vary depending on your install applications.
+If you want some examples of dotfiles to backup look at the [Files To Backup](#files-to-backup) section. Here is an example of how your folder should look after you have moved your files, remember this will vary depending on your installed applications.
 
 ```
 └── dotfiles/
@@ -81,53 +82,59 @@ If you want some examples of dotfiles to backup look at the [Files To Backup](#f
         └── starship.toml
 ```
 
+Before you can push your files you need somewhere to push them to. On GitHub create a new empty private repository (don't add a README or any other files) and make sure you have an SSH key added to your GitHub account. If you don't have an SSH key yet follow the SSH key steps in [Step 2.2 - Restoring Backup](#step-22---restoring-backup) first then come back here.
+
 Once you have moved all the files, we then need to initialise a new repository by
 ```console
 $ git init
 $ git add --all #Stage all the files
 $ git commit -m "Message Here" #Commit the files
-$ git push #Finally to push it to the repository
+$ git branch -M main #Name the branch main
+$ git remote add origin git@github.com:<username>/<repo name>.git #Link the folder to your GitHub repository
+$ git push -u origin main #Finally to push it to the repository
 ```
 
+The `-u` on the first push links your branch to the GitHub repository, so from now on a plain `git push` or `git pull` is all you need.
+
 > [!CAUTION]
-> Be careful as some dotfiles may contain sensative data which could be a security risk and should not be shared. To be safe ensure the GitHub repository is private unless you know what you are doing!
+> Be careful as some dotfiles may contain sensitive data which could be a security risk and should not be shared. To be safe ensure the GitHub repository is private unless you know what you are doing!
 
 ---
 
-#### Step 2.2 Restoring Backup
-Now we need to make a SSH key to allow us to access the already existing repo.
+#### Step 2.2 - Restoring Backup
+Now we need to make an SSH key to allow us to access the already existing repo.
 ```console
-$ ssh-keygen -C GUN-Stow-Repo
+$ ssh-keygen -C GNU-Stow-Repo
 ```
 - `ssh-keygen` - Generates a new public/private key pair.
 - `-C` - This allows us to add a comment.
-- `GUN-Stow-Repo` - Comment, you can put anything you want just make it descriptive.
+- `GNU-Stow-Repo` - Comment, you can put anything you want just make it descriptive.
 
-Next it will ask were do you want to save the key. I like to leave it as default so just press enter.
+Next it will ask where do you want to save the key. I like to leave it as default so just press enter.
 
-You will get a prompt to override, type `y` and continue.
+If you already have a key saved in that location you will get a prompt asking to overwrite it. Type `n` and either run the command again and give the new key a different file name, or skip this and use your existing key. Overwriting a key will break anything else that uses it, such as other servers or GitHub accounts.
 
 You will now be asked for a passphrase, type what you like or if you wish to not have one leave it blank and press enter. This will then output something like:
 
 ```console
-$ Your identifiation has been saved in /home/senkawolf/.ssh/id_ed25519
+$ Your identification has been saved in /home/senkawolf/.ssh/id_ed25519
 $ Your public key has been saved in /home/senkawolf/.ssh/id_ed25519.pub
 $ The key fingerprint is:
-$ SHA256:MmGMLEPB+om6hVMoFEz1DxxcfYkSS3TcUHSAlihgdr4 GUN-Stow-Repo
+$ SHA256:MmGMLEPB+om6hVMoFEz1DxxcfYkSS3TcUHSAlihgdr4 GNU-Stow-Repo
 ```
 
 Copy the public key directory path and run the below:
 ```console
-cat /home/senkawolf/.ssh/id_ed25519.pub
+$ cat /home/senkawolf/.ssh/id_ed25519.pub
 ```
 
-This will then print your SSH key in the terminal, copy everything. Or you can use your window explorer and manually navigate to the file, just remember the .ssh folder is hidden and you will need to turn on hidden files. 
+This will then print your SSH key in the terminal, copy everything. Or you can use your file manager and manually navigate to the file, just remember the .ssh folder is hidden and you will need to turn on hidden files. 
 
-Then go to your Github settings, then go to the Access section and you will see "SSH and GPG keys".
+Then go to your GitHub settings, then go to the Access section and you will see "SSH and GPG keys".
 
-Click New SSH key, type whatever title you want just make sure it is descriptive and then paste in the key you copied from the terminal. You will be asked to enter your password or F2A to finalise adding the SSH key.
+Click New SSH key, type whatever title you want just make sure it is descriptive and then paste in the key you copied from the terminal. You will be asked to enter your password or 2FA to finalise adding the SSH key.
 
-Now you can clone your repository, make sure you are in the home `~` directory. Then go to your repo on GitHub, click on the code button and get the SSH reference. Your will differ to the below but will be something like `git clone git@github.com:<username>/<repo name>.git`
+Now you can clone your repository, make sure you are in the home `~` directory. Then go to your repo on GitHub, click on the code button and get the SSH reference. Yours will differ to the below but will be something like `git clone git@github.com:<username>/<repo name>.git`
 ```console
 $ cd ~
 $ git clone git@github.com:SenkaWolf/dotfiles.git
@@ -137,7 +144,7 @@ If you added a passphrase when making the SSH key it will be asked during this s
 ---
 
 ### Step 3 - GNU Stow
-Now that we have the directory made with the files we want to symlink.
+Now we have the directory made with the files we want to symlink.
 
 ```console
 $ cd dotfiles #Make sure you are in the dotfiles directory.
@@ -146,12 +153,12 @@ $ stow . #Run this to create the symlink.
 
 ---
 
-#### Step 4 Using the setup
+### Step 4 - Using the setup
 
-Now whenevery you make a change and want to back it up you can repeat the below steps as used in [Step 2.1 - Moving Current Files](#step-21---moving-current-files).
+Now whenever you make a change and want to back it up you can repeat the below steps as used in [Step 2.1 - Moving Current Files](#step-21---moving-current-files).
 
 ##### Pushing Files
-To push the file to github you must do the following:
+To push the files to GitHub you must do the following:
 ```console
 $ git add --all #Stage all the files
 $ git commit -m "Message Here" #Commit the files
@@ -183,7 +190,7 @@ There are many files you can back up, but here are a few important ones. These c
 
 | File / Directory                | Type        | Notes / Description                                   |
 |---------------------------------|------------|-------------------------------------------------------|
-| ~/.zshrc                         | Linux      | Zsh shell
+| ~/.zshrc                         | Linux      | Zsh shell |
 | ~/.config/kdeglobals                              | plasmashell | General KDE Plasma settings (theme, colors, fonts)        |
 | ~/.config/kwinrc                                  | Application | KWin window manager configuration (window rules, effects) |
 | ~/.config/plasma-org.kde.plasma.desktop-appletsrc | plasmashell | Plasma desktop layout and widgets configuration           |
@@ -202,7 +209,7 @@ Some examples of these are:
 ---
 
 ##### Restarting Plasma
-If you have cloned files from a repo which effect the plasma desktop you need to run the below command to stop and restart the process so the changes can take effect.
+If you have cloned files from a repo which affect the plasma desktop you need to run the below command to stop and restart the process so the changes can take effect.
 
 ```console
 $ plasmashell --replace & #or use the below

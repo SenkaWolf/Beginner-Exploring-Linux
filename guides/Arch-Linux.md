@@ -33,16 +33,16 @@
 
 <h1 align="center">Arch-based Distributions</h1>
 
-This list is OS distributions which are derived from Arch Linux either in whole or in part. The version you use is down to preference, taste in distros and use case.
+This is a list of OS distributions which are derived from Arch Linux either in whole or in part. The version you use is down to preference, taste in distros and use case.
    
-<sub>In alphabetical order.<sub>
+<sub>In alphabetical order.</sub>
 
 - [Arch Linux](https://archlinux.org)
 - [CachyOS](https://cachyos.org/)
 - [EndeavourOS](https://endeavouros.com/)
-- [Garuda Linux](https://garudalinux.org/) - Targeted towards gaming however does bring alot of bloat and not recommended for low end computers.
+- [Garuda Linux](https://garudalinux.org/) - Targeted towards gaming however does bring a lot of bloat and not recommended for low end computers.
 - [Manjaro](https://manjaro.org/)
-- [XeroLinux](https://xerolinux.xyz/) - Simplies installation process and offers pre-configured environments that serve as an elegant but functional starting point for users.
+- [XeroLinux](https://xerolinux.xyz/) - Simplifies installation process and offers pre-configured environments that serve as an elegant but functional starting point for users.
 
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
@@ -59,10 +59,10 @@ Now we will be going through the install process of Arch Linux, you should be in
 > If you want to clear the console screen you can by pressing `Ctrl + L` this can help declutter the console to make it easier to follow along.
 
 - Connecting to the internet.
-    - If you are using a ethernet cable you can use the ping command to check the connection. Type `ping google.com` and you should see a ping return.
+    - If you are using an ethernet cable you can use the ping command to check the connection. Type `ping google.com` and you should see a ping return.
         - To stop the pings press `Ctrl + C`.
     - If you are using Wi-Fi then you will need to use iwctl to connect to the internet. Type `iwctl` to enter the iwd shell.
-        - The type `device list` to see a list of network interfaces.
+        - Then type `device list` to see a list of network interfaces.
         - Look for 'wlan0' then type `device wlan0 show` to see more information.
         - Then type `station wlan0 get-networks` to see a list of Wi-Fi networks.
         - Then type `station wlan0 connect [name of Wi-Fi network]` replace [] with the name of your Wi-Fi network.
@@ -73,7 +73,7 @@ Now we will be going through the install process of Arch Linux, you should be in
 - Syncing system packages and updating.
     - Type `pacman -Sy` to sync and upgrade system packages.
 - Formatting Disk
-    - Now type `lsblk` to show a list of all the connect drives to the computer.
+    - Now type `lsblk` to show a list of all the connected drives to the computer.
     - If you're unsure what drive you need to use, you can type `fdisk -l` to see more information.
     - **Make sure you are careful as it's important you format the correct drive otherwise you could lose important data.**
         - If you are using a virtual machine then the drive will most likely be named 'sda'.
@@ -81,7 +81,7 @@ Now we will be going through the install process of Arch Linux, you should be in
     - Once in gdisk press `x` to enter expert mode.
     - Then press `z` to erase the drive.
     - Follow the prompts by typing `y` to finish the process.
-    - Now in my case the 'sda' drive should be free of nay partitions and files.
+    - Now in my case the 'sda' drive should be free of any partitions and files.
 - Install Script
     - Now type the command `pacman -Sy archlinux-keyring` which contains the public keys used to verify the authenticity and integrity of Arch Linux packages ensuring they come from trusted sources.
         - Make sure you press `y` for any prompts.
@@ -96,11 +96,11 @@ Now we will be going through the install process of Arch Linux, you should be in
     - Select Disk Configuration
         - Select Partitioning
         - Select Use a best-effort default partition layout
-        - Select the drive where you want to install Arch Linux, the one we identified earlier. So in my case dev/sda.
+        - Select the drive where you want to install Arch Linux, the one we identified earlier. So in my case /dev/sda.
         - Select the `btrfs` filesystem.
         - Select yes to would you like to use BTRFS subvolumes with a default structure.
         - Select Use compression.
-        - Then go back oto the main menu.
+        - Then go back to the main menu.
     - Select Bootloader
         - Make sure Grub is selected.
     - Select Root password and set a secure password.
@@ -117,7 +117,7 @@ Now we will be going through the install process of Arch Linux, you should be in
         - Pick the driver which suits your computer hardware configuration.
         - NVIDIA - Select the `Nvidia (proprietary)` option.
         - Virtual Machine - If you're using a virtual machine then select `VMware / VirtualBox (open-source)`.
-        - Then go back oto the main menu.
+        - Then go back to the main menu.
     - Audio
         - Then select the option pipewire.
     - Additional packages
@@ -128,7 +128,7 @@ Now we will be going through the install process of Arch Linux, you should be in
     - Timezone
         - Set this to your timezone, in my case it would be `Europe/London`
     - Finally you are ready to press install, this may take a few minutes.
-    - Once the installtion has been completed you will get a prompt saying wouldl you like to chroot into the newly created installation and perform post-installation configuration.
+    - Once the installation has been completed you will get a prompt saying would you like to chroot into the newly created installation and perform post-installation configuration.
         - Select yes.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
@@ -141,16 +141,16 @@ Now we are in the chroot environment where we can install useful tools before bo
 $ pacman -Sy enchant mythes-en ttf-liberation hunspell-en_GB ttf-bitstream-vera adobe-source-sans-pro-fonts gst-plugins-good ttf-droid ttf-dejavu aspell-en icedtea-web gst-libav ttf-ubuntu-font-family ttf-anonymous-pro jre8-openjdk languagetool libmythes firefox libreoffice-fresh vlc
 $ exit          #To exit the chroot environment
 $ shutdown now  #Powers off your computer or virtual machine
-````
+```
 > [!IMPORTANT]  
-> If you installed Arch Linus onto bare metal remove the bootsable USB and turn on the computer.
+> If you installed Arch Linux onto bare metal remove the bootable USB and turn on the computer.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
 <h2 align="center">Fix Discover app backend</h2>
-The Discover application helps you find and install applications, games, and tools from multiple sources. If you try to launch the application you will get a error saying that Arch Linus is not configured for installing apps through Discover. 
+The Discover application helps you find and install applications, games, and tools from multiple sources. If you try to launch the application you will get an error saying that Arch Linux is not configured for installing apps through Discover. 
 
-To fix this we need to install Flatpak and use it as a backend for Dicover.
+To fix this we need to install Flatpak and use it as a backend for Discover.
 
 ```console
 $ sudo pacman -Sy
@@ -177,7 +177,7 @@ $ sudo nano /etc/pacman.conf      #Opens the file pacman.conf
 $ sudo pacman -Syu      #Make the changes take effect.
 ```
 
-Optional: If you have a good computer and internet connection then remove the hashtag in front of `ParalleDownloads = 5` so pacman will download several packages at the simultaneously.
+Optional: If you have a good computer and internet connection then remove the hashtag in front of `ParallelDownloads = 5` so pacman will download several packages simultaneously.
 
 ---
 
@@ -202,7 +202,7 @@ $ mv .bashrc ~/.bashrc
 ---
 
 #### Automatic package cache cleaning <sup>[Wiki](https://wiki.archlinux.org/title/Pacman#Cleaning_the_package_cache)</sup>
-Downloading package updates can take up a large amount of space over time, this will automatically clear the cache for you. The below instructions will clear the cache weekly but leave 3 of the most recent versions of each package incase you need to downgrade anything.
+Downloading package updates can take up a large amount of space over time, this will automatically clear the cache for you. The below instructions will clear the cache weekly but leave 3 of the most recent versions of each package in case you need to downgrade anything.
 
 ```console
 $ sudo pacman -S pacman-contrib
@@ -212,7 +212,7 @@ $ sudo systemctl enable paccache.timer
 ---
 
 #### Installing AUR Helper <sup>[Wiki](https://wiki.archlinux.org/title/Arch_User_Repository)</sup>
-The Arch User Repository (AUR) is a communuty-drive repository of packages. If a package isn't in the official Arch repository it most likey found in the AUR.
+The Arch User Repository (AUR) is a community-driven repository of packages. If a package isn't in the official Arch repository it is most likely found in the AUR.
 
 ```console
 $ sudo pacman -S --needed base-devel git
@@ -226,7 +226,7 @@ $ makepkg -si
 ---
 
 #### Create user folders <sup>[Wiki](https://wiki.archlinux.org/title/XDG_user_directories)</sup>
-By default you don't get the common folders like pictures, videos etc like you do in Windows. Here is a easy way to create them without having to do it manually.
+By default you don't get the common folders like pictures, videos etc like you do in Windows. Here is an easy way to create them without having to do it manually.
 
 ```console
 $ sudo pacman -S xdg-user-dirs
@@ -234,7 +234,7 @@ $ xdg-user-dirs-update
 ```
 
 #### Install microcode <sup>[Wiki](https://wiki.archlinux.org/title/Microcode)</sup>
-Microcode is a essential part of our CPU's functionality so it's important that it's secure and up to date. Make sure you install the packages based on if you have a AMD or Intel CPU.
+Microcode is an essential part of our CPU's functionality so it's important that it's secure and up to date. Make sure you install the packages based on if you have an AMD or Intel CPU.
 
 ```console
 $ sudo pacman -S amd-ucode      #AMD CPU
@@ -250,7 +250,7 @@ To speed up your boot process you can disable the GRUB screen and boot into Arch
 > If you need the GRUB screen you can get to it by holding ESC key whilst booting your virtual machine or computer.
 
 ```console
-$ sudo nano /etc/default/grub   #Open the grub.cfg file
+$ sudo nano /etc/default/grub   #Open the GRUB config file
 ```
 
 - Scroll down the file to the line `GRUB_TIMEOUT_STYLE=menu`.
@@ -260,22 +260,22 @@ $ sudo nano /etc/default/grub   #Open the grub.cfg file
 
 ```console
 $ sudo grub-mkconfig -o /boot/grub/grub.cfg     #Update the grub config
-$ sudo reboot now                               #Powers off your computer or virtual machine
+$ sudo reboot now                               #Restarts your computer or virtual machine
 ```
 
 ---
 
 #### Set up firewall <sup>[Wiki](https://wiki.archlinux.org/title/Uncomplicated_Firewall)</sup>
-Almost all Linux distributions come with a inactive firewall. The Linux kernel has a built-in firewall and technically all Linux distros have this but it is not configured and activated. Linux is still secure even without an active firewall. By default, most of the distributions have no open ports. It is better to be safe than sorry to add a firewall. A firewall does use some system resources, but not enought to make a impact and it adds an extra layer of security making it worth while.
+Almost all Linux distributions come with an inactive firewall. The Linux kernel has a built-in firewall and technically all Linux distros have this but it is not configured and activated. Linux is still secure even without an active firewall. By default, most of the distributions have no open ports. It is better to be safe than sorry to add a firewall. A firewall does use some system resources, but not enough to make an impact and it adds an extra layer of security making it worthwhile.
 
 > [!WARNING]
 > Note that this will not work if iptables.service is also enabled.
 
 ```console
 $ sudo pacman -S ufw                    # To install ufw
-$ sudo ufw enable                       # Enabled ufw
-$ sudo ufw status verbose               # To check it's status to make sure it's active.
-$ sudo systemctl enable ufw.service`    # To make it auto start with the system.
+$ sudo ufw enable                       # Enable ufw
+$ sudo ufw status verbose               # To check its status to make sure it's active.
+$ sudo systemctl enable ufw.service     # To make it auto start with the system.
 ```
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
@@ -283,7 +283,7 @@ $ sudo systemctl enable ufw.service`    # To make it auto start with the system.
 <h2 align="center">Themes</h2>
 
 ### My Setup
-My setup uses the [Vivid Dark Global 6](https://store.kde.org/p/2133856) theme. As for Widgets AkA Plasmoids, it uses [Apdatifier](https://store.kde.org/p/2135796), [Netspeed](https://store.kde.org/p/2136505), [Quick Shutdown](https://store.kde.org/p/1288430) and [Toggle Overview](https://store.kde.org/p/2132554).
+My setup uses the [Vivid Dark Global 6](https://store.kde.org/p/2133856) theme. As for Widgets AKA Plasmoids, it uses [Apdatifier](https://store.kde.org/p/2135796), [Netspeed](https://store.kde.org/p/2136505), [Quick Shutdown](https://store.kde.org/p/1288430) and [Toggle Overview](https://store.kde.org/p/2132554).
 
 ### Other Themes
 - [Layan](https://github.com/vinceliuice/Layan-kde)

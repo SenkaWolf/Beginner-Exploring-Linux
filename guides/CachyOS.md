@@ -39,8 +39,8 @@ Now we will be going through the install process of CachyOS, this will put you i
 - Bootloader - Pick Grub.
 - Select your language then press next.
 - Select your region then press next.
-- Select your keybaord layout then press next.
-- Select storage device: Pick the drive you wish to install Linux on or the parition you made earlier if you are dual booting.
+- Select your keyboard layout then press next.
+- Select storage device: Pick the drive you wish to install Linux on or the partition you made earlier if you are dual booting.
   - Select "Replace a partition".
   - Make sure the dropdown says "btrfs".
   - Select a partition to install on: Click on the grey free space on the bar and the install will select all the free space on the partition.
@@ -56,7 +56,7 @@ Now we need to ensure Windows shows up in the GRUB boot manager screen so you ca
 $ sudo nano /etc/default/grub
 ```
 
-This will open the grub config in the terminal which will look simular to the below. Look for the below lines and change them, I have added comments to the example below as well.
+This will open the grub config in the terminal which will look similar to the below. Look for the below lines and change them, I have added comments to the example below as well.
 - `GRUB_TIMEOUT='5'` → `GRUB_TIMEOUT='30'` - Changes the default timer.
 - `#GRUB_DISABLE_OS_PROBER=false` → `GRUB_DISABLE_OS_PROBER=false` - Uncomment this line so GRUB can look for the Windows boot loader and can add it to the GRUB boot manager screen.
 
@@ -65,7 +65,7 @@ $ # GRUB boot loader configuration
 $ 
 $ GRUB_DEFAULT=0
 $ GRUB_TIMEOUT='5' #Change this from 5 to 30.
-$ $ $ GRUB_DISTRIBUTOR='CachyOS'
+$ GRUB_DISTRIBUTOR='CachyOS'
 $ GRUB_CMDLINE_LINUX_DEFAULT='nowatchdog nvme_load=YES zswap.enabled=0 splash loglevel=3'
 $ GRUB_CMDLINE_LINUX=""
 $ 
@@ -90,7 +90,7 @@ $ # note that you can use only modes which your graphic card supports via VBE
 $ # you can see them in real GRUB with the command `videoinfo'
 $ GRUB_GFXMODE=auto
 $ 
-# Uncomment to allow the kernel use the same resolution used by grub
+$ # Uncomment to allow the kernel use the same resolution used by grub
 $ GRUB_GFXPAYLOAD_LINUX=keep
 $ 
 $ # Uncomment if you want GRUB to pass to the Linux kernel the old parameter
@@ -137,7 +137,7 @@ $ sudo pacman -Sy os-prober #Installs os-prober
 $ sudo grub-mkconfig -o /boot/grub/grub.cfg #This command updates GRUB 
 ```
 
-You should now see a output in the terminal which should look like the below. It should say "Found Windows Boot Manager" and this means it has added Windows to the GRUB boot manager screen.
+You should now see an output in the terminal which should look like the below. It should say "Found Windows Boot Manager" and this means it has added Windows to the GRUB boot manager screen.
 
 ```console
 $ Generating grub configuration file ...
@@ -156,15 +156,15 @@ $  done
 <h2 align="center">Troubleshooting</h2>
 
 #### Boots into Windows and not the GRUB boot manager screen 
-If you boot straight into Windows after the install then we need to change the boot loader order in the BIOs.
-- Restart your computer and enter your BIO settings (use ESC, F8, F9, F10 or F12).
-- Change your UEFI Boot Order so that the GRUB optionis the primary (first) in the boot list.
+If you boot straight into Windows after the install then we need to change the boot loader order in the BIOS.
+- Restart your computer and enter your BIOS settings (use ESC, F8, F9, F10 or F12).
+- Change your UEFI Boot Order so that the GRUB option is the primary (first) in the boot list.
 - Save the changes and reboot the computer.
 - This will now open the GRUB boot manager screen on startup.
 
 
 #### Virtual Machine Install - Asking for liveuser password
-When booting from a USB media to instal CachyOS on a virtual machine you may be greeted by the below screen.
+When booting from a USB media to install CachyOS on a virtual machine you may be greeted by the below screen.
 
 ![Live User Login Screen Screenshot](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/CachyOS-liveuser-Login.png?raw=true)
 
@@ -235,7 +235,7 @@ Alt + SysRq + B  # Reboot
 
 #### BTRFS Log Tree Startup Error
 
-During startup if you get a simular error code to the below:
+During startup if you get a similar error code to the below:
 ```console
 $ You are in emergency mode. After logging in, type "journalctl -xb" to view system logs, "systemctl reboot" to reboot, or "exit" to continue boot up.
 $ Cannot open access to console, the root account is locked.
@@ -252,7 +252,7 @@ $ BTRFS: error (device nvme2n1p2 state EAO) in btrfs_recover_log_trees:7736: err
 $ BTRFS: error (device nvme2n1p2 state EAO) in btrfs_replay_log:2094: errno=-17 Object already exists (failed to recover log tree)
 ```
 
-The key points to the above message is
+The key points of the above message are
 ```
 BTRFS critical: log replay failed
 errno=-17 Object already exists
@@ -265,7 +265,7 @@ This means:
 
 To fix this we need to clear the Btrfs log:
 
-Boot from a live USB (Use the same USB drive setup you used to install CachyOS). Next looking over the error it mentions `device nvme2n1p2` which is the Btrfs partition witth the issue however we will confirm this in the steps below.
+Boot from a live USB (Use the same USB drive setup you used to install CachyOS). Next looking over the error it mentions `device nvme2n1p2` which is the Btrfs partition with the issue however we will confirm this in the steps below.
 
 In the terminal:
 ```console
@@ -312,7 +312,7 @@ When using pacman to install and upgrade you can enable or allow more parallel d
 $ sudo nano /etc/pacman.conf
 ```
 
-Below is the first 42 lines from the config file. Look for `ParallelDownloads = 5` and change this to 10.
+Below are the first 42 lines from the config file. Look for `ParallelDownloads = 5` and change this to 10.
 
 ```conf
 #
@@ -361,7 +361,7 @@ DownloadUser = alpm
 ---
 
 #### Automatic package cache cleaning <sup>[Wiki](https://wiki.archlinux.org/title/Pacman#Cleaning_the_package_cache)</sup>
-Downloading package updates can take up a large amount of space over time, this will automatically clear the cache for you. The below instructions will clear the cache weekly but leave 3 of the most recent versions of each package incase you need to downgrade anything.
+Downloading package updates can take up a large amount of space over time, this will automatically clear the cache for you. The below instructions will clear the cache weekly but leave 3 of the most recent versions of each package in case you need to downgrade anything.
 ```console
 $ sudo systemctl enable paccache.timer
 ```
@@ -369,7 +369,7 @@ $ sudo systemctl enable paccache.timer
 
 #### CPU Core Balancing <sup>[Github](https://github.com/Irqbalance/irqbalance)</sup>
 
-Using irqbalance we can use this to distribute hardware interrupts across CPU cores to prevent one core (often CPU0) from becoming overloaded. This helps with reduces microstutter in games, improves frametime consistency and especially useful on 6+ core CPUs.
+Using irqbalance we can use this to distribute hardware interrupts across CPU cores to prevent one core (often CPU0) from becoming overloaded. This helps reduce microstutter in games, improves frametime consistency and is especially useful on 6+ core CPUs.
 
 ```console
 $ sudo pacman -Sy irqbalance #Install irqbalance

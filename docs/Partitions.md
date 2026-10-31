@@ -21,7 +21,7 @@
   - [Partitions](#Partitions)
     - [Use Cases](#Use-Cases)
     - [GParted](#GParted)
-    - [Mounting & fstab](#Mounting-&-fstab)
+    - [Mounting & fstab](#mounting--fstab)
     - [Directory Permissions](#Directory-Permissions)
 </details>
 
@@ -29,9 +29,9 @@
 
 <h1 align="center">Partitions</h1>
 
-Partitions can be used to allow Linux operating system to manage sections of the drive as separate units. This organisation helps improve efficiency and can be used for various purposes, such as running multiple operating systems or organising files.
+Partitions can be used to allow the Linux operating system to manage sections of the drive as separate units. This organisation helps improve efficiency and can be used for various purposes, such as running multiple operating systems or organising files.
 
-In this section I will explain how to use a tool called [GParted](https://gparted.org/) to grow/shrink drive space and create new partitions for organising files. Further more I will explain how to mount drives, auto mount, optimal mount settings and edit directory permissions.
+In this section I will explain how to use a tool called [GParted](https://gparted.org/) to grow/shrink drive space and create new partitions for organising files. Furthermore I will explain how to mount drives, auto mount, optimal mount settings and edit directory permissions.
 
 > [!NOTE]
 > You can use command line tools like `fdisk` and `parted` to achieve the same outcome however I don't have experience using these tools so they won't be covered. In the future I will learn them and update this document but for now I will only cover GParted.
@@ -40,7 +40,7 @@ In this section I will explain how to use a tool called [GParted](https://gparte
 
 <h2 align="center">Use Cases</h2>
 
-Some use cases for partitioning your drive can be for keeping your operation system on root `/` but then you can split your personal files and coding projects on another e.g. `/home`, and large game installations on a separate partition e.g `/games`. This makes it easier to reinstall the operation system without losing files and helps keep your system organised. This isi also helpful if you like to distro hop.
+Some use cases for partitioning your drive can be for keeping your operating system on root `/` but then you can split your personal files and coding projects on another e.g. `/home`, and large game installations on a separate partition e.g. `/games`. This makes it easier to reinstall the operating system without losing files and helps keep your system organised. This is also helpful if you like to distro hop.
 
 I will explain my current setup as an example.
 
@@ -84,7 +84,7 @@ Because partitioning modifies how data is stored on a disk, there is always some
 
 ### Splitting a secondary drive into multiple partitions
 
-In this section I will explain how to split a drive into multiple partitions by resizing the existing one and creating a new one. Please note I don't have a empty drive so I will be using one with a in use partition but I will edit the image to hide this fact to give you the best representation.
+In this section I will explain how to split a drive into multiple partitions by resizing the existing one and creating a new one. Please note I don't have an empty drive so I will be using one with an in-use partition but I will edit the image to hide this fact to give you the best representation.
 
 Go to the drive you want to split and make sure it is not mounted (there should be no key icon next to it). If a key icon is shown, first confirm that the drive is not the one your operating system is currently running on.
 
@@ -102,11 +102,13 @@ Now you will see the pending changes to the partitions. To finalise press the gr
 
 ![GParted Screenshot Change Pending](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/GParted-Resize-change-pending.png?raw=true)
 
-This now leaves you with a unallocated space on the drive which we can now add a new partition onto. Right click on the unallocated space and select "New". Select the size you wish to allocate to the partition then set the file system to "btrfs" and give it a partition name and label.
+This now leaves you with unallocated space on the drive which we can now add a new partition onto. Right click on the unallocated space and select "New". Select the size you wish to allocate to the partition then set the file system to "btrfs" and give it a partition name and label.
 
 ![GParted Screenshot New Partition](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/GParted-new-partition.png?raw=true)
 
-Now you have your new partition you still have a few more steps. Go to the [Mounting & fstab](#Mounting-&-fstab) section.
+Once you are happy with the new partition press the green check mark again to apply it. The partition won't be created until the change has been applied.
+
+Now you have your new partition you still have a few more steps. Go to the [Mounting & fstab](#mounting--fstab) section.
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)
 
@@ -143,7 +145,15 @@ $ sudo nano /etc/fstab #Edit fstab file
 Now go to the bottom of the file and add:
 `UUID=1ba67418-f9c0-42a9-ae82-2dec3196d747  /mnt/example  btrfs  defaults,noatime,compress=zstd  0  0`. Remember to change the UUID and the "example" to suit your setup, then Ctrl + O then enter to save changes.
 
-The above adds the unique ID (UUID) of the drive, the mount point (/mnt/), file system type (btrfs) and some common btfrs options to the fstab file which will now automatic mount the drive when you turn on your computer.
+The above adds the unique ID (UUID) of the drive, the mount point (/mnt/), file system type (btrfs) and some common Btrfs options to the fstab file which will now automatically mount the drive when you turn on your computer.
+
+Before rebooting, test the new fstab entry. A mistake in fstab can stop your system from booting so it is worth checking now.
+```console
+$ sudo umount /mnt/example #Unmount the drive so the fstab entry gets tested
+$ sudo systemctl daemon-reload #Reload so the system picks up the fstab changes
+$ sudo mount -a #Mount everything in fstab, no output means there are no errors
+```
+If `mount -a` shows an error, open fstab again and check the line you added before rebooting.
 
 Common Btrfs options:
 - `defaults` - Shorthand for a standard set of mount options the kernel applies if you don't specify anything special.
@@ -156,7 +166,7 @@ Now move onto the final step [Directory Permissions](#Directory-Permissions).
 
 <h2 align="center">Directory Permissions</h2>
 
-Finally when you mount a filesystem from `fstab`, the mountpoint directory is owned by root, so normal users can't write to it so in turn can cause applications being unable to write to it as well.
+Finally when you mount a filesystem from `fstab`, the mountpoint directory is owned by root, so normal users can't write to it, which in turn can cause applications to be unable to write to it as well.
 
 Go through each section and run the commands, comments will be added to explain each section. Remember to change "example" to suit your setup.
 
@@ -170,7 +180,7 @@ $ sudo chown -R $USER:$USER /mnt/example #Change ownership to your user
 $ ls -ld /mnt/example #Check ownership again
 $ 
 $ #You should now see something like this (but your username):
-$ drwxr-xr-x SenkaWolf SenkaWolf
+$ drwxr-xr-x senkawolf senkawolf
 ```
 
 ![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/line.png?raw=true)

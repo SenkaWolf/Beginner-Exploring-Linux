@@ -119,6 +119,8 @@ Here I will list a bunch of useful commands to make a central place to search fo
 | `dnf update`  | Update packages |
 | `dnf remove`  | Remove package  |
 
+#### Arch (pacman / yay / paru)
+
 | Command          | Description                                             |
 | ---------------- | ------------------------------------------------------- |
 | `pacman -Syu`    | Update system                                           |

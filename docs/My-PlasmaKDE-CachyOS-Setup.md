@@ -32,6 +32,7 @@
       - [fish shell Configuration](#fish-shell-configuration-website)
       - [Uncomplicated Firewall (Ufw) Configuration](#uncomplicated-firewall-ufw-configuration-wiki)
       - [Login Screen (SDDM) on Multi Monitors Setup Config](#login-screen-sddm-on-multi-monitors-setup-config-wiki)
+      - [Ungoogled Chromium How to install Extensions](#ungoogled-chromium-how-to-install-extensions)
     - [Visuals](#Visuals)
       - [Plasma Theme](#plasma-theme-arch-wiki)
       - [Custom Plasma Color Schemes](#custom-plasma-color-schemes-arch-wiki)
@@ -55,7 +56,7 @@
 
 <h1 align="center">My CachyOS Setup</h1>
 
-This is a list of all the packages I have install on my system and changes I have made to personal my desktop.
+This is a list of all the packages I have installed on my system and changes I have made to my personal desktop.
 
 ![My Desktop](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/My-Desktop.png?raw=true)
 
@@ -76,7 +77,7 @@ Run the following commands in each section using pacman:
 - Visuals: `sudo pacman -Sy kvantum`
 - Widgets (Plasmoids) Dependencies: `sudo pacman -Sy cava qt6-websockets python-websockets`
 
-If you'd like a explanation on the code above or what each package is go [here](../docs/Arch-Package-Installation-Basics.md).
+If you'd like an explanation on the code above or what each package is go [here](../docs/Arch-Package-Installation-Basics.md).
 
 Below aren't available through pacman so we will use AUR instead: 
 - Firmware: `yay -Syu`
@@ -124,12 +125,12 @@ Now we need to allow low-level users to use the VM. Edit the `/etc/libvirt/libvi
 $ sudo nano /etc/libvirt/libvirtd.conf
 ```
 
-Go to line 85 and uncomment by removing the hashtag (#) from the begining:
+Go to line 85 and uncomment by removing the hashtag (#) from the beginning:
 ```
 unix_sock_group = "libvirt"
 ```
 
-Then go to line 108 and uncomment by removing the hashtag (#) from the begining:
+Then go to line 108 and uncomment by removing the hashtag (#) from the beginning:
 ```
 unix_sock_rw_perms = "0770"
 ```
@@ -137,7 +138,7 @@ unix_sock_rw_perms = "0770"
 Now we need to add our user to the `libvirt` group.
 ```console
 $ sudo usermod -a -G libvirt $(whoami)
-$ sudo systemctl restart libvirtd.service #Restart libvirt deamon
+$ sudo systemctl restart libvirtd.service #Restart libvirt daemon
 ```
 
 **Enable Nested Virtualization (Optional)**
@@ -146,7 +147,7 @@ Nested Virtualization is the ability to run virtual machines inside virtual mach
 - Intel: `echo "options kvm-intel nested=1" | sudo tee /etc/modprobe.d/kvm-intel.conf`
 - AMD: `echo "options kvm-amd nested=1" | sudo tee /etc/modprobe.d/kvm-amd.conf`
 
-Now you can run the `virt-manager` command to open the GUI virtual machine manger, or you can open it through your DE application menu.
+Now you can run the `virt-manager` command to open the GUI virtual machine manager, or you can open it through your DE application menu.
 
 > [!NOTE]
 > A shortcut to setting this up you can use [Linutil](https://github.com/ChrisTitusTech/linutil) which is a tool made by Chris Titus to simplify the install of certain applications.
@@ -176,7 +177,7 @@ $ arch-update --tray --enable
 ---
 #### Number Lock on startup <sup>[Arch Wiki](https://wiki.archlinux.org/title/Activating_numlock_on_bootup#KDE_Plasma)</sup>
 
-Eiter run the below command or navigate to System Settings > Keyboard.
+Either run the below command or navigate to System Settings > Keyboard.
 
 ```console
 $ systemsettings kcm_keyboard
@@ -193,7 +194,7 @@ In the `../files/fastfetch` folder copy the config and the logo to `~/.config/fa
 ---
 #### Starship Configuration <sup>[Website](https://starship.rs/config/)</sup>
 
-Starship is a customizable prompt for a shell enviroment in a terminal.
+Starship is a customizable prompt for a shell environment in a terminal.
 
 To get started open your terminal and do the following:
 ```console
@@ -201,7 +202,7 @@ $ sudo pacman -Sy starship #Install starship
 $ mkdir -p ~/.config && touch ~/.config/starship.toml #Create config file.
 $ nano ~/.config/starship.toml #Edit File
 ```
-Copy the content from the .toml file found in the [Tokyo Night Preset ](https://starship.rs/presets/tokyo-night) and save the changes.
+Copy the content from the .toml file found in the [Tokyo Night Preset](https://starship.rs/presets/tokyo-night) and save the changes.
 
 CachyOS default shell is fish so to add starship to the shell, edit the following file and add `starship init fish | source` to the end of the file.
 
@@ -218,7 +219,7 @@ Run the command:
 ```console
 $ gh auth login #Then authenticate using your browser.
 ```
-After authenticating onfigure the following:
+After authenticating configure the following:
 ```console
 $ git config --global user.email "senkawolf@example.com"
 $ git config --global user.name "SenkaWolf"
@@ -227,11 +228,11 @@ $ git config --global init.defaultBranch main
 
 ---
 #### fish shell Configuration <sup>[Website](https://fishshell.com/)</sup>
-Fish, or the Friendly Interactive Shell, is a user-friendly command line shell for Unix-like operating systems which comes pre configured with CachyOS by default. Hower fish is very configurable and you can streamline many processes by creating functions and aliases.
+Fish, or the Friendly Interactive Shell, is a user-friendly command line shell for Unix-like operating systems which comes preconfigured with CachyOS by default. However fish is very configurable and you can streamline many processes by creating functions and aliases.
 
-To edit the fish shell config you can go to `~/.config/fish/` in your file explorer or use `nano ~/.config/fish/config.fish`. Within the config file CachyOS refrences the file `/usr/share/cachyos-fish-config/cachyos-config.fish` which is their take on additonal tweaks for the shell, I recommend keeping them as they are additions I would have added myself.
+To edit the fish shell config you can go to `~/.config/fish/` in your file explorer or use `nano ~/.config/fish/config.fish`. Within the config file CachyOS references the file `/usr/share/cachyos-fish-config/cachyos-config.fish` which is their take on additional tweaks for the shell, I recommend keeping them as they are additions I would have added myself.
 
-To add an alias to fish simply open the `~/.config/fish/config.fish` from their add a new line using the format of where anything inside [] you replace to suit your needs `alias [alias name]="[command]"`. Below are some examples in my config:
+To add an alias to fish simply open the `~/.config/fish/config.fish` from there add a new line using the format of where anything inside [] you replace to suit your needs `alias [alias name]="[command]"`. Below are some examples in my config:
 
 ```console
 $ alias update="sudo pacman -Syu" #Update system
@@ -246,14 +247,14 @@ Now we will make a function and these can use arguments and complex logic to do 
 $ touch ~/.config/fish/functions/[command].fish #Make a file in this directory, name it something which suits the commands use
 $ nano ~/.config/fish/functions/[command].fish #Edit the file
 ```
-Within the file you need to set the file up like do:
+Within the file you need to set the file up like so:
 ```console
 $ function [command name]
 $ #commands or code here
 $ end
 ```
 
-Below is a example where I have a git repo in a folder called "dotfiles" in my home directory. I use this with a symlink to backup my configs files, you can learn more about this setup in the [Managing Dotfiles](/docs/Managing-Dotfiles.md) section. The below function when I run `dotpush [commit message]` it cds into the dotfiles directory and goes through the git process to push the changes to GitHub.
+Below is an example where I have a git repo in a folder called "dotfiles" in my home directory. I use this with a symlink to backup my config files, you can learn more about this setup in the [Managing Dotfiles](/docs/Managing-Dotfiles.md) section. The below function when I run `dotpush [commit message]` it cds into the dotfiles directory and goes through the git process to push the changes to GitHub.
 
 ```console
 $ function dotpush
@@ -303,14 +304,14 @@ $ sudo ufw reload #Run this after using any of the above.
 ---
 #### Login Screen (SDDM) on Multi Monitors Setup Config <sup>[Wiki](https://wiki.archlinux.org/title/SDDM)</sup>
 
-If you have a multi monitor setup and when you get to the login screen you find that your cursor may start on another monitor to your primary one or if you have a rotated display it displays incorrectly at the login screen but is corrected once logged in.
+If you have a multi monitor setup, you may find that at the login screen your cursor starts on a monitor other than your primary one, or that a rotated display shows incorrectly at the login screen but is corrected once logged in. Follow the steps below to fix this.
 
 You can edit the SDDM config to display the correct rotation and change the priority of which monitor should be the primary when met with the login screen.
 
 You can edit the file `/var/lib/sddm/.config/kwinoutputconfig.json` but to assist in editing this as it may not be clear which monitor is which you can use your local display configuration settings from the file `~/.config/kwinoutputconfig.json`. Use the reference from `edidHash` to compare the settings across the files.
 
 **Wrong Rotation**
-- Find the "edidHash" e.g `"edidHash": "ea0ebe39eb825dc64a3f770bc8b95bd1",`
+- Find the "edidHash" e.g. `"edidHash": "ea0ebe39eb825dc64a3f770bc8b95bd1",`
 - Look for the setting "transform" to get the correct orientation  `"transform": "Rotated90",`
 - Copy this across from the local display settings to the SDDM file.
 
@@ -398,7 +399,7 @@ Go towards the bottom of the config file and you will see the below section, eve
 Source: https://www.reddit.com/r/archlinux/comments/143b6we/how_to_display_login_screen_sddm_on_a_single/
 
 ---
-#### Ungoogled Chromium How to install Extentions
+#### Ungoogled Chromium How to install Extensions
 
 Use this tool: https://www.ungoogledextensions.com/
 
@@ -450,7 +451,7 @@ Download the file and ensure it follows the below layout:
 
 If this looks correct then run the following commands to move the files and open system settings:
 ```console
-$ mmv ~/Downloads/Dracula/*.colors ~/.local/share/color-schemes/
+$ mv ~/Downloads/Dracula/*.colors ~/.local/share/color-schemes/
 $ systemsettings
 ```
 Then navigate to Colours & Themes > Colours and then select the one you just installed.
@@ -459,7 +460,7 @@ Then navigate to Colours & Themes > Colours and then select the one you just ins
 
 #### Custom Window Decorations Aurorae <sup>[Arch Wiki](https://wiki.archlinux.org/title/KDE#Themes)</sup>
 
-Find a color scheme you like from [here](https://www.pling.com/browse?cat=717&ord=latest). I like [Ant-Dracula KDE](https://store.kde.org/p/1370682/) so I will use this.
+Find a window decoration you like from [here](https://www.pling.com/browse?cat=717&ord=latest). I like [Ant-Dracula KDE](https://store.kde.org/p/1370682/) so I will use this.
 
 Download the file then extract/unzip the file and ensure it follows the below layout:
 
@@ -486,13 +487,13 @@ $ systemsettings
 Then navigate to Colours & Themes > Window Decorations and then select the one you just installed.
 
 ##### Additional Window Decorations
-Under Colours & Themes > Window Decorations their are more settings you can adjust to change the look and feel of the windows. 
+Under Colours & Themes > Window Decorations there are more settings you can adjust to change the look and feel of the windows. 
 
-Their is a dropdown in the top middle of the screen you can pick how thick/thin you want the boarders to be or can go with no borders. I like to go with the `No window borders`.
+There is a dropdown in the top middle of the screen you can pick how thick/thin you want the borders to be or can go with no borders. I like to go with the `No window borders`.
 
 ![Window Decorations Borders Dropdown](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/Window-Decorations-Borders.png?raw=true)
 
-To the right of the above dropdown their is the "Configure Titlebar Buttons..." button where you can change which buttons are displayed and the locations of them on the window. I like to swap the buttons around to give a more mac style setup.
+To the right of the above dropdown there is the "Configure Titlebar Buttons..." button where you can change which buttons are displayed and the locations of them on the window. I like to swap the buttons around to give a more mac style setup.
 
 ![Titlebar Buttons](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/Titlebar-Buttons.png?raw=true)
 
@@ -505,12 +506,12 @@ For this it is recommended to use the program [Kvantum](https://github.com/tsuja
 $ sudo pacman -Sy kvantum
 ```
 
-Find a application style you like from [here](https://store.kde.org/browse?cat=123&ord=latest). I like [Ant-Dracula KDE](https://store.kde.org/p/1370681/) so I will use this and download the Dracula-purple-solid version.
+Find an application style you like from [here](https://store.kde.org/browse?cat=123&ord=latest). I like [Ant-Dracula KDE](https://store.kde.org/p/1370681/) so I will use this and download the Dracula-purple-solid version.
 
-- Extact the downloaded files.
+- Extract the downloaded files.
 - Search for "Kvantum Manager" from your start menu and open the application. 
-- In the Install/Update Theme section navigate to the extract files and select the folder.
-- Then go to Change/Delete Theme and pick the theme you just intalled in my case "Dracula-purple-solid" then click Use this theme.
+- In the Install/Update Theme section navigate to the extracted files and select the folder.
+- Then go to Change/Delete Theme and pick the theme you just installed in my case "Dracula-purple-solid" then click Use this theme.
 - Close Kvantum Manager.
 - Finally navigate to your System Settings > Colours & Themes > Application Style and then select "kvantum-dark" and apply.
 
@@ -518,7 +519,7 @@ Find a application style you like from [here](https://store.kde.org/browse?cat=1
 
 #### Icon Theme <sup>[Arch Wiki](https://wiki.archlinux.org/title/Icons)</sup>
 
-Find a icon pack you like from [here](https://www.pling.com/browse?cat=132&ord=latest). I like [Slot Nord Dark Colorize Icons](https://www.pling.com/p/2338310) so I will use this.
+Find an icon pack you like from [here](https://www.pling.com/browse?cat=132&ord=latest). I like [Slot Nord Dark Colorize Icons](https://www.pling.com/p/2338310) so I will use this.
 
 Download the file then extract/unzip the file and ensure it follows the below layout:
 
@@ -559,7 +560,7 @@ Then navigate to Colours & Themes > Cursors and then select the one you just ins
 
 #### Custom Splashscreen <sup>[Arch Wiki](https://wiki.archlinux.org/title/KDE#Themes)</sup>
 
-Find a plashscreen you like from [here](https://www.pling.com/browse?cat=716&ord=latest). I like to disable this but I will give instructions on how to install one as I use to run the Magna Splash 6.
+Find a splashscreen you like from [here](https://www.pling.com/browse?cat=716&ord=latest). I like to disable this but I will give instructions on how to install one as I used to run the Magna Splash 6.
 
 Download the file then extract/unzip the file and ensure it follows the below layout:
 
@@ -577,7 +578,7 @@ $ systemsettings
 
 Then navigate to Colours & Themes > Splash Screen and then select the one you just installed or in my case I like to select none.
 
-The splashscreen is the only customisation where you cannot edit the background image from the settings. So, if you want to edit the background image, go to the location below (remember to put your splashcreen name) and swap in a different image, ensuring it has the same name and file type as the original.
+The splashscreen is the only customisation where you cannot edit the background image from the settings. So, if you want to edit the background image, go to the location below (remember to put your splashscreen name) and swap in a different image, ensuring it has the same name and file type as the original.
 
 ```console
 $ cd ~/.local/share/plasma/look-and-feel/Magna-Splash-6/contents/splash/images
@@ -588,7 +589,7 @@ $ dolphin .
 
 #### SDDM Login Themes <sup>[Arch Wiki](https://wiki.archlinux.org/title/KDE#Themes)</sup>
 
-Find a icon pack you like from [here](https://store.kde.org/browse?cat=101&order=latest). I like [Azure-SDDM-6](https://store.kde.org/p/2149189) so I will use this.
+Find an SDDM theme you like from [here](https://store.kde.org/browse?cat=101&order=latest). I like [Azure-SDDM-6](https://store.kde.org/p/2149189) so I will use this.
 
 Download the file then extract/unzip the file and ensure it follows the below layout:
 
@@ -618,7 +619,7 @@ Go to System Settings > Text & Fonts > Fonts and change them to suit your prefer
 - Small: Raleway SemiBold 8pt
 - Toolbar: Raleway SemiBold 10pt
 - Menu: Raleway ExtraBold 10pt
-- WIndoww title: Raleway ExtraBold 10pt
+- Window title: Raleway ExtraBold 10pt
 
 ![Font Settings](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/Font-Settings.png?raw=true)
 
@@ -675,7 +676,7 @@ Then navigate to Colours & Themes > System Sounds and then select the one you ju
 #### Plasma 6 Extensions Widgets (Plasmoids) <sup>[Arch Wiki](https://wiki.archlinux.org/title/KDE#Widgets)</sup>
 Find any Plasma 6 extensions you like from [here](https://store.kde.org/browse?cat=705&ord=latest).
 
-I'm doing to downwload the below files:
+I'm going to download the below files:
 - [KDE Modern Clock](https://store.kde.org/p/2135653)
 - [Kurve - Audio Visualizer](https://store.kde.org/p/2299506) <sup>`sudo pacman -Syu cava qt6-websockets python-websockets`</sup>
 - [plasmusic-toolbar](https://store.kde.org/p/2128143)
@@ -705,9 +706,9 @@ $ kpackagetool6 --type=Plasma/Applet --install <downloaded-widget>.plasmoid #Rep
 $ # Then log out and back in again. Restarting plasmashell in the terminal isn't very reliable.
 ```
 
-***Option 3:*** Some are available by right clicking your panel and click "Add or Manage Widgets" then press "Get New" as shown in the below screenhot. You can then search for the widget name but some are only available from the KDE Store.
+***Option 3:*** Some are available by right clicking your panel and click "Add or Manage Widgets" then press "Get New" as shown in the below screenshot. You can then search for the widget name but some are only available from the KDE Store.
 
-![---](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/Add-or-Manage-Widgets-Get-New.png?raw=true)
+![Add or Manage Widgets Get New](https://github.com/senkawolf/Beginner-Exploring-Linux/blob/main/media/screenshots/Add-or-Manage-Widgets-Get-New.png?raw=true)
 
 #### Widgets (Plasmoids) Customisation
 Some Widgets (Plasmoids) offer some customisation in their settings and some don't. In this section I will list how I've done some workarounds to tweak things to my liking.
@@ -726,7 +727,7 @@ I don't like the icon used by this widget as it doesn't match my panels style so
 #### GRUB Theme <sup>[Arch Wiki](https://wiki.archlinux.org/title/GRUB)</sup>
 Find any GRUB theme you like from [here](https://www.gnome-look.org/browse?cat=109&ord=latest). I like [CyberGRUB-2077](https://www.gnome-look.org/p/2235245) so I will use this.
 
-Most GRUB themes will come with a install script using either a `.sh` or `.fish` script. It is recommended to use fish where possible. Follow thes steps provided and that will install the theme.
+Most GRUB themes will come with an install script using either a `.sh` or `.fish` script. It is recommended to use fish where possible. Follow these steps provided and that will install the theme.
 
 You can manually install themes as well.
 
